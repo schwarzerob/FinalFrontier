@@ -5,6 +5,8 @@
  */
 package finalfrontier;
 
+import finalfrontier.model.Player;
+
 /**
  *
  * @author rschw
@@ -15,7 +17,12 @@ public class FinalFrontier {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Player playerOne = new Player();
+        playerOne.setName("Robby");
+        
+        String PlayerOneName = playerOne.getName();
+        
+        System.out.println("Name = " + PlayerOneName);
     }
     
 }
