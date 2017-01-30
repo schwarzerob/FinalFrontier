@@ -5,10 +5,38 @@
  */
 package finalfrontier.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Gabriel
  */
-public class Attack {
+public class Attack implements Serializable  {
+    private int healthAttack;
+    private int healthPlayer;
+    
+    public Attack (){
+    
+}
+
+//get and set healthAttack
+
+    public int getHealthAttack() {
+        return healthAttack;
+    }
+
+    public void setHealthAttack(int healthAttack) {
+        this.healthAttack = healthAttack;
+    }
+    
+    //getter and setter healthPlayer 
+
+    public int getHealthPlayer() {
+        return healthPlayer;
+    }
+
+    public void setHealthPlayer(int healthPlayer) {
+        this.healthPlayer = healthPlayer;
+    }
     
 }
