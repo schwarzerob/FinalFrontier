@@ -24,5 +24,35 @@ public class ToolsAndWeapons implements Serializable{
     public void setType(char type) {
         this.type = type;
     }
+// hashCode
+    @Override
+    public int hashCode() {
+        int hash = 3;
+        hash = 71 * hash + this.type;
+        return hash;
+    }
+// equals
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final ToolsAndWeapons other = (ToolsAndWeapons) obj;
+        if (this.type != other.type) {
+            return false;
+        }
+        return true;
+    }
+// toString
+    @Override
+    public String toString() {
+        return "ToolsAndWeapons{" + "type=" + type + '}';
+    }
     
 }

@@ -39,5 +39,43 @@ public class Location implements Serializable{
     public void setVisited(char visited) {
         this.visited = visited;
     }
+// hashCode
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 17 * hash + this.row;
+        hash = 17 * hash + this.column;
+        hash = 17 * hash + this.visited;
+        return hash;
+    }
+// equals
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Location other = (Location) obj;
+        if (this.row != other.row) {
+            return false;
+        }
+        if (this.column != other.column) {
+            return false;
+        }
+        if (this.visited != other.visited) {
+            return false;
+        }
+        return true;
+    }
+// toString
+    @Override
+    public String toString() {
+        return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + '}';
+    }
     
 }
