@@ -5,10 +5,27 @@
  */
 package finalfrontier.model;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Gabriel
  */
-public class Treasure {
+public class Treasure implements Serializable {
+    private int loot;
+    
+    public Treasure() {
+    
+}
+    //Getter for loot
+
+    public int getLoot() {
+        return loot;
+    }
+     //setter for loor
+
+    public void setLoot(int loot) {
+        this.loot = loot;
+    }
     
 }
