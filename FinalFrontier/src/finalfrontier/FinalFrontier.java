@@ -22,7 +22,7 @@ public class FinalFrontier {
         
         String PlayerOneName = playerOne.getName();
         
-        System.out.println("Name = " + PlayerOneName);
+        System.out.println(playerOne.toString());
     }
     
 }
