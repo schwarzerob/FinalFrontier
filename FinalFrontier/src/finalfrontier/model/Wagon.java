@@ -39,6 +39,44 @@ public class Wagon implements Serializable {
     public void setHeight(int height) {
         this.height = height;
     }
+// hashCode
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 79 * hash + this.length;
+        hash = 79 * hash + this.width;
+        hash = 79 * hash + this.height;
+        return hash;
+    }
+// equals
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Wagon other = (Wagon) obj;
+        if (this.length != other.length) {
+            return false;
+        }
+        if (this.width != other.width) {
+            return false;
+        }
+        if (this.height != other.height) {
+            return false;
+        }
+        return true;
+    }
+// toString
+    @Override
+    public String toString() {
+        return "Wagon{" + "length=" + length + ", width=" + width + ", height=" + height + '}';
+    }
     
     
 }

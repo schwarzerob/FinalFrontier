@@ -18,27 +18,26 @@ public class Player implements Serializable{
 
     public Player() {
     }
-    
+// get and set Name    
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
-
+// hashCode
     @Override
     public int hashCode() {
         int hash = 3;
         hash = 41 * hash + Objects.hashCode(this.name);
         return hash;
     }
-
+// toString
     @Override
     public String toString() {
         return "Player{" + "name=" + name + '}';
     }
-
+// equals
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
