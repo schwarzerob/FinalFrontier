@@ -6,6 +6,7 @@
 package finalfrontier.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  *
@@ -45,6 +46,40 @@ public class Event implements Serializable {
 
     public void setBlockedLocation(String blockedLocation) {
         this.blockedLocation = blockedLocation;
+    }
+    //hash
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 59 * hash + Objects.hashCode(this.symbol);
+        hash = 59 * hash + Objects.hashCode(this.description);
+        hash = 59 * hash + Objects.hashCode(this.blockedLocation);
+        return hash;
+    }
+//Equals
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Event other = (Event) obj;
+        if (!Objects.equals(this.symbol, other.symbol)) {
+            return false;
+        }
+        if (!Objects.equals(this.description, other.description)) {
+            return false;
+        }
+        if (!Objects.equals(this.blockedLocation, other.blockedLocation)) {
+            return false;
+        }
+        return true;
     }
     
 }

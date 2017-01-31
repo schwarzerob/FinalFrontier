@@ -6,6 +6,7 @@
 package finalfrontier.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  *
@@ -38,6 +39,35 @@ public class Resources implements Serializable {
     public void setType(String type) {
         this.type = type;
     }
-    
+ //hash   
+
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 13 * hash + this.quantity;
+        hash = 13 * hash + Objects.hashCode(this.type);
+        return hash;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Resources other = (Resources) obj;
+        if (this.quantity != other.quantity) {
+            return false;
+        }
+        if (!Objects.equals(this.type, other.type)) {
+            return false;
+        }
+        return true;
+    }
     
 }

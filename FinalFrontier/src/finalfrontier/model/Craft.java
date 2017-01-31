@@ -6,6 +6,7 @@
 package finalfrontier.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  *
@@ -44,6 +45,40 @@ public class Craft implements Serializable {
 
     public void setAmountRequired(int amountRequired) {
         this.amountRequired = amountRequired;
+    }
+    //hash
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 23 * hash + this.neededResources;
+        hash = 23 * hash + Objects.hashCode(this.create);
+        hash = 23 * hash + this.amountRequired;
+        return hash;
+    }
+//equals
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Craft other = (Craft) obj;
+        if (this.neededResources != other.neededResources) {
+            return false;
+        }
+        if (this.amountRequired != other.amountRequired) {
+            return false;
+        }
+        if (!Objects.equals(this.create, other.create)) {
+            return false;
+        }
+        return true;
     }
     
 }

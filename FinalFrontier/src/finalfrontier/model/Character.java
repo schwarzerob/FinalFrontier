@@ -6,6 +6,7 @@
 package finalfrontier.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  *
@@ -35,6 +36,35 @@ public Character (){
 
     public void setWhereIsCharacter(String whereIsCharacter) {
         this.whereIsCharacter = whereIsCharacter;
+    }
+//hash
+    @Override
+    public int hashCode() {
+        int hash = 5;
+        hash = 71 * hash + Objects.hashCode(this.characterName);
+        hash = 71 * hash + Objects.hashCode(this.whereIsCharacter);
+        return hash;
+    }
+//equals
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Character other = (Character) obj;
+        if (!Objects.equals(this.characterName, other.characterName)) {
+            return false;
+        }
+        if (!Objects.equals(this.whereIsCharacter, other.whereIsCharacter)) {
+            return false;
+        }
+        return true;
     }
     
 

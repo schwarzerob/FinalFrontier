@@ -27,5 +27,31 @@ public class Treasure implements Serializable {
     public void setLoot(int loot) {
         this.loot = loot;
     }
+   //hash
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 89 * hash + this.loot;
+        return hash;
+    }
+// equals
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Treasure other = (Treasure) obj;
+        if (this.loot != other.loot) {
+            return false;
+        }
+        return true;
+    }
     
 }

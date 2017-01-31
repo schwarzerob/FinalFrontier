@@ -38,5 +38,42 @@ public class Attack implements Serializable  {
     public void setHealthPlayer(int healthPlayer) {
         this.healthPlayer = healthPlayer;
     }
+//Hash
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 71 * hash + this.healthAttack;
+        hash = 71 * hash + this.healthPlayer;
+        return hash;
+    }
+//Equals
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        final Attack other = (Attack) obj;
+        if (this.healthAttack != other.healthAttack) {
+            return false;
+        }
+        if (this.healthPlayer != other.healthPlayer) {
+            return false;
+        }
+        return true;
+    }
+        
+
+    // to string
+
+    @Override
+    public String toString() {
+        return "Attack{" + "healthAttack=" + healthAttack + ", healthPlayer=" + healthPlayer + '}';
+    }
     
 }
