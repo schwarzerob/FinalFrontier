@@ -12,9 +12,10 @@ import java.io.Serializable;
  * @author rschw
  */
 public class Wagon implements Serializable {
-    private int length = 3;
-    private int width = 2;
-    private int height = 2;
+    private int length;
+    private int width;
+    private int height;
+    int area;
     
     public Wagon(){
     }
@@ -32,7 +33,7 @@ public class Wagon implements Serializable {
     public void setWidth(int width) {
         this.width = width;
     }
-//get and set height
+// get and set height
     public int getHeight() {
         return height;
     }
