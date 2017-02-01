@@ -6,6 +6,7 @@
 package finalfrontier;
 
 import finalfrontier.model.Player;
+import finalfrontier.model.Character;
 import finalfrontier.model.Wagon;
 
 /**
@@ -24,6 +25,12 @@ public class FinalFrontier {
         playerOne.setName("Robby");
         String PlayerOneName = playerOne.getName();
         System.out.println(playerOne.toString());
+        
+        // players character
+        Character hunter = new Character();  // Player constructor
+        hunter.setCharacterName("Hunter");
+        String hunterCharacterName = hunter.getCharacterName();
+        System.out.println(hunter.toString());
         
         // wagon area
         Wagon wagon = new Wagon();  // Wagon constructor
