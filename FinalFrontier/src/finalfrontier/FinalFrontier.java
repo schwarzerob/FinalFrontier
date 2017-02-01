@@ -26,7 +26,7 @@ public class FinalFrontier {
         String PlayerOneName = playerOne.getName();
         System.out.println(playerOne.toString());
         
-        // players character
+        // players character named Hunter
         Character hunter = new Character();  // Player constructor
         hunter.setCharacterName("Hunter");
         String hunterCharacterName = hunter.getCharacterName();
