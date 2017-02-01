@@ -19,24 +19,23 @@ public class Character implements Serializable {
 public Character (){
     
 }   
+
 // getter for characterName and whereIsCharacter
     public String getCharacterName() {
         return characterName;
     }
-
     public String getWhereIsCharacter() {
         return whereIsCharacter;
     }
 
 //Setter characterName and whereIsCharacter
-
     public void setCharacterName(String characterName) {
         this.characterName = characterName;
     }
-
     public void setWhereIsCharacter(String whereIsCharacter) {
         this.whereIsCharacter = whereIsCharacter;
     }
+    
 //hash
     @Override
     public int hashCode() {
@@ -45,6 +44,7 @@ public Character (){
         hash = 71 * hash + Objects.hashCode(this.whereIsCharacter);
         return hash;
     }
+    
 //equals
     @Override
     public boolean equals(Object obj) {

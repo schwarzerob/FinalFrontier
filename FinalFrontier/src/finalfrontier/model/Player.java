@@ -15,16 +15,19 @@ import java.util.Objects;
 public class Player implements Serializable{
     private String name;
     
-
+// Constructor
     public Player() {
     }
+    
 // get and set Name    
+// What is this players name?
     public String getName() {
         return name;
     }
     public void setName(String name) {
         this.name = name;
     }
+    
 // hashCode
     @Override
     public int hashCode() {
@@ -32,11 +35,13 @@ public class Player implements Serializable{
         hash = 41 * hash + Objects.hashCode(this.name);
         return hash;
     }
+    
 // toString
     @Override
     public String toString() {
         return "Player{" + "name=" + name + '}';
     }
+    
 // equals
     @Override
     public boolean equals(Object obj) {
@@ -56,5 +61,6 @@ public class Player implements Serializable{
         return true;
     }
     
+// What character is the Player using?
     
 }
