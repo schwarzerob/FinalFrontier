@@ -75,5 +75,5 @@ public class Attack implements Serializable  {
     public String toString() {
         return "Attack{" + "healthAttack=" + healthAttack + ", healthPlayer=" + healthPlayer + '}';
     }
-    
+
 }

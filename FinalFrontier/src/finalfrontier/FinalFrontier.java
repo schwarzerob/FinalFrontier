@@ -5,6 +5,7 @@
  */
 package finalfrontier;
 
+import finalfrontier.model.Attack;
 import finalfrontier.model.Player;
 import finalfrontier.model.Character;
 import finalfrontier.model.Wagon;
@@ -42,5 +43,10 @@ public class FinalFrontier {
         int wagonWidth = wagon.getWidth();
         System.out.println(wagon.toString());
     }
-    
+    //Attack 
+        Attack attack = new Attack();
+        attack.sethealthAttack(3);
+        attack.sethealthPlayer(3);
+        System.out.println(attack.toString());
+        
 }
