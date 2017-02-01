@@ -19,6 +19,7 @@ public class Homestead implements Serializable{
     
     public Homestead(){
     }
+    
 // get and set Description
     public String getDescription() {
         return Description;
@@ -26,6 +27,7 @@ public class Homestead implements Serializable{
     public void setDescription(String Description) {
         this.Description = Description;
     }
+    
 // get and set PurchaseResource
     public String getPurchaseResource() {
         return PurchaseResource;
@@ -33,6 +35,7 @@ public class Homestead implements Serializable{
     public void setPurchaseResource(String PurchaseResource) {
         this.PurchaseResource = PurchaseResource;
     }
+    
 // get and set SellResource
     public String getSellResource() {
         return SellResource;
@@ -40,6 +43,7 @@ public class Homestead implements Serializable{
     public void setSellResource(String SellResource) {
         this.SellResource = SellResource;
     }
+    
 // hashCode
     @Override
     public int hashCode() {
@@ -49,6 +53,7 @@ public class Homestead implements Serializable{
         hash = 67 * hash + Objects.hashCode(this.SellResource);
         return hash;
     }
+    
 // equals
     @Override
     public boolean equals(Object obj) {
@@ -73,6 +78,7 @@ public class Homestead implements Serializable{
         }
         return true;
     }
+    
 // toString
     @Override
     public String toString() {

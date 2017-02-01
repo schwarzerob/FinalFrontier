@@ -8,8 +8,11 @@ package finalfrontier;
 import finalfrontier.model.Attack;
 import finalfrontier.model.Player;
 import finalfrontier.model.Character;
+import finalfrontier.model.Homestead;
 import finalfrontier.model.Location;
 import finalfrontier.model.Map;
+import finalfrontier.model.Puzzle;
+import finalfrontier.model.ToolsAndWeapons;
 import finalfrontier.model.Wagon;
 
 /**
@@ -52,14 +55,33 @@ public class FinalFrontier {
         Location currentLocation = new Location();
         currentLocation.setColumn(2);
         currentLocation.setRow(4);
-        currentLocation.getVisited('X');
+        currentLocation.setVisited('X');
         System.out.println(currentLocation.toString());
         
-    }
-    //Attack 
+        //Attack 
         Attack attack = new Attack();
-        attack.sethealthAttack(3);
-        attack.sethealthPlayer(3);
+        attack.setHealthAttack(3);
+        attack.setHealthPlayer(3);
         System.out.println(attack.toString());
+        
+        // Tools and Weapons
+        ToolsAndWeapons bow = new ToolsAndWeapons();
+        bow.setType('A');
+        System.out.println(bow.toString());
+        
+        //Puzzle
+        Puzzle door = new Puzzle();
+        door.setDescription("At the door to the dragons cave!");
+        door.setCorrectAnswer("Yet to be determined");
+        System.out.println(door.toString());
+        
+        //Homestead
+        Homestead rexburg = new Homestead();
+        rexburg.setDescription("Welcome to Rexburg!");
+        rexburg.setPurchaseResource("Wood");
+        rexburg.setSellResource("Grain");
+        System.out.println(rexburg.toString());
+        
+    }
         
 }

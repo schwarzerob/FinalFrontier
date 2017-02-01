@@ -18,20 +18,24 @@ public class Puzzle implements Serializable{
     
     public Puzzle(){
         }
+    
 // get and set Description
     public String getDescription() {
         return Description;
     }
+    
     public void setDescription(String Description) {
         this.Description = Description;
     }
+    
 // get and set CorrectAnswer
     public String getCorrectAnswer() {
         return CorrectAnswer;
-    }
+    }    
     public void setCorrectAnswer(String CorrectAnswer) {
         this.CorrectAnswer = CorrectAnswer;
     }
+    
 // hashCode
     @Override
     public int hashCode() {
@@ -40,6 +44,7 @@ public class Puzzle implements Serializable{
         hash = 11 * hash + Objects.hashCode(this.CorrectAnswer);
         return hash;
     }
+    
 // equals
     @Override
     public boolean equals(Object obj) {
@@ -61,6 +66,7 @@ public class Puzzle implements Serializable{
         }
         return true;
     }
+    
 // toString
     @Override
     public String toString() {

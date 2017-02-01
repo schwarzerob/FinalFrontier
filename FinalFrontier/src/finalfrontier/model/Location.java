@@ -14,7 +14,7 @@ import java.io.Serializable;
 public class Location implements Serializable{
     private int row;
     private int column;
-    private char visited;
+    private char visited = 'O';
     
     public Location(){
         }
