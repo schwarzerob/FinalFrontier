@@ -16,8 +16,8 @@ public class Character implements Serializable {
     private String characterName;
     private String whereIsCharacter;
 
+// Character constructor
 public Character (){
-    
 }   
 
 // getter for characterName and whereIsCharacter
@@ -67,6 +67,11 @@ public Character (){
         return true;
     }
     
-
+//toString
+    @Override
+    public String toString() {
+        return "Character{" + "characterName=" + characterName + ", whereIsCharacter=" + whereIsCharacter + '}';
+    }
+    
 }
 

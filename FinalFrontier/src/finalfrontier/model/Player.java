@@ -39,7 +39,7 @@ public class Player implements Serializable{
 // toString
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + '}';
+        return "Player's name = " + name;
     }
     
 // equals
