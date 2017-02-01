@@ -24,6 +24,7 @@ public class Map implements Serializable {
     public void setRow(int row) {
         this.row = row;
     }
+    
 // get and set Column
     public int getColumn() {
         return column;
@@ -31,6 +32,7 @@ public class Map implements Serializable {
     public void setColumn(int column) {
         this.column = column;
     }
+    
 // hashCode
     @Override
     public int hashCode() {
@@ -39,6 +41,7 @@ public class Map implements Serializable {
         hash = 19 * hash + this.column;
         return hash;
     }
+    
 // equals
     @Override
     public boolean equals(Object obj) {
@@ -60,6 +63,7 @@ public class Map implements Serializable {
         }
         return true;
     }
+    
 // toString
     @Override
     public String toString() {
