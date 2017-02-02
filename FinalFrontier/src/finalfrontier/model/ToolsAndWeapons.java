@@ -13,6 +13,7 @@ import java.io.Serializable;
  */
 public class ToolsAndWeapons implements Serializable{
     private char type;
+    // char type because items to be created will have a character to select from list
     
     public ToolsAndWeapons(){
     }
