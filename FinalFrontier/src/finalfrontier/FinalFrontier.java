@@ -8,9 +8,15 @@ package finalfrontier;
 import finalfrontier.model.Attack;
 import finalfrontier.model.Player;
 import finalfrontier.model.Character;
+import finalfrontier.model.Craft;
+import finalfrontier.model.Event;
 import finalfrontier.model.Location;
 import finalfrontier.model.Map;
+import finalfrontier.model.Resources;
+import finalfrontier.model.Treasure;
 import finalfrontier.model.Wagon;
+
+
 
 /**
  *
@@ -52,14 +58,54 @@ public class FinalFrontier {
         Location currentLocation = new Location();
         currentLocation.setColumn(2);
         currentLocation.setRow(4);
-        currentLocation.getVisited('X');
+        
         System.out.println(currentLocation.toString());
+       
+         //Attack 
+        Attack attack = new Attack();
+        attack.setHealthAttack(30);
+        attack.setHealthPlayer(30);
+        System.out.println(attack.toString());
+        
+        //Craft
+        Craft crafting = new Craft();
+        crafting.setNeededResources(50);
+        crafting.setCreate("Sword Crafted");
+        crafting.setAmountRequired(13);
+        System.out.println(crafting.toString());
+        
+        //resources
+        Resources resources = new Resources();
+        resources.setType("Wood");
+        resources.setQuantity(0);
+        System.out.print(resources.toString());
+        
+        //event
+        Event event = new Event();
+        event.setBlockedLocation("There is a Canyon ahead,  Build a Bridge");
+        event.setDescription("Welcome to The Hunting Grounds");
+        event.setSymbol("~~XC~~");
+        System.out.print(event.toString());
+        
+        //treasure
+        Treasure treasure = new Treasure();
+        treasure.setLoot(50);
+        System.out.print(treasure.toString());
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
     }
-    //Attack 
-        Attack attack = new Attack();
-        attack.sethealthAttack(3);
-        attack.sethealthPlayer(3);
-        System.out.println(attack.toString());
+   
+        
+        
+        
         
 }

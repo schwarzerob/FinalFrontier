@@ -81,5 +81,10 @@ public class Event implements Serializable {
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Event{" + "symbol=" + symbol + ", description=" + description + ", blockedLocation=" + blockedLocation + '}';
+    }
     
 }

@@ -69,5 +69,10 @@ public class Resources implements Serializable {
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Resources{" + "quantity=" + quantity + ", type=" + type + '}';
+    }
     
 }

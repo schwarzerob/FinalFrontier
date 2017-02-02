@@ -53,5 +53,10 @@ public class Treasure implements Serializable {
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Treasure{" + "loot=" + loot + '}';
+    }
     
 }
