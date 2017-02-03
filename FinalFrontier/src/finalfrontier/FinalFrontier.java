@@ -97,7 +97,7 @@ public class FinalFrontier {
         treasure.setLoot(50);
         System.out.print(treasure.toString());
         
-            // Tools and Weapons
+        // Tools and Weapons
         ToolsAndWeapons bow = new ToolsAndWeapons();
         bow.setType('A');
         System.out.println(bow.toString());
