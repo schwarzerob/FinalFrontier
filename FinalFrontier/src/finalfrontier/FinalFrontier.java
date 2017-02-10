@@ -18,6 +18,7 @@ import finalfrontier.model.Treasure;
 import finalfrontier.model.Puzzle;
 import finalfrontier.model.ToolsAndWeapons;
 import finalfrontier.model.Wagon;
+import finalrontier.control.wagonControl;
 
 
 
@@ -115,7 +116,7 @@ public class FinalFrontier {
         rexburg.setSellResource("Grain");
         System.out.println(rexburg.toString());
         
-        
+        wagonControl.calcMaxContent(2, 3, 4);
         
         
         

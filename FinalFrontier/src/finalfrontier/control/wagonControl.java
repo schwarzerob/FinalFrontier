@@ -5,13 +5,14 @@
  */
 package finalrontier.control;
 
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *
  * @author rschw
  */
-public class wagonControl {
+public class wagonControl implements Serializable {
     public void calcMaxContent(double length, double width, double height) {
         String dimension;
         int size;
@@ -25,7 +26,17 @@ public class wagonControl {
         dimension = inputDimension.next();
                 
         //if not
-        if (dimension == "L") {
+        if (dimension == "L" || dimension == "l") {
+            System.out.println("Constructing on Length of the wagon");
+            System.out.println("How much?");
+        } else if (dimension == "W" || dimension == "w") {
+            System.out.println("Constructing on Width of the wagon");
+            System.out.println("How much?");            
+        }else if (dimension == "H" || dimension == "h") {
+            System.out.println("Constructing on Width of the wagon");
+            System.out.println("How much?");   
+        }else if (dimension == "B" || dimension == "b") {
+        }else {
             System.out.println("Invalid input.");
         }
 //input size
