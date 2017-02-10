@@ -18,7 +18,7 @@ import finalfrontier.model.Treasure;
 import finalfrontier.model.Puzzle;
 import finalfrontier.model.ToolsAndWeapons;
 import finalfrontier.model.Wagon;
-import finalrontier.control.wagonControl;
+import finalfrontier.control.wagonControl;
 
 
 
