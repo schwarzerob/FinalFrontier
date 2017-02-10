@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package finalrontier.control;
+package finalfrontier.control;
 
 import java.io.Serializable;
 import java.util.Scanner;
@@ -35,7 +35,7 @@ public class wagonControl implements Serializable {
         }else if (dimension == "H" || dimension == "h") {
             System.out.println("Constructing on Width of the wagon");
             System.out.println("How much?");   
-        }else if (dimension == "B" || dimension == "b") {
+        //}else if (dimension == "B" || dimension == "b") {
         }else {
             System.out.println("Invalid input.");
         }
