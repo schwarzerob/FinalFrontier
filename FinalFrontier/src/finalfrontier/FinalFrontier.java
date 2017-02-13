@@ -116,7 +116,6 @@ public class FinalFrontier {
         rexburg.setSellResource("Grain");
         System.out.println(rexburg.toString());
         
-        wagonControl.calcMaxContent(2, 3, 4);
         
         
         
