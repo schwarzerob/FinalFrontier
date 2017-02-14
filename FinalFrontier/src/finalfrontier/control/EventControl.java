@@ -10,5 +10,7 @@ package finalfrontier.control;
  * @author rschw
  */
 public class EventControl {
-    
+    public String Event(char symbol, String description){
+        return null;        
+    }    
 }

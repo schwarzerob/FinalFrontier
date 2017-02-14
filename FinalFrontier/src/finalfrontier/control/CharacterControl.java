@@ -10,5 +10,9 @@ package finalfrontier.control;
  * @author rschw
  */
 public class CharacterControl {
+    public String Character(String characterName, String whereIsCharacter){
+        return null;
+        
+    }
     
 }

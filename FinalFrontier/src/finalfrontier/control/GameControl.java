@@ -10,5 +10,7 @@ package finalfrontier.control;
  * @author rschw
  */
 public class GameControl {
-    
+    public String NewGame(){
+    return null;
+        }
 }

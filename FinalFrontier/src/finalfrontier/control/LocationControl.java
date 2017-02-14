@@ -10,5 +10,7 @@ package finalfrontier.control;
  * @author rschw
  */
 public class LocationControl {
-    
+    public char Location(int row, int column, char visited){
+        return 0;
+    }    
 }

@@ -10,5 +10,8 @@ package finalfrontier.control;
  * @author rschw
  */
 public class Map {
+    public char Coordinates(int row, int column, char visited){
+        return 0;
+    }
     
 }
