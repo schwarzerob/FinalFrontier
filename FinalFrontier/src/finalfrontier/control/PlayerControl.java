@@ -9,6 +9,6 @@ package finalfrontier.control;
  *
  * @author rschw
  */
-public class NewPlayer {
+public class PlayerControl {
     
 }
