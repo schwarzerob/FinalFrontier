@@ -14,8 +14,10 @@ import java.util.Scanner;
  */
 public class wagonControl implements Serializable {
     public int calcMaxContent(String dimension, int width, int height, int increase) {
+        
+        //Variables
                int cost;
-        int size;
+               int size;
         
         if (dimension == null) {
             return -1;
