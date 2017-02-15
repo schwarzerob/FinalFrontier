@@ -44,10 +44,14 @@ public class wagonControl implements Serializable {
     Scanner inputSize = new Scanner(System.in);
         size = inputSize.nextInt();
         if (size > 10 || size <0) {
-            System.out.println("Invalid Input.");
+      
         }
         //calculate area
         return 0;
+    }
+
+    void calcMaxContent(double length, double width, double height) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
