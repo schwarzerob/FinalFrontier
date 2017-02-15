@@ -13,8 +13,8 @@ import java.util.Scanner;
  * @author rschw
  */
 public class wagonControl implements Serializable {
-    public int calcMaxContent(String dimension, int width, int height, int increase) {
-               int cost;
+    public int calcMaxContent(String dimension, int length, int width, int height, int increase) {
+        int cost;
         int size;
         
         if (dimension == null) {
@@ -28,12 +28,12 @@ public class wagonControl implements Serializable {
              
             case "W":
             case "w":
-                cost =(((width + height)*2)*increase);
+                cost =(((length + height)*2)*increase);
                 return cost;
                
             case "H":
             case "h":
-                cost =(((width + height)*2)*increase);
+                cost =(((width + length)*2)*increase);
                 return cost;
                 
             default:
