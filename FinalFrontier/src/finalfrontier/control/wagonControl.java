@@ -50,8 +50,8 @@ public class wagonControl implements Serializable {
         return 0;
     }
 
-    void calcMaxContent(double length, double width, double height) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    //void calcMaxContent(double length, double width, double height) {
+    //    throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    //}
     
 }
