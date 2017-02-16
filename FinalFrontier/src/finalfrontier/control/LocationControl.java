@@ -31,7 +31,7 @@ public class LocationControl implements Serializable {
        visited = '_';
         
         if (direction != 'N' || direction != 'E' || direction != 'S' || direction != 'W') {
-            return '_';
+            return visited = '_';
         }
             
         switch (direction) {

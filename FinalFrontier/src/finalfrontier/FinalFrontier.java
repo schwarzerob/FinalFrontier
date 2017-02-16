@@ -19,6 +19,7 @@ import finalfrontier.model.Puzzle;
 import finalfrontier.model.ToolsAndWeapons;
 import finalfrontier.model.Wagon;
 import finalfrontier.control.wagonControl;
+import finalfrontier.control.LocationControl;
 
 
 
@@ -60,9 +61,9 @@ public class FinalFrontier {
         
         // Location
         Location currentLocation = new Location();
-        currentLocation.setColumn(2);
-        currentLocation.setRow(4);
-        currentLocation.setVisited('X');
+        currentLocation.setRow(LocationControl.class.getModifiers());
+        currentLocation.setColumn(LocationControl.class.getModifiers());
+        currentLocation.setVisited((char) LocationControl.class.getModifiers());
         System.out.println(currentLocation.toString());
     
         //Attack 
