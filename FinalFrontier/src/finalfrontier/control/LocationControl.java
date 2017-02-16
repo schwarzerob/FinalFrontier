@@ -6,7 +6,6 @@
 package finalfrontier.control;
 
 import java.io.Serializable;
-import java.util.Scanner;
 
 /**
  *
@@ -36,14 +35,17 @@ public class LocationControl implements Serializable {
             case 'n':
                  row = row + distance;
                  return row;
+                 
             case 'E':
             case 'e':
                  column = column - distance;
                  return column;
+                 
             case 'S':
             case 's':
                  row = row - distance;
                  return row;
+                 
             case 'W':
             case 'w':
                  column = column + distance;
