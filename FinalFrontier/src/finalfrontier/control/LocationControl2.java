@@ -19,9 +19,9 @@ Player chooses direction, then how far to go.  After
 the method is complete, the location on the map will 
 be changed by the value of either the row, or the column.
 */
-public class LocationControl implements Serializable {
+public class LocationControl2 implements Serializable {
     
-    public int Location(int row, int column, char visited){
+    public int LocationDirection(int row, int column, char visited){
        //row = 1;
        //column = 1;
        Scanner whichWay = new Scanner(System.in);
