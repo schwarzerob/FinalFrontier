@@ -13,7 +13,7 @@ import java.util.Scanner;
  * @author rschw
  */
 public class wagonControl implements Serializable {
-    public int calcMaxContent(String dimension, int width, int height, int increase) {
+    public int calcMaxContent(String dimension, int length, int width, int height, int increase) {
         
         //Variables
                int cost;
@@ -30,12 +30,12 @@ public class wagonControl implements Serializable {
              
             case "W":
             case "w":
-                cost =(((width + height)*2)*increase);
+                cost =(((length + height)*2)*increase);
                 return cost;
                
             case "H":
             case "h":
-                cost =(((width + height)*2)*increase);
+                cost =(((width + length)*2)*increase);
                 return cost;
                 
             default:
@@ -52,8 +52,9 @@ public class wagonControl implements Serializable {
         return 0;
     }
 
-    void calcMaxContent(double length, double width, double height) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    //void calcMaxContent(double length, double width, double height) {
+    //    throw new UnsupportedOperationException("Not supported yet."); 
+    //To change body of generated methods, choose Tools | Templates.
+    //}
     
 }
