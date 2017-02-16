@@ -57,6 +57,6 @@ public class LocationControl implements Serializable {
         }
     
 //input size
-        return 1;    
+        return row;
     }
 }
