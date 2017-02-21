@@ -26,6 +26,7 @@ public class LocationControl implements Serializable {
        //column = 1;
        Scanner whichWay = new Scanner(System.in);
        char direction = whichWay.next().charAt(0);
+       
        Scanner howFar = new Scanner(System.in);
        int distance = howFar.nextInt();
        visited = '_';
@@ -38,23 +39,23 @@ public class LocationControl implements Serializable {
             case 'N':
             case 'n':
                  row = row + distance;
-                 return row;
-                 
+                 //return row;
+                 break;
             case 'E':
             case 'e':
                  column = column - distance;
-                 return column;
-                 
+                 //return column;
+                 break;                 
             case 'S':
             case 's':
                  row = row - distance;
-                 return row;
-                 
+                 //return row;
+                 break;
             case 'W':
             case 'w':
                  column = column + distance;
-                 return column;
-                
+                 //return column;
+                 break;
         default:
             System.out.println("Invalid input.");
             break;
