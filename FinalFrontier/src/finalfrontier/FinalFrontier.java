@@ -61,12 +61,12 @@ public class FinalFrontier {
         
         // Location
         Location currentLocation = new Location();
-        //currentLocation.setRow(LocationControl.class.getModifiers());
-        currentLocation.setRow(2);
-        //currentLocation.setColumn(LocationControl.class.getModifiers());
-        currentLocation.setColumn(3);
-        //currentLocation.setVisited((char) LocationControl.class.getModifiers());
-        currentLocation.setVisited('X');
+        currentLocation.setRow(LocationControl.class.getModifiers());
+        //currentLocation.setRow(2);
+        currentLocation.setColumn(LocationControl.class.getModifiers());
+        //currentLocation.setColumn(3);
+        currentLocation.setVisited((char) LocationControl.class.getModifiers());
+        //currentLocation.setVisited('X');
         System.out.println(currentLocation.toString());
     
         //Attack 

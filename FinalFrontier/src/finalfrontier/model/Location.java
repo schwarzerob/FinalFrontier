@@ -14,20 +14,22 @@ import java.io.Serializable;
 public class Location implements Serializable{
     private int row;
     private int column;
-    private char visited = 'O';
+    private char visited;
     
     public Location(){
         }
 // get and set Row
     public int getRow() {
-        return row;
+        //return row;
+        return finalfrontier.control.LocationControl.class.getModifiers();
     }
     public void setRow(int row) {
         this.row = row;
     }
 // get and set Column
     public int getColumn() {
-        return column;
+        //return column;
+        return finalfrontier.control.LocationControl.class.getModifiers();
     }
     public void setColumn(int column) {
         this.column = column;

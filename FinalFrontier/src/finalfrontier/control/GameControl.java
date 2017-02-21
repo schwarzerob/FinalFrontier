@@ -69,18 +69,22 @@ public class GameControl {
             case 'g':
             case 'G':
                 //Go again
+                //LocationControl
                 break;
             case 'c':
             case 'C':
                 //Craft items
+                //CraftingControl
                 break;
             case 'i':
             case 'I':
                 //Inventory list
+                //
                 break;
             case 'v':
             case 'V':
                 //View the map
+                //MapControl
                 break;
             default: 
             System.out.println("Invalid input.");

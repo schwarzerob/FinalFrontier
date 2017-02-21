@@ -22,8 +22,8 @@ be changed by the value of either the row, or the column.
 public class LocationControl implements Serializable {
     
     public int Location(int row, int column, char visited){
-       //row = 1;
-       //column = 1;
+       row = 1;
+       column = 1;
        Scanner whichWay = new Scanner(System.in);
        char direction = whichWay.next().charAt(0);
        
