@@ -11,6 +11,9 @@ package finalfrontier.control;
  */
 public class CharacterControl {
     public String Character(String characterName, String whereIsCharacter){
+        //Description of the character
+        //define starting strength
+        //define starting resources
         return null;
         
     }

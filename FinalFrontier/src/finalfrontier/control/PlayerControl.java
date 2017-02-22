@@ -11,6 +11,11 @@ package finalfrontier.control;
  */
 public class PlayerControl {
     public String NewPlayer(String name){
+        
+        //Get players name
+        //assign a character
+        //
+        
         return null;    
 }
 }

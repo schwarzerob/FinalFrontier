@@ -11,6 +11,10 @@ package finalfrontier.control;
  */
 public class EventControl {
     public String Event(char symbol, String description){
+        
+        //get location from Location
+        //execute event assigned to that location
+        
         return null;        
     }    
 }
