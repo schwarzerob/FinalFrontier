@@ -54,4 +54,8 @@ public class StartProgramView {
         return true;
     }
 }
+
+
+
+
 // stopped at start of pg 17 before the "Implement the getPlayersName() function" part
