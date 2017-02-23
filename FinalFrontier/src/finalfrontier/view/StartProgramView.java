@@ -47,10 +47,9 @@ public class StartProgramView {
     }
 
     private String getPlayersName() {
-        return null;
+   
         
         //Template from pg.18
-        
         String value = "";
         Scanner keyboard = new Scanner(System.in);
         boolean valid = false;
