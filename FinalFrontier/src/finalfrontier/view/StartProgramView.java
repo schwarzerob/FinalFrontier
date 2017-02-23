@@ -5,6 +5,8 @@
  */
 package finalfrontier.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author rschw
@@ -48,19 +50,21 @@ public class StartProgramView {
         return null;
         
         //Template from pg.18
-        /*
-        WHILE a valid value has not been entered
-            DISPLAY a message prompting the user to enter a value
-            GET the value entered from keyboard
-            Trim front and trailing blanks off of the value
-            IF the length of the value is blank THEN
-                DISPLAY “Invalid value: The value cannot be blank”
-                CONTINUE
-            ENDIF
-            BREAK
-        ENDWHILE
-        RETURN value
-        */
+        
+        String value = "";
+        Scanner keyboard = new Scanner(System.in);
+        boolean valid = false;
+        while (!valid){
+            System.out.println("\n"+this.promptMessage);
+            value = keyboard.nextLine();
+            value = value.trim();
+            if(value.length() < 1){
+                System.out.println("Invalid value: The value cannot be blank");
+                continue;
+            }
+            break;
+        }
+        return value;        
     }
 
     private boolean doAction(String playersName) {
