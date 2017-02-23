@@ -45,6 +45,7 @@ public class StartProgramView {
     }
 
     private String getPlayersName() {
+        return null;
         
         //Template from pg.18
         /*
@@ -65,10 +66,32 @@ public class StartProgramView {
     private boolean doAction(String playersName) {
         System.out.println("\n*** doAction() called ***");
         return true;
-    }
+  }
+    
+    
+    
+    
+    /**
+     * display the start program view
+     */
+public void diplayStartProgramView(){
+
+    boolean done = false; //set flag to not done
+do {
+//promt for and get player name 
+String playersName = this.getPlayerName();
+if (playersName.toUpperCase().equals("Q")) //user want to quit
+    return; //exit game
+
+    //do the requested action and display the next view
+    done = this.doAction(playersName);
+
+} while (!done);
 }
 
-
-
+    private String getPlayerName() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+}
 
 // stopped at start of pg 17 before the "Implement the getPlayersName() function" part
