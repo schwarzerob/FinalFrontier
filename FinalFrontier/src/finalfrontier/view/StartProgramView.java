@@ -47,7 +47,7 @@ public class StartProgramView {
     }
 
     private String getPlayersName() {
-        return null;
+     
         
         //Template from pg.18
         
