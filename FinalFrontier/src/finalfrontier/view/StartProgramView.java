@@ -5,6 +5,7 @@
  */
 package finalfrontier.view;
 
+import finalfrontier.FinalFrontier;
 import finalfrontier.control.GameControl;
 import finalfrontier.model.Player;
 import java.util.Scanner;

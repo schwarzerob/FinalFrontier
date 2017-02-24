@@ -29,7 +29,10 @@ import finalfrontier.view.StartProgramView;
  * @author rschw
  */
 public class FinalFrontier {
-
+   
+   private static Game currentGame = null;
+   private static Player player = null;
+    
     /**
      * @param args the command line arguments
      */
@@ -39,11 +42,15 @@ public class FinalFrontier {
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.displayStartProgramView();
         
-        
+       
         
         
          
      }
+
+    public static void setPlayer(Player player) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
          
         
 }
