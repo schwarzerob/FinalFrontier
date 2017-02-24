@@ -5,6 +5,8 @@
  */
 package finalfrontier.view;
 
+import finalfrontier.control.GameControl;
+import finalfrontier.model.Player;
 import java.util.Scanner;
 
 /**
@@ -73,7 +75,13 @@ public class StartProgramView {
                                 + "The name must be greater than one character in length");
             return false;
         }
-        return false;
+        // call creatPlayer() control function
+        Player player = GameControl.createPlayer(playersName);
+        if(player == null){
+            System.out.println("\nError creating player.");
+            return false;
+        }
+        return true;
   }
     
     
