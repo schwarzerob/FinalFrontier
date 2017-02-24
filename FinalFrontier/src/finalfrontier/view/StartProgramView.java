@@ -82,7 +82,7 @@ public class StartProgramView {
             System.out.println("\nError creating player.");
             return false;
         }
-        this.displayNextView();
+        this.displayNextView(player);
         return true;
   }
     
@@ -111,8 +111,15 @@ if (playersName.toUpperCase().equals("Q")) //user want to quit
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void displayNextView() {
-        System.out.println("/n*** displayNextView() called ***");
+    private void displayNextView(Player player) {
+        System.out.println("\n========================================="
+                         + "\n Welcome to the game " + player.getName()
+                         + "\n We hope you have a lot of fun!"
+                         + "\n========================================="
+                         );
+        MainMenuView mainMenuView = new MainMenuView();
+        
+        mainMenuView.displayMainMenuView();
     }
     
 }

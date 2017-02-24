@@ -16,14 +16,14 @@ import java.util.Scanner;
 public class GameControl {
 
         public static Player createPlayer(String name) {
-          if(name == null){
+            if(name == null){
               return null;
-      }
+            }
     
-          Player player = new Player ();
-          player.setName(name);
+            Player player = new Player();
+            player.setName(name);
           
-          FinalFrontier.setPlayer(player); //save the player
+            FinalFrontier.setPlayer(player); //save the player
           
           return player;
   }
