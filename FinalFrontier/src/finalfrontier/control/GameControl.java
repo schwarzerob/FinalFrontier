@@ -5,6 +5,7 @@
  */
 package finalfrontier.control;
 
+import finalfrontier.model.Player;
 import java.util.Scanner;
 
 /**
@@ -12,6 +13,11 @@ import java.util.Scanner;
  * @author rschw
  */
 public class GameControl {
+
+    public static Player createPlayer(String playersName) {
+        System.out.println("\n*** createPlayer() funcion called ***");
+        return new Player();
+    }
     public String NewGame(){
         
         /* Very Beginning
