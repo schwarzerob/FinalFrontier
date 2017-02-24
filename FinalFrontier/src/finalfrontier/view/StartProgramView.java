@@ -68,8 +68,12 @@ public class StartProgramView {
     }
 
     private boolean doAction(String playersName) {
-        System.out.println("\n*** doAction() called ***");
-        return true;
+        if(playersName.length()<2){
+            System.out.println("\nInvalid players name: "
+                                + "The name must be greater than one character in length");
+            return false;
+        }
+        return false;
   }
     
     
@@ -96,6 +100,7 @@ if (playersName.toUpperCase().equals("Q")) //user want to quit
     private String getPlayerName() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
 }
 
 // stopped at start of pg 17 before the "Implement the getPlayersName() function" part
