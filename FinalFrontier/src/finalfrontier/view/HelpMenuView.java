@@ -5,32 +5,31 @@
  */
 package finalfrontier.view;
 
-import finalfrontier.FinalFrontier;
-import finalfrontier.control.GameControl;
 import java.util.Scanner;
 
 /**
  *
  * @author rschw
  */
-public class MainMenuView {
+public class HelpMenuView {
         private final String menu;
         public String value;
     private String promptMessage;
-    public MainMenuView(){
+    public HelpMenuView(){
         this.menu = "\n"
-                   +"\n-------------------------------------"
-                   +"\n|   Main Menu                       |"
-                   +"\n-------------------------------------"
-                   +"\nN - Start new game"
-                   +"\nG - Get and start saved game"
-                   +"\nH - Get help on how to play the game"
-                   +"\nS - Save game"
+                   +"\n--------------------------------------"
+                   +"\n|   Getting Help                     |"
+                   +"\n--------------------------------------"
+                   +"\nG - What is the goal of the game?"
+                   +"\nM - How to move"
+                   +"\nE - Estimating the amount of resources"
+                   +"\nH - Harvesting resources"
+                   +"\nC - Crafting materials with resources"
                    +"\nQ - Quit"
-                   +"\n-------------------------------------";
+                   +"\n--------------------------------------";
     }
 
-public void displayMainMenuView() {
+public void displayHelpMenuView() {
         boolean done = false;
         do {
             String menuOption = this.getMenuOption();
@@ -63,17 +62,23 @@ public void displayMainMenuView() {
     public boolean doAction(String menuOption) {
         value = value.toUpperCase();
         switch (value){
-            case "N":
-                this.startNewGame();
-                break;
             case "G":
-                this.startExistingGame();
+                this.goalOfGame();
                 break;
-            case "S":
-                this.saveGame();
+            case "M":
+                this.howToMove();
+                break;
+            case "E":
+                this.resourceAmount();
                 break;
             case "H":
-                this.displayHelpMenu();
+                this.harvestResources();
+                break;
+            case "C":
+                this.craftItems();
+                break;
+            case "Q":
+                this.quit();
                 break;
             default:
                 System.out.println("\n*** Invalid selection ***"
@@ -84,24 +89,28 @@ public void displayMainMenuView() {
         return false;
     }
 
-    private void startNewGame() {
-        GameControl.createNewGame(FinalFrontier.getPlayer());
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+    private void goalOfGame() {
+        System.out.println("*** goalOfGame function called ***");
     }
 
-    private void startExistingGame() {
-        System.out.println("*** StartExistingGame function called ***");
+    private void howToMove() {
+        System.out.println("*** howToMove function called ***");
     }
 
-    private void saveGame() {
-        System.out.println("*** saveGame function called ***");
+    private void resourceAmount() {
+        System.out.println("*** resourceAmount function called ***");
     }
 
-    private void displayHelpMenu() {
-        HelpMenuView helpMenuView = new HelpMenuView();
-        
-        helpMenuView.displayHelpMenuView();
+    private void harvestResources() {
+        System.out.println("*** harvestResources function called ***");
+    }
+
+    private void craftItems() {
+        System.out.println("*** craftItems function called ***");
+    }
+
+    private void quit() {
+        System.out.println("*** quit function called ***");
     }
     
 }
