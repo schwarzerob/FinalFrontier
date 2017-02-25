@@ -5,6 +5,8 @@
  */
 package finalfrontier.view;
 
+import finalfrontier.FinalFrontier;
+import finalfrontier.control.GameControl;
 import java.util.Scanner;
 
 /**
@@ -82,7 +84,9 @@ public void displayMainMenuView() {
     }
 
     private void startNewGame() {
-        System.out.println("*** startNewGame function called ***");
+        GameControl.createNewGame(FinalFrontier.getPlayer());
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
     }
 
     private void startExistingGame() {
