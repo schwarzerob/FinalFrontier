@@ -12,7 +12,7 @@ package finalfrontier.view;
 class GameMenuView {
 
     void displayMenu() {
-        System.out.println("*** StartExistingGame function called ***");
+        System.out.println("*** GameMenu function called ***");
     }
     
 }

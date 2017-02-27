@@ -10,5 +10,8 @@ package finalfrontier;
  * @author rschw
  */
 class Game {
+    public Game(){
+        
+    }
     
 }

@@ -85,7 +85,6 @@ public void displayHelpMenuView() {
                                   +"\n    Try again");
                 break;
         }
-        
         return false;
     }
 
