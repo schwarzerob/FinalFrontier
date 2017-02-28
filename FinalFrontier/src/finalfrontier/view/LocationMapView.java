@@ -11,14 +11,13 @@ package finalfrontier.view;
  */
 public class LocationMapView {
     public LocationMapView() {
-//variables:
-    int row = 0;
-    int col = 0;
-    int far = 0;
-    
-    //apply Location specs to array
-    int mapMatrix[][] = new int[7][5];
-        //from current location coordinates
+        //variables:
+        int row = 0;
+        int col = 0;
+        int far = 0;
+        //save Location specs to array
+        int mapMatrix[][] = new int[7][5];
+        //changes from current location coordinates
 }
     
     //display map
