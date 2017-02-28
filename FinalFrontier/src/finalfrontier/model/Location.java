@@ -21,19 +21,21 @@ public class Location implements Serializable{
 // get and set Row
     public int getRow() {
         //return row;
-        return finalfrontier.control.LocationControl.class.getModifiers();
+        return row;
     }
     public void setRow(int row) {
         this.row = row;
     }
+    
 // get and set Column
     public int getColumn() {
         //return column;
-        return finalfrontier.control.LocationControl.class.getModifiers();
+        return column;
     }
     public void setColumn(int column) {
         this.column = column;
     }
+    
 // get and set Visited
     public char getVisited() {
         return visited;
@@ -41,6 +43,7 @@ public class Location implements Serializable{
     public void setVisited(char visited) {
         this.visited = visited;
     }
+    
 // hashCode
     @Override
     public int hashCode() {
@@ -50,6 +53,7 @@ public class Location implements Serializable{
         hash = 17 * hash + this.visited;
         return hash;
     }
+    
 // equals
     @Override
     public boolean equals(Object obj) {
@@ -74,6 +78,7 @@ public class Location implements Serializable{
         }
         return true;
     }
+    
 // toString
     @Override
     public String toString() {

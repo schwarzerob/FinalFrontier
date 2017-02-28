@@ -10,5 +10,11 @@ package finalfrontier.view;
  * @author rschw
  */
 public class LocationMapView {
+    //apply Location specs to array
     
+    //display map
+        //each row is an array[] in a matrix[][]
+        //specific character for event on visited location.
+    
+    //insert where to move
 }
