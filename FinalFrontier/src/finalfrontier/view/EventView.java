@@ -10,5 +10,11 @@ package finalfrontier.view;
  * @author rschw
  */
 public class EventView {
+    //retrieve random integer from Location
+    
+    //start event related to retrieved integer
+    
+    //event funtion
+        //
     
 }

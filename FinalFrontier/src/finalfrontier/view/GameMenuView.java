@@ -13,6 +13,15 @@ class GameMenuView {
 
     void displayMenu() {
         System.out.println("*** GameMenu function called ***");
+        
+        //move
+            //call LocationMapView
+        //view resources
+        //craft
+        //main menu
+        
+        
+        
     }
     
 }

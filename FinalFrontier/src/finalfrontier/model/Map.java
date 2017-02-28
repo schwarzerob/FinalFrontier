@@ -70,6 +70,38 @@ public class Map implements Serializable {
         return "Map{" + "row=" + row + ", column=" + column + '}';
     }
     
+//Display Map
+    public String displayMap(){
+    System.out.println(" _________________________________________");
+    System.out.println("|     |     |     |     |     |     |     |");
+    System.out.println("|     |     |     |     |     |     |     |");
+    System.out.println("|_____|_____|_____|_____|_____|_____|_____|");
+    System.out.println("|     |     |     |     |     |     |     |");
+    System.out.println("|     |     |     |     |     |     |     |");
+    System.out.println("|_____|_____|_____|_____|_____|_____|_____|");
+    System.out.println("|     |     |     |     |     |     |     |");
+    System.out.println("|     |     |     |     |     |     |     |");
+    System.out.println("|_____|_____|_____|_____|_____|_____|_____|");
+    System.out.println("|     |     |     |     |     |     |     |");
+    System.out.println("|     |     |     |     |     |     |     |");
+    System.out.println("|_____|_____|_____|_____|_____|_____|_____|");
+    System.out.println("|     |     |     |     |     |     |     |");
+    System.out.println("|     |     |     |     |     |     |     |");
+    System.out.println("|_____|_____|_____|_____|_____|_____|_____|");
+    System.out.println("|     |     |     |     |     |     |     |");
+    System.out.println("|     |     |     |     |     |     |     |");
+    System.out.println("|_____|_____|_____|_____|_____|_____|_____|");
+    System.out.println("|     |     |     |     |     |     |     |");
+    System.out.println("|     |     |     |     |     |     |     |");
+    System.out.println("|_____|_____|_____|_____|_____|_____|_____|");
+    System.out.println("|     |     |     |     |     |     |     |");
+    System.out.println("|     |     |     |     |     |     |     |");
+    System.out.println("|_____|_____|_____|_____|_____|_____|_____|");
+    System.out.println("|     |     |     |     |     |     |     |");
+    System.out.println("|     |     |     |     |     |     |     |");
+    System.out.println("|_____|_____|_____|_____|_____|_____|_____|");
+        return null;
+    }
     
     
 }

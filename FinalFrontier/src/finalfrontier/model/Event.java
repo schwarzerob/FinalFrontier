@@ -21,7 +21,6 @@ public class Event implements Serializable {
     }
     
     //Getter for Symbol, description, blockedLocation
-
     public String getSymbol() {
         return symbol;
     }
@@ -39,16 +38,14 @@ public class Event implements Serializable {
     public void setSymbol(String symbol) {
         this.symbol = symbol;
     }
-
     public void setDescription(String description) {
         this.description = description;
     }
-
     public void setBlockedLocation(String blockedLocation) {
         this.blockedLocation = blockedLocation;
     }
-    //hash
-
+    
+    //hashCoode
     @Override
     public int hashCode() {
         int hash = 7;
@@ -57,6 +54,7 @@ public class Event implements Serializable {
         hash = 59 * hash + Objects.hashCode(this.blockedLocation);
         return hash;
     }
+    
 //Equals
     @Override
     public boolean equals(Object obj) {

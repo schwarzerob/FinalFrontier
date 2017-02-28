@@ -36,7 +36,7 @@ public class Location implements Serializable{
         this.column = column;
     }
     
-    //random integer to select which event 
+    //create random integer to select which event and run to EventView
     
     
 // get and set Visited
