@@ -36,6 +36,9 @@ public class Location implements Serializable{
         this.column = column;
     }
     
+    //random integer to select which event 
+    
+    
 // get and set Visited
     public char getVisited() {
         return visited;

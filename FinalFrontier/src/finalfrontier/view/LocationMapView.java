@@ -11,10 +11,11 @@ package finalfrontier.view;
  */
 public class LocationMapView {
     //apply Location specs to array
+        //from current location coordinates
     
     //display map
-        //each row is an array[] in a matrix[][]
-        //specific character for event on visited location.
+        //each row is an array[] in a matrix[7][5]
+        //specific character for each event at visited location placed on map location.
     
     //insert where to move
 }
