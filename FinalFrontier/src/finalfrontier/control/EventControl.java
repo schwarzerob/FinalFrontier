@@ -10,6 +10,18 @@ package finalfrontier.control;
  * @author rschw
  */
 public class EventControl {
+
+    public static void lootTreasure() {
+        System.out.println("*** The Treasure was looted ***");
+    }
+
+    public static void puzzelEvent() {
+        System.out.println("*** Riddle me this! ***");
+    }
+
+    public static void timeToAttack() {
+        System.out.println("*** Pull your sword out because you are under attack! ***");
+    }
     public String Event(char symbol, String description){
         
         //get location from Location
