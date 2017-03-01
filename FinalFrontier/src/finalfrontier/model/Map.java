@@ -6,17 +6,32 @@
 package finalfrontier.model;
 
 import java.io.Serializable;
+import finalfrontier.view.LocationMapView;
 
 /**
  *
  * @author rschw
  */
 public class Map implements Serializable {
-    private int row;
-    private int column;
+    LocationMapView mapLocation = new LocationMapView();
+    int row = mapLocation.whereToGo();
+    int column = mapLocation.whereToGo();
+    char eventChar = '_';
+    
+    //save Location specs to array
+    int mapMatrix[][] = {                
+        {0, 0, 0, 0, 0},              
+        {0, 0, 0, 0, 0},              
+        {0, 0, 0, 0, 0},              
+        {0, 0, 0, 0, 0},              
+        {0, 0, 0, 0, 0},              
+        {0, 0, 0, 0, 0},              
+        {0, 0, 0, 0, 0}
+        };
     
     public Map(){
     }
+    
 // get and set Row
     public int getRow() {
         return row;
@@ -70,36 +85,23 @@ public class Map implements Serializable {
         return "Map{" + "row=" + row + ", column=" + column + '}';
     }
     
-//Display Map
+//Display the Map
     public String displayMap(){
-    System.out.println(" _________________________________________");
-    System.out.println("|     |     |     |     |     |     |     |");
-    System.out.println("|     |     |     |     |     |     |     |");
-    System.out.println("|_____|_____|_____|_____|_____|_____|_____|");
-    System.out.println("|     |     |     |     |     |     |     |");
-    System.out.println("|     |     |     |     |     |     |     |");
-    System.out.println("|_____|_____|_____|_____|_____|_____|_____|");
-    System.out.println("|     |     |     |     |     |     |     |");
-    System.out.println("|     |     |     |     |     |     |     |");
-    System.out.println("|_____|_____|_____|_____|_____|_____|_____|");
-    System.out.println("|     |     |     |     |     |     |     |");
-    System.out.println("|     |     |     |     |     |     |     |");
-    System.out.println("|_____|_____|_____|_____|_____|_____|_____|");
-    System.out.println("|     |     |     |     |     |     |     |");
-    System.out.println("|     |     |     |     |     |     |     |");
-    System.out.println("|_____|_____|_____|_____|_____|_____|_____|");
-    System.out.println("|     |     |     |     |     |     |     |");
-    System.out.println("|     |     |     |     |     |     |     |");
-    System.out.println("|_____|_____|_____|_____|_____|_____|_____|");
-    System.out.println("|     |     |     |     |     |     |     |");
-    System.out.println("|     |     |     |     |     |     |     |");
-    System.out.println("|_____|_____|_____|_____|_____|_____|_____|");
-    System.out.println("|     |     |     |     |     |     |     |");
-    System.out.println("|     |     |     |     |     |     |     |");
-    System.out.println("|_____|_____|_____|_____|_____|_____|_____|");
-    System.out.println("|     |     |     |     |     |     |     |");
-    System.out.println("|     |     |     |     |     |     |     |");
-    System.out.println("|_____|_____|_____|_____|_____|_____|_____|");
+    System.out.println(" _________");
+    System.out.println("|" + mapMatrix[6][0] + "|" + mapMatrix[6][1] + "|" + mapMatrix[6][2] + "|" + mapMatrix[6][3] + "|" + mapMatrix[0][4] + "|");
+    System.out.println(" _________");
+    System.out.println("|" + mapMatrix[5][0] + "|" + mapMatrix[5][1] + "|" + mapMatrix[5][2] + "|" + mapMatrix[5][3] + "|" + mapMatrix[0][4] + "|");
+    System.out.println(" _________");
+    System.out.println("|" + mapMatrix[4][0] + "|" + mapMatrix[4][1] + "|" + mapMatrix[4][2] + "|" + mapMatrix[4][3] + "|" + mapMatrix[0][4] + "|");
+    System.out.println(" _________");
+    System.out.println("|" + mapMatrix[3][0] + "|" + mapMatrix[3][1] + "|" + mapMatrix[3][2] + "|" + mapMatrix[3][3] + "|" + mapMatrix[0][4] + "|");
+    System.out.println(" _________");
+    System.out.println("|" + mapMatrix[2][0] + "|" + mapMatrix[2][1] + "|" + mapMatrix[2][2] + "|" + mapMatrix[2][3] + "|" + mapMatrix[0][4] + "|");
+    System.out.println(" _________");
+    System.out.println("|" + mapMatrix[1][0] + "|" + mapMatrix[1][1] + "|" + mapMatrix[1][2] + "|" + mapMatrix[1][3] + "|" + mapMatrix[0][4] + "|");
+    System.out.println(" _________");
+    System.out.println("|" + mapMatrix[0][0] + "|" + mapMatrix[0][1] + "|" + mapMatrix[0][2] + "|" + mapMatrix[0][3] + "|" + mapMatrix[0][4] + "|");
+    System.out.println(" _________");
         return null;
     }
     
