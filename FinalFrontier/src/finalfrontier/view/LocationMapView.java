@@ -32,37 +32,38 @@ public class LocationMapView {
     public int whereToGo(){
         
         //variables:
-        int row = 6;
+        int row = 0;
         int col = 0;
         String direction = "";
         int howFar = 0;
         
         while(direction!="N"||direction!="S"||direction!="E"||direction!="W"){    
-            System.out.println("\nWhich way?\n");  
-            System.out.println(" N ");  
-            System.out.println("W+E");  
-            System.out.println(" S ");
+            System.out.println("\nWhich way?" + 
+                                "\n   N "+
+                                "\n  W+E"+
+                                "\n   S ");
             Scanner keyboard = new Scanner(System.in);
             direction = keyboard.nextLine();
+            direction.toUpperCase();
                 System.out.println("\nNot a valid direction");
-                System.out.println("N, S, E, or W");
+                System.out.println("\n N, S, E, or W");
         }
 
             while(direction.length() != 1){
-            System.out.println("\nHow Far?");
+            System.out.println("\nHow Far are we going?");
             
             Scanner keyPad = new Scanner(System.in);
             howFar = keyPad.nextInt();
-            if(direction == "N" && row-howFar <= 5){
+            if(direction == "N" && row-howFar > 6){
                 row = row - howFar;
                     }
-            else if(direction == "S" && row+howFar >= 0){
+            else if(direction == "S" && row+howFar < 0){
                 row = row - howFar;
                     }
-            else if(direction == "E" && col+howFar <= 5){
+            else if(direction == "E" && col+howFar < 5){
                 col = col + howFar;
                     }
-            else if(direction == "W" && col-howFar >= 0){
+            else if(direction == "W" && col-howFar > 0){
                 col = col - howFar;
                     }
             else 

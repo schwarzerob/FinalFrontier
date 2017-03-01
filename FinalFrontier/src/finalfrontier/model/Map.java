@@ -12,10 +12,9 @@ import finalfrontier.view.LocationMapView;
  *
  * @author rschw
  */
-public class Map implements Serializable {
-    LocationMapView mapLocation = new LocationMapView();
-    int row = mapLocation.whereToGo();
-    int column = mapLocation.whereToGo();
+public class Map extends LocationMapView {
+    int row = 0;
+    int column = 0;
     char eventChar = '_';
     
     //save Location specs to array
@@ -87,6 +86,7 @@ public class Map implements Serializable {
     
 //Display the Map
     public String displayMap(){
+        mapMatrix[row][column] = 1;
     System.out.println(" _________");
     System.out.println("|" + mapMatrix[6][0] + "|" + mapMatrix[6][1] + "|" + mapMatrix[6][2] + "|" + mapMatrix[6][3] + "|" + mapMatrix[0][4] + "|");
     System.out.println(" _________");
