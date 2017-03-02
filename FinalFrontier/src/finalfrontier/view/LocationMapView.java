@@ -23,6 +23,9 @@ public class LocationMapView {
         //changes from current location coordinates
     
     //display map
+        public DisplayLocationMapView(){
+            
+        }
     public String showMap(){
     
         //print Map
