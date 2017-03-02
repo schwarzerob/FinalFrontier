@@ -37,8 +37,6 @@ public class MapIT {
         int expResult = 0;
         int result = instance.getRow();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -50,8 +48,6 @@ public class MapIT {
         int row = 0;
         Map instance = new Map();
         instance.setRow(row);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -64,8 +60,6 @@ public class MapIT {
         int expResult = 0;
         int result = instance.getColumn();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -77,22 +71,6 @@ public class MapIT {
         int column = 0;
         Map instance = new Map();
         instance.setColumn(column);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of hashCode method, of class Map.
-     */
-    @Test
-    public void testHashCode() {
-        System.out.println("hashCode");
-        Map instance = new Map();
-        int expResult = 0;
-        int result = instance.hashCode();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -106,22 +84,6 @@ public class MapIT {
         boolean expResult = false;
         boolean result = instance.equals(obj);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of toString method, of class Map.
-     */
-    @Test
-    public void testToString() {
-        System.out.println("toString");
-        Map instance = new Map();
-        String expResult = "";
-        String result = instance.toString();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -134,8 +96,6 @@ public class MapIT {
         String expResult = "";
         String result = instance.displayMap();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

@@ -6,6 +6,7 @@
 package finalfrontier.model;
 
 import java.io.Serializable;
+import java.util.Random;
 
 /**
  *
@@ -13,27 +14,45 @@ import java.io.Serializable;
  */
 public class Treasure implements Serializable {
     private int loot;
+    private String type;
+    Random resource = new Random();
+        int  whichOne = resource.nextInt(4) + 1;
+    Random amount = new Random();
+        int  howMuch = amount.nextInt(10) + 1;
     
     public Treasure() {
-    
 }
-    //Getter for loot
 
+    public String getResource() {
+        switch(whichOne){
+            case 1: type = "Gold";
+            case 2: type = "Wood";
+            case 3: type = "Grain";
+            case 4: type = "Ore";
+            case 5: type = "Meat";
+                }
+        return type;
+    }
+
+    public void setResource(String type) {
+        this.type = resource;
+    }
+    
+    //Getter for loot
     public int getLoot() {
         return loot;
     }
-     //setter for loor
-
+     //setter for loot
     public void setLoot(int loot) {
-        this.loot = loot;
+        this.loot = howMuch;
     }
+    
    //hash
-
     @Override
     public int hashCode() {
         int hash = 7;
         hash = 89 * hash + this.loot;
-        return hash;
+        return 0;
     }
 // equals
     @Override
@@ -56,7 +75,8 @@ public class Treasure implements Serializable {
 
     @Override
     public String toString() {
-        return "Treasure{" + "loot=" + loot + '}';
+        System.out.println("Treasure{" + "loot=" + loot + '}');
+        return "";
     }
     
 }

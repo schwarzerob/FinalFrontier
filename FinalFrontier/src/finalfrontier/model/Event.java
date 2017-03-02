@@ -15,7 +15,7 @@ import java.util.Objects;
 public class Event implements Serializable {
     private String symbol;
     private String description;
-    private String blockedLocation;
+    private String blockedLocation = "";
     
     public Event() {
     }
@@ -82,7 +82,8 @@ public class Event implements Serializable {
 
     @Override
     public String toString() {
-        return "Event{" + "symbol=" + symbol + ", description=" + description + ", blockedLocation=" + blockedLocation + '}';
+        System.out.println("Event{" + "symbol=" + symbol + ", description=" + description + ", blockedLocation=" + blockedLocation + '}');
+        return "";
     }
     
 }

@@ -18,11 +18,11 @@ import java.util.Random;
 public class EventView {
     //retrieve random integer from Location
     Random rand = new Random();
-        int  n = rand.nextInt(5) + 1;
+        int  event = rand.nextInt(5) + 1;
     //start event related to retrieved integer
     public boolean randomEvent(int createEvent) {
         
-        switch (createEvent){
+        switch (event){
             case 1:
                 this.lootTreasure();
                 break;
@@ -57,5 +57,23 @@ public class EventView {
         Attack attack = new Attack();
         attack.getHealthAttack();
         attack.getHealthPlayer();
-    }  
+    }
+    private void harvestResources() {
+        EventControl.harvestResources();
+        Attack attack = new Attack();
+        attack.getHealthAttack();
+        attack.getHealthPlayer();
+    }
+    private void craftItems() {
+        EventControl.craftItems();
+        Attack attack = new Attack();
+        attack.getHealthAttack();
+        attack.getHealthPlayer();
+    }
+    
+    
+    
+    
+    
+    
 }

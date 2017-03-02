@@ -12,49 +12,38 @@ import finalfrontier.view.LocationMapView;
  *
  * @author rschw
  */
-public class Map implements Serializable {
-    LocationMapView mapLocation = new LocationMapView();
-    int row = mapLocation.whereToGo();
-    int column = mapLocation.whereToGo();
-    char eventChar = '_';
+public class Map extends LocationMapView {
     
     //save Location specs to array
-    int mapMatrix[][] = {                
-        {0, 0, 0, 0, 0},              
-        {0, 0, 0, 0, 0},              
-        {0, 0, 0, 0, 0},              
-        {0, 0, 0, 0, 0},              
-        {0, 0, 0, 0, 0},              
-        {0, 0, 0, 0, 0},              
-        {0, 0, 0, 0, 0}
+    char mapMatrix[][] = {                
+        {'_', '_', '_', '_', '_'},          
+        {'_', '_', '_', '_', '_'},         
+        {'_', '_', '_', '_', '_'},         
+        {'_', '_', '_', '_', '_'},         
+        {'_', '_', '_', '_', '_'},         
+        {'_', '_', '_', '_', '_'},         
+        {'_', '_', '_', '_', '_'}, 
         };
+    private int mapColumn;
+    private int mapRow;
     
     public Map(){
     }
     
 // get and set Row
     public int getRow() {
-        return row;
+        return LocationMapView.row;
     }
     public void setRow(int row) {
-        this.row = row;
+        this.mapRow = row;
     }
     
 // get and set Column
     public int getColumn() {
-        return column;
+        return LocationMapView.col;
     }
     public void setColumn(int column) {
-        this.column = column;
-    }
-    
-// hashCode
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 19 * hash + this.row;
-        hash = 19 * hash + this.column;
-        return hash;
+        this.mapColumn = col;
     }
     
 // equals
@@ -70,39 +59,28 @@ public class Map implements Serializable {
             return false;
         }
         final Map other = (Map) obj;
-        if (this.row != other.row) {
+        if (this.mapRow != other.mapRow) {
             return false;
         }
-        if (this.column != other.column) {
+        if (this.mapColumn != other.mapColumn) {
             return false;
         }
         return true;
     }
     
-// toString
-    @Override
-    public String toString() {
-        return "Map{" + "row=" + row + ", column=" + column + '}';
-    }
-    
 //Display the Map
     public String displayMap(){
-    System.out.println(" _________");
-    System.out.println("|" + mapMatrix[6][0] + "|" + mapMatrix[6][1] + "|" + mapMatrix[6][2] + "|" + mapMatrix[6][3] + "|" + mapMatrix[0][4] + "|");
-    System.out.println(" _________");
-    System.out.println("|" + mapMatrix[5][0] + "|" + mapMatrix[5][1] + "|" + mapMatrix[5][2] + "|" + mapMatrix[5][3] + "|" + mapMatrix[0][4] + "|");
-    System.out.println(" _________");
-    System.out.println("|" + mapMatrix[4][0] + "|" + mapMatrix[4][1] + "|" + mapMatrix[4][2] + "|" + mapMatrix[4][3] + "|" + mapMatrix[0][4] + "|");
-    System.out.println(" _________");
-    System.out.println("|" + mapMatrix[3][0] + "|" + mapMatrix[3][1] + "|" + mapMatrix[3][2] + "|" + mapMatrix[3][3] + "|" + mapMatrix[0][4] + "|");
-    System.out.println(" _________");
-    System.out.println("|" + mapMatrix[2][0] + "|" + mapMatrix[2][1] + "|" + mapMatrix[2][2] + "|" + mapMatrix[2][3] + "|" + mapMatrix[0][4] + "|");
-    System.out.println(" _________");
-    System.out.println("|" + mapMatrix[1][0] + "|" + mapMatrix[1][1] + "|" + mapMatrix[1][2] + "|" + mapMatrix[1][3] + "|" + mapMatrix[0][4] + "|");
-    System.out.println(" _________");
-    System.out.println("|" + mapMatrix[0][0] + "|" + mapMatrix[0][1] + "|" + mapMatrix[0][2] + "|" + mapMatrix[0][3] + "|" + mapMatrix[0][4] + "|");
-    System.out.println(" _________");
-        return null;
+        mapMatrix[mapRow][mapColumn] = 'X';
+    System.out.println("   _ _ _ _ _");
+    System.out.println("6 "+"|" + mapMatrix[6][0] + "|" + mapMatrix[6][1] + "|" + mapMatrix[6][2] + "|" + mapMatrix[6][3] + "|" + mapMatrix[0][4] + "|");
+    System.out.println("5 "+"|" + mapMatrix[5][0] + "|" + mapMatrix[5][1] + "|" + mapMatrix[5][2] + "|" + mapMatrix[5][3] + "|" + mapMatrix[0][4] + "|");
+    System.out.println("4 "+"|" + mapMatrix[4][0] + "|" + mapMatrix[4][1] + "|" + mapMatrix[4][2] + "|" + mapMatrix[4][3] + "|" + mapMatrix[0][4] + "|");
+    System.out.println("3 "+"|" + mapMatrix[3][0] + "|" + mapMatrix[3][1] + "|" + mapMatrix[3][2] + "|" + mapMatrix[3][3] + "|" + mapMatrix[0][4] + "|");
+    System.out.println("2 "+"|" + mapMatrix[2][0] + "|" + mapMatrix[2][1] + "|" + mapMatrix[2][2] + "|" + mapMatrix[2][3] + "|" + mapMatrix[0][4] + "|");
+    System.out.println("1 "+"|" + mapMatrix[1][0] + "|" + mapMatrix[1][1] + "|" + mapMatrix[1][2] + "|" + mapMatrix[1][3] + "|" + mapMatrix[0][4] + "|");
+    System.out.println("0 "+"|" + mapMatrix[0][0] + "|" + mapMatrix[0][1] + "|" + mapMatrix[0][2] + "|" + mapMatrix[0][3] + "|" + mapMatrix[0][4] + "|");
+    System.out.println("   0 1 2 3 4");
+        return "";
     }
     
     

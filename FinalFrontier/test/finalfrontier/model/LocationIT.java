@@ -37,8 +37,6 @@ public class LocationIT {
         int expResult = 0;
         int result = instance.getRow();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -50,8 +48,6 @@ public class LocationIT {
         int row = 0;
         Location instance = new Location();
         instance.setRow(row);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -64,8 +60,6 @@ public class LocationIT {
         int expResult = 0;
         int result = instance.getColumn();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -77,49 +71,6 @@ public class LocationIT {
         int column = 0;
         Location instance = new Location();
         instance.setColumn(column);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of getVisited method, of class Location.
-     */
-    @Test
-    public void testGetVisited() {
-        System.out.println("getVisited");
-        Location instance = new Location();
-        char expResult = ' ';
-        char result = instance.getVisited();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of setVisited method, of class Location.
-     */
-    @Test
-    public void testSetVisited() {
-        System.out.println("setVisited");
-        char visited = ' ';
-        Location instance = new Location();
-        instance.setVisited(visited);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of hashCode method, of class Location.
-     */
-    @Test
-    public void testHashCode() {
-        System.out.println("hashCode");
-        Location instance = new Location();
-        int expResult = 0;
-        int result = instance.hashCode();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -133,8 +84,6 @@ public class LocationIT {
         boolean expResult = false;
         boolean result = instance.equals(obj);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -147,8 +96,6 @@ public class LocationIT {
         String expResult = "";
         String result = instance.toString();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

@@ -22,6 +22,14 @@ public class EventControl {
     public static void timeToAttack() {
         System.out.println("*** Pull your sword out because you are under attack! ***");
     }
+
+    public static void harvestResources() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public static void craftItems() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     public String Event(char symbol, String description){
         
         //get location from Location
