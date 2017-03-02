@@ -60,8 +60,8 @@ public void displayHelpMenuView() {
     }
 
     public boolean doAction(String menuOption) {
-        value = value.toUpperCase();
-        switch (value){
+        menuOption = menuOption.toUpperCase();
+        switch (menuOption){
             case "G":
                 this.goalOfGame();
                 break;

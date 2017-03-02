@@ -27,16 +27,8 @@ public class HelpMenuViewTest {
     public static void tearDownClass() {
     }
 
-    /**
-     * Test of displayHelpMenuView method, of class HelpMenuView.
-     */
-    @Test
-    public void testDisplayHelpMenuView() {
-        System.out.println("displayHelpMenuView");
-        HelpMenuView instance = new HelpMenuView();
-        instance.displayHelpMenuView();
-        
-    }
+
+    
 
     /**
      * Test of doAction method, of class HelpMenuView.
@@ -44,12 +36,13 @@ public class HelpMenuViewTest {
     @Test
     public void testDoAction() {
         System.out.println("doAction");
-        String menuOption = "";
+        String menuOption = "G";
         HelpMenuView instance = new HelpMenuView();
         boolean expResult = false;
         boolean result = instance.doAction(menuOption);
         assertEquals(expResult, result);
         
     }
+
     
 }

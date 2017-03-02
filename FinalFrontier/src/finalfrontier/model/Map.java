@@ -12,7 +12,7 @@ import finalfrontier.view.LocationMapView;
  *
  * @author rschw
  */
-public class Map extends LocationMapView {
+public class Map {
     
     //save Location specs to array
     char mapMatrix[][] = {                
@@ -27,7 +27,8 @@ public class Map extends LocationMapView {
     private int mapColumn;
     private int mapRow;
     
-    public Map(){
+    public Map() {
+        
     }
     
 // get and set Row
@@ -43,7 +44,7 @@ public class Map extends LocationMapView {
         return LocationMapView.col;
     }
     public void setColumn(int column) {
-        this.mapColumn = col;
+        this.mapColumn = column;
     }
     
 // equals
