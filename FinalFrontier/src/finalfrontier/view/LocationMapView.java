@@ -14,6 +14,9 @@ import java.util.Scanner;
  */
 public class LocationMapView {
         private String direction;
+        public static int row = 0;
+        public static int col = 0;
+        private int howFar;
         
         //changes from current location coordinates
     
@@ -32,10 +35,6 @@ public class LocationMapView {
     //get coordinates for destination
     public int whereToGo(){
         
-        //variables:
-        int row = 0;
-        int col = 0;
-        int howFar;
             
             System.out.println("\nWhich way?" + 
                                 "\n   N "+
@@ -80,8 +79,9 @@ public class LocationMapView {
         return 0;
     }
     
-        //run Location with new row, col, and far
+        //run Location with new row, col, and howFar
     public boolean doAction(){
+        
         return false;
     }
     

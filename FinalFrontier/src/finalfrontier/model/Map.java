@@ -13,8 +13,6 @@ import finalfrontier.view.LocationMapView;
  * @author rschw
  */
 public class Map extends LocationMapView {
-    int row = 0;
-    int column = 0;
     
     //save Location specs to array
     char mapMatrix[][] = {                
@@ -26,24 +24,26 @@ public class Map extends LocationMapView {
         {'_', '_', '_', '_', '_'},         
         {'_', '_', '_', '_', '_'}, 
         };
+    private int mapColumn;
+    private int mapRow;
     
     public Map(){
     }
     
 // get and set Row
     public int getRow() {
-        return row;
+        return LocationMapView.row;
     }
     public void setRow(int row) {
-        this.row = row;
+        this.mapRow = row;
     }
     
 // get and set Column
     public int getColumn() {
-        return column;
+        return LocationMapView.col;
     }
     public void setColumn(int column) {
-        this.column = column;
+        this.mapColumn = col;
     }
     
 // equals
@@ -59,10 +59,10 @@ public class Map extends LocationMapView {
             return false;
         }
         final Map other = (Map) obj;
-        if (this.row != other.row) {
+        if (this.mapRow != other.mapRow) {
             return false;
         }
-        if (this.column != other.column) {
+        if (this.mapColumn != other.mapColumn) {
             return false;
         }
         return true;
@@ -70,7 +70,7 @@ public class Map extends LocationMapView {
     
 //Display the Map
     public String displayMap(){
-        mapMatrix[row][column] = 'X';
+        mapMatrix[mapRow][mapColumn] = 'X';
     System.out.println("   _ _ _ _ _");
     System.out.println("6 "+"|" + mapMatrix[6][0] + "|" + mapMatrix[6][1] + "|" + mapMatrix[6][2] + "|" + mapMatrix[6][3] + "|" + mapMatrix[0][4] + "|");
     System.out.println("5 "+"|" + mapMatrix[5][0] + "|" + mapMatrix[5][1] + "|" + mapMatrix[5][2] + "|" + mapMatrix[5][3] + "|" + mapMatrix[0][4] + "|");
