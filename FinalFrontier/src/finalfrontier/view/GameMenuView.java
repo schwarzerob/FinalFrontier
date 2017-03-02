@@ -25,7 +25,7 @@ public class GameMenuView {
             
     private void MakeAMove(){
         LocationMapView locationMapView = new LocationMapView();
-        locationMapView.showMap();
+        locationMapView.DisplayLocationMapView();
         //view resources
         //craft
         //main menu
