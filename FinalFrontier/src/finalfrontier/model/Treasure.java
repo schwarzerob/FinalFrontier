@@ -16,14 +16,18 @@ public class Treasure implements Serializable {
     private int loot;
     private String type;
     Random resource = new Random();
-        int  whichOne = resource.nextInt(4) + 1;
+        int  whichOne = resource.nextInt(4);
     Random amount = new Random();
-        int  howMuch = amount.nextInt(10) + 1;
+        int  howMuch = amount.nextInt(10);
     
     public Treasure() {
 }
 
     public String getResource() {
+        return type;
+    }
+
+    public void setResource(String type) {
         switch(whichOne){
             case 1: type = "Gold";
             case 2: type = "Wood";
@@ -31,11 +35,6 @@ public class Treasure implements Serializable {
             case 4: type = "Ore";
             case 5: type = "Meat";
                 }
-        return type;
-    }
-
-    public void setResource(String type) {
-        this.type = resource;
     }
     
     //Getter for loot
