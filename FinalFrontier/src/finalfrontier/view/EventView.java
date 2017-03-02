@@ -46,7 +46,7 @@ public class EventView {
     }
     
     private void puzzleEvent() {
-        EventControl.puzzelEvent();
+        EventControl.puzzleEvent();
         Puzzle puzzle = new Puzzle();
         puzzle.getDescription();  
         puzzle.getCorrectAnswer();
