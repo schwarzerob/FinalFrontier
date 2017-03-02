@@ -7,6 +7,7 @@ package finalfrontier.control;
 
 import finalfrontier.FinalFrontier;
 import finalfrontier.model.Player;
+import finalfrontier.view.LocationMapView;
 import java.util.Scanner;
 
 /**
