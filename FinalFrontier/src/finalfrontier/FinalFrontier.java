@@ -30,7 +30,6 @@ import finalfrontier.view.StartProgramView;
  */
 public class FinalFrontier {
    
-   private static Game currentGame = null;
    private static Player player = null;
     
     /**
@@ -43,12 +42,6 @@ public class FinalFrontier {
         startProgramView.displayStartProgramView();
      }
 
-    public static Game getCurrentGame() {
-        return currentGame;
-    }
-    public static void setCurrentGame(Game currentGame) {
-        FinalFrontier.currentGame = currentGame;
-    }
 
     public static Player getPlayer() {
         return player;

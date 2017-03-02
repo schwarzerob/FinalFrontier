@@ -42,7 +42,7 @@ public class EventControlIT {
     @Test
     public void testPuzzelEvent() {
         System.out.println("puzzelEvent");
-        EventControl.puzzelEvent();
+        EventControl.puzzleEvent();
     }
 
     /**

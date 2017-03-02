@@ -27,7 +27,8 @@ public class Map {
     private int mapColumn;
     private int mapRow;
     
-    public Map(){
+    public Map() {
+        
     }
     
 // get and set Row
