@@ -33,6 +33,7 @@ public class EventView {
                 this.timeToAttack();
                 break;
             
+            
         }
         return false;
     }
@@ -58,18 +59,7 @@ public class EventView {
         attack.getHealthAttack();
         attack.getHealthPlayer();
     }
-    private void harvestResources() {
-        EventControl.harvestResources();
-        Attack attack = new Attack();
-        attack.getHealthAttack();
-        attack.getHealthPlayer();
-    }
-    private void craftItems() {
-        EventControl.craftItems();
-        Attack attack = new Attack();
-        attack.getHealthAttack();
-        attack.getHealthPlayer();
-    }
+   
     
     
     
