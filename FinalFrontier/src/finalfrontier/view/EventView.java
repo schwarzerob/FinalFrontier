@@ -32,12 +32,7 @@ public class EventView {
             case 3:
                 this.timeToAttack();
                 break;
-            case 4:
-                this.harvestResources();
-                break;
-            case 5:
-                this.craftItems();
-                break;
+            
         }
         return false;
     }
