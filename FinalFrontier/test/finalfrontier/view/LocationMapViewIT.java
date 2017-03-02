@@ -28,27 +28,13 @@ public class LocationMapViewIT {
     }
 
     /**
-     * Test of showMap method, of class LocationMapView.
+     * Test of DisplayLocationMapView method, of class LocationMapView.
      */
     @Test
-    public void testShowMap() {
-        System.out.println("showMap");
+    public void testDisplayLocationMapView() {
+        System.out.println("DisplayLocationMapView");
         LocationMapView instance = new LocationMapView();
-        String expResult = "";
-        String result = instance.showMap();
-        assertEquals(expResult, result);
-    }
-
-    /**
-     * Test of whereToGo method, of class LocationMapView.
-     */
-    @Test
-    public void testWhereToGo() {
-        System.out.println("whereToGo");
-        LocationMapView instance = new LocationMapView();
-        int expResult = 0;
-        int result = instance.whereToGo();
-        assertEquals(expResult, result);
+        instance.DisplayLocationMapView();
     }
 
     /**
@@ -57,10 +43,22 @@ public class LocationMapViewIT {
     @Test
     public void testDoAction() {
         System.out.println("doAction");
+        String direction = "";
+        int distance = 0;
         LocationMapView instance = new LocationMapView();
         boolean expResult = false;
-        boolean result = instance.doAction();
+        boolean result = instance.doAction(direction, distance);
         assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of BackToGameMenu method, of class LocationMapView.
+     */
+    @Test
+    public void testBackToGameMenu() {
+        System.out.println("BackToGameMenu");
+        LocationMapView instance = new LocationMapView();
+        instance.BackToGameMenu();
     }
     
 }

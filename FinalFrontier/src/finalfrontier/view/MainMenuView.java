@@ -43,7 +43,6 @@ public void displayMainMenuView() {
 
     private String getMenuOption() {
         this.promptMessage = "Please enter you choice from the menu";
-        //String value = "";
         value = "";
         Scanner keyboard = new Scanner(System.in);
         boolean valid = false;
