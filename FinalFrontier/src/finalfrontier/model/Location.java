@@ -38,24 +38,7 @@ public class Location implements Serializable{
     
     //create random integer to select which event and run to EventView
     
-    
-// get and set Visited
-    public char getVisited() {
-        return visited;
-    }
-    public void setVisited(char visited) {
-        this.visited = visited;
-    }
-    
-// hashCode
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 17 * hash + this.row;
-        hash = 17 * hash + this.column;
-        hash = 17 * hash + this.visited;
-        return hash;
-    }
+ 
     
 // equals
     @Override
@@ -85,7 +68,8 @@ public class Location implements Serializable{
 // toString
     @Override
     public String toString() {
-        return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + '}';
+        System.out.println("Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + '}');
+        return "";
     }
     
 }

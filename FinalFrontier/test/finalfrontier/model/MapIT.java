@@ -28,6 +28,65 @@ public class MapIT {
     }
 
     /**
+     * Test of getRow method, of class Map.
+     */
+    @Test
+    public void testGetRow() {
+        System.out.println("getRow");
+        Map instance = new Map();
+        int expResult = 0;
+        int result = instance.getRow();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of setRow method, of class Map.
+     */
+    @Test
+    public void testSetRow() {
+        System.out.println("setRow");
+        int row = 0;
+        Map instance = new Map();
+        instance.setRow(row);
+    }
+
+    /**
+     * Test of getColumn method, of class Map.
+     */
+    @Test
+    public void testGetColumn() {
+        System.out.println("getColumn");
+        Map instance = new Map();
+        int expResult = 0;
+        int result = instance.getColumn();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of setColumn method, of class Map.
+     */
+    @Test
+    public void testSetColumn() {
+        System.out.println("setColumn");
+        int column = 0;
+        Map instance = new Map();
+        instance.setColumn(column);
+    }
+
+    /**
+     * Test of equals method, of class Map.
+     */
+    @Test
+    public void testEquals() {
+        System.out.println("equals");
+        Object obj = null;
+        Map instance = new Map();
+        boolean expResult = false;
+        boolean result = instance.equals(obj);
+        assertEquals(expResult, result);
+    }
+
+    /**
      * Test of displayMap method, of class Map.
      */
     @Test
@@ -37,8 +96,6 @@ public class MapIT {
         String expResult = "";
         String result = instance.displayMap();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
