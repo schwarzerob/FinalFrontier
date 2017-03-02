@@ -13,6 +13,8 @@ import java.util.Scanner;
  * @author rschw
  */
 public class LocationMapView {
+    LocationMapView() {
+    }
         private String direction;
         public static int row = 0;
         public static int col = 0;
@@ -90,4 +92,8 @@ public class LocationMapView {
         MainMenuView mainMenuView = new MainMenuView();
         mainMenuView.displayMainMenuView();
     }
+
+
+
+
 }
