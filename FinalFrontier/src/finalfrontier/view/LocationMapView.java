@@ -13,7 +13,7 @@ import java.util.Scanner;
  * @author rschw
  */
 public class LocationMapView {
-    LocationMapView() {
+    public LocationMapView() {
     }
         private String direction;
         public static int row = 0;
@@ -29,7 +29,7 @@ public class LocationMapView {
         Map displayMap = new Map();
         displayMap.displayMap();
         return "";
-        //each row is an individual row in mapMatrix[7][5]
+        //each row is an individual row in mapMatrix[][]
         //specific character for each event at visited location placed on map location.
         
     }
