@@ -13,11 +13,12 @@ import java.util.Scanner;
  * @author rschw
  */
 public class LocationMapView {
-        private final String where;
-        private final String howFar;
+        private final String where;   //Banner
+        private final String howFar;  //Banner
         public static int row = 0;
         public static int col = 0;
         private String direction;
+        
     public LocationMapView() {
         this.where = ("\nWhich way?" + 
                                 "\n   N "+
@@ -49,6 +50,7 @@ public class LocationMapView {
                 System.out.println("\nNot a valid direction");
                 System.out.println("\n N, S, E, or W");
                 }
+            else done = true;
         }while (!done);
             return direction;
     }

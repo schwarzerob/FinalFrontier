@@ -14,6 +14,7 @@ import finalfrontier.view.LocationMapView;
  */
 public class Map {
     
+    
     //save Location specs to array
     char mapMatrix[][] = {                
         {'_', '_', '_', '_', '_'},          
