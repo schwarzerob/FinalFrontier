@@ -57,8 +57,8 @@ public class LocationMapViewIT {
     @Test
     public void testBackToGameMenu() {
         System.out.println("BackToGameMenu");
-        LocationMapView instance = new LocationMapView();
-        instance.BackToGameMenu();
+        GameMenuView gameMenuView = new GameMenuView();
+        instgameMenuViewance.BackToGameMenu();
     }
     
 }

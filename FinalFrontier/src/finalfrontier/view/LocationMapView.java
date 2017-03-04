@@ -42,17 +42,19 @@ public class LocationMapView {
     //get coordinates for destination
     private String whereToGo(){
         System.out.println(where);
+        direction = "";
+        Scanner keyboard = new Scanner(System.in);
         boolean done = false;
-        do{
-            Scanner whichWay = new Scanner(System.in);
-            direction = whichWay.nextLine().toUpperCase();
-            if(direction!="N"||direction!="S"||direction!="E"||direction!="W"){
-                System.out.println("\nNot a valid direction");
+        while(!done){
+            this.direction = keyboard.nextLine().toUpperCase();
+            if(direction!="N"&&direction!="S"&&direction!="E"&&direction!="W"){
+                System.out.println("\n"+ direction + " is not a valid direction");
                 System.out.println("\n N, S, E, or W");
+                continue;
                 }
-            else done = true;
-        }while (!done);
-            return direction;
+            break;
+        }
+        return direction;
     }
     private int howFarToGo(){
         System.out.println(howFar);
@@ -83,7 +85,7 @@ public class LocationMapView {
     
     //return to MainMenuView
     public void BackToGameMenu(){
-        GameMenuView gameMenuView = new GameMenuView();
-        gameMenuView.displayMenu();
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayGameMenuView();
     }
 }

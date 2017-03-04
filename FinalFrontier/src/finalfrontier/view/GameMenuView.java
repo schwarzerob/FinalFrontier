@@ -7,6 +7,7 @@ package finalfrontier.view;
 
 import finalfrontier.FinalFrontier;
 import finalfrontier.control.GameControl;
+import finalfrontier.model.Map;
 import java.util.Scanner;
 
 /**
@@ -62,17 +63,20 @@ public void displayGameMenuView() {
     public boolean doAction(String menuOption) {
         value = value.toUpperCase();
         switch (value){
-            case "N":
-                this.startNewGame();
+            case "M":
+                this.makeAMove();
                 break;
-            case "G":
-                this.startExistingGame();
+            case "R":
+                this.resources();
                 break;
-            case "S":
-                this.saveGame();
+            case "C":
+                this.crafting();
                 break;
-            case "H":
-                this.displayHelpMenu();
+            case "V":
+                this.viewTheMap();
+                break;
+            case "B":
+                this.backToMainMenu();
                 break;
             default:
                 System.out.println("\n*** Invalid selection ***"
@@ -83,24 +87,27 @@ public void displayGameMenuView() {
         return false;
     }
 
-    private void startNewGame() {
-        GameControl.createNewGame(FinalFrontier.getPlayer());
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+    private void makeAMove() {
+        LocationMapView locationMapView = new LocationMapView();
+        locationMapView.DisplayLocationMapView();
     }
 
-    private void startExistingGame() {
-        System.out.println("*** StartExistingGame function called ***");
+    private void resources() {
+        System.out.println("*** resources function called ***");
     }
 
-    private void saveGame() {
-        System.out.println("*** saveGame function called ***");
+    private void crafting() {
+        System.out.println("*** crafting function called ***");
     }
 
-    private void displayHelpMenu() {
-        HelpMenuView helpMenuView = new HelpMenuView();
+    private void viewTheMap() {
+        Map map = new Map();
+        map.displayMap();
+    }
         
-        helpMenuView.displayHelpMenuView();
+    private void backToMainMenu() {
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.displayMainMenuView();
     }
     
 }

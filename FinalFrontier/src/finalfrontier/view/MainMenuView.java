@@ -86,7 +86,7 @@ public void displayMainMenuView() {
     private void startNewGame() {
         GameControl.createNewGame(FinalFrontier.getPlayer());
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+        gameMenu.displayGameMenuView();
     }
 
     private void startExistingGame() {
