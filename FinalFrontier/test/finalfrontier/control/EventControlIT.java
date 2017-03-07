@@ -63,7 +63,7 @@ public class EventControlIT {
         char symbol = ' ';
         String description = "";
         EventControl instance = new EventControl();
-        String expResult = "";
+        String expResult = null;
         String result = instance.Event(symbol, description);
         assertEquals(expResult, result);
     }

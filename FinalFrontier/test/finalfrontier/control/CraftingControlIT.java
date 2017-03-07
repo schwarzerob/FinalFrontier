@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package finalfrontier.view;
+package finalfrontier.control;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -14,9 +14,9 @@ import static org.junit.Assert.*;
  *
  * @author rschw
  */
-public class GameMenuViewIT {
+public class CraftingControlIT {
     
-    public GameMenuViewIT() {
+    public CraftingControlIT() {
     }
     
     @BeforeClass
@@ -28,13 +28,18 @@ public class GameMenuViewIT {
     }
 
     /**
-     * Test of displayMenu method, of class GameMenuView.
+     * Test of craftMaster method, of class CraftingControl.
      */
     @Test
-    public void testDisplayMenu() {
-        System.out.println("displayMenu");
-        GameMenuView instance = new GameMenuView();
-        instance.displayMenu();
+    public void testCraftMaster() {
+        System.out.println("craftMaster");
+        int radius = 0;
+        int area = 0;
+        CraftingControl instance = new CraftingControl();
+        int expResult = 0;
+        int result = instance.craftMaster(radius, area);
+        assertEquals(expResult, result);
+      
     }
     
 }
