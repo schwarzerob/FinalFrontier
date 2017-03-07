@@ -64,6 +64,10 @@ public class LocationMapView {
             
     }
     
+    
+    
+    
+    
         //run Location with new row, col, and howFar
     public boolean doAction(String direction, int distance){
             if(direction=="N"  && row-distance > 6){
