@@ -12,15 +12,15 @@ import java.util.Scanner;
  *
  * @author rschw
  */
-public class LocationMapView {
-        private final String where;   //Banner
+public class LocationMapView extends View{
         private final String howFar;  //Banner
         public static int row = 0;
         public static int col = 0;
         private String direction;
+        private int distance;
         
     public LocationMapView() {
-        this.where = ("\nWhich way?" + 
+        super("\nWhich way?" + 
                                 "\n   N "+
                                 "\n  W+E"+
                                 "\n   S ");
@@ -33,15 +33,12 @@ public class LocationMapView {
         do {
         String whichWay = this.whereToGo();
         int distance = this.howFarToGo();
-        this.doAction(whichWay, distance);
+        this.doAction(whichWay);
         }while(!done);
-    Map displayMap = new Map();
-    displayMap.displayMap();
     }
     
     //get coordinates for destination
     private String whereToGo(){
-        System.out.println(where);
         direction = "";
         Scanner keyboard = new Scanner(System.in);
         boolean done = false;
@@ -68,12 +65,17 @@ public class LocationMapView {
     
     
     
+    
+    
         //run Location with new row, col, and howFar
-    public boolean doAction(String direction, int distance){
-            if(direction=="N"  && row-distance > 6){
-                row = row - distance;
+    @Override
+    public boolean doAction(String direction){
+            Map displayMap = new Map();
+            displayMap.displayMap();
+            if(direction=="N"  && row+distance < 6){
+                row = row + distance;
                 }
-            else if(direction=="S" && row+distance < 0){
+            else if(direction=="S" && row-distance > 0){
                 row = row - distance;
                     }
             else if(direction=="E" && col+distance < 5){
@@ -85,11 +87,5 @@ public class LocationMapView {
             else 
                 System.out.println("\nToo far!");
             return false;
-    }
-    
-    //return to MainMenuView
-    public void BackToGameMenu(){
-        GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayGameMenuView();
     }
 }

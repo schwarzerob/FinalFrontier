@@ -107,7 +107,7 @@ public void displayGameMenuView() {
         
     private void backToMainMenu() {
         MainMenuView mainMenuView = new MainMenuView();
-        mainMenuView.displayMainMenuView();
+        mainMenuView.display();
     }
     
 }

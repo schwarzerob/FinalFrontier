@@ -50,15 +50,5 @@ public class LocationMapViewIT {
         boolean result = instance.doAction(direction, distance);
         assertEquals(expResult, result);
     }
-
-    /**
-     * Test of BackToGameMenu method, of class LocationMapView.
-     */
-    @Test
-    public void testBackToGameMenu() {
-        System.out.println("BackToGameMenu");
-        LocationMapView instance = new LocationMapView();
-        instance.BackToGameMenu();
-    }
     
 }
