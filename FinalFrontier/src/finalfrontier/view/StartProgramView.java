@@ -119,7 +119,7 @@ if (playersName.toUpperCase().equals("Q")) //user want to quit
                          );
         MainMenuView mainMenuView = new MainMenuView();
         
-        mainMenuView.displayMainMenuView();
+        mainMenuView.display();
     }
     
 }

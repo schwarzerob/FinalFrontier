@@ -14,6 +14,8 @@ import java.util.Scanner;
  * @author rschw
  */
 public class MainMenuView extends View{
+        public String value;
+    private String promptMessage;
     public MainMenuView(){
         super("\n"
                    +"\n-------------------------------------"
