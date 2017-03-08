@@ -44,10 +44,9 @@ public class LocationMapViewIT {
     public void testDoAction() {
         System.out.println("doAction");
         String direction = "";
-        int distance = 0;
         LocationMapView instance = new LocationMapView();
         boolean expResult = false;
-        boolean result = instance.doAction(direction, distance);
+        boolean result = instance.doAction(direction);
         assertEquals(expResult, result);
     }
     

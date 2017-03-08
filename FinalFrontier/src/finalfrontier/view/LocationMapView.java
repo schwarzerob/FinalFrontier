@@ -17,7 +17,7 @@ public class LocationMapView extends View{
         public static int row = 0;
         public static int col = 0;
         private String direction;
-        private int distance;
+        private int distance = 1;
         
     public LocationMapView() {
         super("\nWhich way?" + 
@@ -31,9 +31,9 @@ public class LocationMapView extends View{
     public void DisplayLocationMapView(){
     boolean done= false;
         do {
-        String whichWay = this.whereToGo();
-        int distance = this.howFarToGo();
-        this.doAction(whichWay);
+        this.direction = this.whereToGo();
+        this.distance = this.howFarToGo();
+        this.doAction(direction);
         }while(!done);
     }
     
@@ -53,12 +53,14 @@ public class LocationMapView extends View{
         }
         return direction;
     }
+    
+    
+    
     private int howFarToGo(){
         System.out.println(howFar);
         Scanner howFar = new Scanner(System.in);
-        int distance = howFar.nextInt();
-            return distance;
-            
+        int value = howFar.nextInt();
+            return value;
     }
     
     
@@ -70,8 +72,7 @@ public class LocationMapView extends View{
         //run Location with new row, col, and howFar
     @Override
     public boolean doAction(String direction){
-            Map displayMap = new Map();
-            displayMap.displayMap();
+            
             if(direction=="N"  && row+distance < 6){
                 row = row + distance;
                 }
@@ -86,6 +87,9 @@ public class LocationMapView extends View{
                     }
             else 
                 System.out.println("\nToo far!");
+        
+            Map displayMap = new Map();
+            displayMap.displayMap();
             return false;
     }
 }

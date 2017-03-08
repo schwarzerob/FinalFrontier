@@ -68,7 +68,7 @@ public class MainMenuView extends View{
     private void displayHelpMenu() {
         HelpMenuView helpMenuView = new HelpMenuView();
         
-        helpMenuView.displayHelpMenuView();
+        helpMenuView.display();
     }
     
 }
