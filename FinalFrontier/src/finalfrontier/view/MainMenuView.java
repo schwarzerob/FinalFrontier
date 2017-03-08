@@ -28,8 +28,8 @@ public class MainMenuView extends View{
                    +"\nQ - Quit"
                    +"\n-------------------------------------");
     }
-
-    public boolean doAction(String menuOption) {
+@Override
+    public boolean doAction(String value) {
         value = value.toUpperCase();
         switch (value){
             case "N":
