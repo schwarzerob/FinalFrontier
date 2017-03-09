@@ -11,12 +11,9 @@ import java.util.Scanner;
  *
  * @author rschw
  */
-public class HelpMenuView {
-        private final String menu;
-        public String value;
-    private String promptMessage;
+public class HelpMenuView extends View{
     public HelpMenuView(){
-        this.menu = "\n"
+        super("\n"
                    +"\n--------------------------------------"
                    +"\n|   Getting Help                     |"
                    +"\n--------------------------------------"
@@ -26,37 +23,7 @@ public class HelpMenuView {
                    +"\nH - Harvesting resources"
                    +"\nC - Crafting materials with resources"
                    +"\nQ - Quit"
-                   +"\n--------------------------------------";
-    }
-
-public void displayHelpMenuView() {
-        boolean done = false;
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q"))
-                return;
-            done = this.doAction(menuOption);
-            
-        } while (!done);
-    }
-
-    private String getMenuOption() {
-        this.promptMessage = "Please enter you choice from the menu";
-        //String value = "";
-        value = "";
-        Scanner keyboard = new Scanner(System.in);
-        boolean valid = false;
-        while (!valid){
-            System.out.println("\n"+this.menu);
-            value = keyboard.nextLine();
-            value = value.trim();
-            if(value.length() < 1){
-                System.out.println("Invalid value: The value cannot be blank");
-                continue;
-            }
-            break;
-        }
-        return value;
+                   +"\n--------------------------------------");
     }
 
     public boolean doAction(String menuOption) {

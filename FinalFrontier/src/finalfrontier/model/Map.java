@@ -25,8 +25,8 @@ public class Map {
         {'_', '_', '_', '_', '_'},         
         {'_', '_', '_', '_', '_'}, 
         };
-    private int mapColumn;
-    private int mapRow;
+    private char mapColumn;
+    private char mapRow;
     
     public Map() {
         
@@ -37,7 +37,7 @@ public class Map {
         return LocationMapView.row;
     }
     public void setRow(int row) {
-        this.mapRow = row;
+        this.mapRow = (char) row;
     }
     
 // get and set Column
@@ -45,30 +45,10 @@ public class Map {
         return LocationMapView.col;
     }
     public void setColumn(int column) {
-        this.mapColumn = column;
+        this.mapColumn = (char) column;
     }
     
 // equals
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Map other = (Map) obj;
-        if (this.mapRow != other.mapRow) {
-            return false;
-        }
-        if (this.mapColumn != other.mapColumn) {
-            return false;
-        }
-        return true;
-    }
     
 //Display the Map
     public String displayMap(){
@@ -82,7 +62,7 @@ public class Map {
     System.out.println("1 "+"|" + mapMatrix[1][0] + "|" + mapMatrix[1][1] + "|" + mapMatrix[1][2] + "|" + mapMatrix[1][3] + "|" + mapMatrix[0][4] + "|");
     System.out.println("0 "+"|" + mapMatrix[0][0] + "|" + mapMatrix[0][1] + "|" + mapMatrix[0][2] + "|" + mapMatrix[0][3] + "|" + mapMatrix[0][4] + "|");
     System.out.println("   0 1 2 3 4");
-        return "";
+        return null;
     }
     
     

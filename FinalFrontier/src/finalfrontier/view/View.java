@@ -14,19 +14,22 @@ import java.util.Scanner;
 public abstract class View implements ViewInterface{
     protected String displayMessage;
     public View() {
-        
     }
+    
     public View(String message) {
         this.displayMessage = message;
     }
+    
     @Override
     public void display(){
+        System.out.println(displayMessage);
         boolean done = false;
         do{
             // prompt for and get players name
             String value = this.getInput();
             if (value.toUpperCase().equals("Q"))
                 return;
+            done = this.doAction(value);
             
             // do the requested action and display the next view
         } while (!done); // exit the view when  done == true
@@ -47,7 +50,7 @@ public abstract class View implements ViewInterface{
             value = value.trim();
             
             if(value.length() < 1){ // blank value entered
-                System.out.println("/n ****You must enter a value****");
+                System.out.println("\n ****You must enter a value****");
                 continue;
             }
             break;

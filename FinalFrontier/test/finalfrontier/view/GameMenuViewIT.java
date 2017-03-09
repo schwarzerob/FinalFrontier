@@ -14,9 +14,9 @@ import static org.junit.Assert.*;
  *
  * @author rschw
  */
-public class LocationMapViewIT {
+public class GameMenuViewIT {
     
-    public LocationMapViewIT() {
+    public GameMenuViewIT() {
     }
     
     @BeforeClass
@@ -28,25 +28,15 @@ public class LocationMapViewIT {
     }
 
     /**
-     * Test of DisplayLocationMapView method, of class LocationMapView.
-     */
-    @Test
-    public void testDisplayLocationMapView() {
-        System.out.println("DisplayLocationMapView");
-        LocationMapView instance = new LocationMapView();
-        instance.DisplayLocationMapView();
-    }
-
-    /**
-     * Test of doAction method, of class LocationMapView.
+     * Test of doAction method, of class GameMenuView.
      */
     @Test
     public void testDoAction() {
         System.out.println("doAction");
-        String direction = "";
-        LocationMapView instance = new LocationMapView();
+        String value = "";
+        GameMenuView instance = new GameMenuView();
         boolean expResult = false;
-        boolean result = instance.doAction(direction);
+        boolean result = instance.doAction(value);
         assertEquals(expResult, result);
     }
     

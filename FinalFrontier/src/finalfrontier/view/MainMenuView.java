@@ -14,8 +14,6 @@ import java.util.Scanner;
  * @author rschw
  */
 public class MainMenuView extends View{
-        public String value;
-    private String promptMessage;
     public MainMenuView(){
         super("\n"
                    +"\n-------------------------------------"
@@ -56,7 +54,7 @@ public class MainMenuView extends View{
     private void startNewGame() {
         GameControl.createNewGame(FinalFrontier.getPlayer());
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayGameMenuView();
+        gameMenu.display();
     }
 
     private void startExistingGame() {
@@ -70,7 +68,7 @@ public class MainMenuView extends View{
     private void displayHelpMenu() {
         HelpMenuView helpMenuView = new HelpMenuView();
         
-        helpMenuView.displayHelpMenuView();
+        helpMenuView.display();
     }
     
 }

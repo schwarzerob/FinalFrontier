@@ -28,16 +28,6 @@ public class HelpMenuViewIT {
     }
 
     /**
-     * Test of displayHelpMenuView method, of class HelpMenuView.
-     */
-    @Test
-    public void testDisplayHelpMenuView() {
-        System.out.println("displayHelpMenuView");
-        HelpMenuView instance = new HelpMenuView();
-        instance.displayHelpMenuView();
-    }
-
-    /**
      * Test of doAction method, of class HelpMenuView.
      */
     @Test
