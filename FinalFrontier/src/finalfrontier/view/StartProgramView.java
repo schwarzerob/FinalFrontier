@@ -19,21 +19,12 @@ import java.util.Scanner;
     //call PlayerControl to create a player object
     //If successfull, display welcome banner
 public class StartProgramView extends View{
-    private String promptMessage;
-    
     public StartProgramView(){
-        this.promptMessage = "Please enter you name";
-        //display the banner when view is created
-        this.displayBanner();
-    }
-
-    private void displayBanner() {
-        System.out.println(
+        super(
         "************************"
         + "\n * Description of the game"
-        + "\n * It fits well over many rows like this."
-        + "\n************************"
-        );
+        + "\n * The description fits well over many rows like this."
+        + "\n************************");
     }
 @Override
     public boolean doAction(String playersName) {
@@ -48,28 +39,15 @@ public class StartProgramView extends View{
             System.out.println("\nError creating player.");
             return false;
         }
-        this.displayNextView(player);
-        return true;
-  }
-    
-    
-    
-    
-    /**
-     * display the start program view
-     */
-
-    private void displayNextView(Player player) {
         System.out.println("\n========================================="
-                         + "\n Welcome to the game " + player.getName()
+                         + "\n Welcome" + player.getName() + ", to the Final Frontier!"
                          + "\n We hope you have a lot of fun!"
                          + "\n========================================="
                          );
-        MainMenuView mainMenuView = new MainMenuView();
-        
-        mainMenuView.display();
-    }
-    
+    MainMenuView mainMenu = new MainMenuView();
+    mainMenu.display();
+        return true;
+  }
 }
 
 // stopped at start of pg 17 before the "Implement the getPlayersName() function" part
