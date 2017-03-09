@@ -13,65 +13,27 @@ import java.util.Scanner;
  * @author rschw
  */
 public class LocationMapView extends View{
-        private final String howFar;  //Banner
-        public static int row = 0;
-        public static int col = 0;
-        private String direction;
-        private int distance = 1;
+        //private final String howFar;  //Banner
+        public static int row;
+        public static int col;
         
     public LocationMapView() {
         super("\nWhich way?" + 
                                 "\n   N "+
                                 "\n  W+E"+
                                 "\n   S ");
-        this.howFar = ("\nHow Far are we going?");
+        //this.howFar = ("\nHow Far are we going?");
     }
-    
-    
-    public void DisplayLocationMapView(){
-    boolean done= false;
-        do {
-        this.direction = this.whereToGo();
-        this.distance = this.howFarToGo();
-        this.doAction(direction);
-        }while(!done);
-    }
-    
-    //get coordinates for destination
-    private String whereToGo(){
-        direction = "";
-        Scanner keyboard = new Scanner(System.in);
-        boolean done = false;
-        while(!done){
-            this.direction = keyboard.nextLine().toUpperCase();
-            if(direction!="N"&&direction!="S"&&direction!="E"&&direction!="W"){
-                System.out.println("\n"+ direction + " is not a valid direction");
-                System.out.println("\n N, S, E, or W");
-                continue;
-                }
-            break;
-        }
-        return direction;
-    }
-    
-    
-    
-    private int howFarToGo(){
-        System.out.println(howFar);
-        Scanner howFar = new Scanner(System.in);
-        int value = howFar.nextInt();
-            return value;
-    }
-    
-    
-    
-    
-    
-    
-    
         //run Location with new row, col, and howFar
     @Override
     public boolean doAction(String direction){
+            if(direction!="N"&&direction!="S"&&direction!="E"&&direction!="W"){
+                System.out.println("\n"+ direction + " is not a valid direction");
+                System.out.println("\n N, S, E, or W\n");
+                getInput();
+                }
+            Scanner howFar = new Scanner(System.in);
+            int distance = howFar.nextInt();
             
             if(direction=="N"  && row+distance < 6){
                 row = row + distance;

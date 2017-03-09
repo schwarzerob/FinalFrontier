@@ -24,8 +24,10 @@ public class StartProgramView extends View{
         "************************"
         + "\n * Description of the game"
         + "\n * The description fits well over many rows like this."
-        + "\n************************");
+        + "\n************************"
+        + "\n \nWhat's your name?");
     }
+    
 @Override
     public boolean doAction(String playersName) {
         if(playersName.length()<2){

@@ -22,6 +22,7 @@ public abstract class View implements ViewInterface{
     
     @Override
     public void display(){
+        System.out.println(displayMessage);
         boolean done = false;
         do{
             // prompt for and get players name

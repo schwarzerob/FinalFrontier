@@ -14,12 +14,10 @@ import java.util.Scanner;
  *
  * @author rschw
  */
-public class GameMenuView {
-        private final String menu;
-        public String value;
-        private String promptMessage;
+public class GameMenuView extends View{
+    String displayMessage = "What to do now?";
     public GameMenuView(){
-        this.menu = "\n"
+        super("\n"
                    +"\n-------------------------------------"
                    +"\n|   Game Menu                       |"
                    +"\n-------------------------------------"
@@ -28,40 +26,12 @@ public class GameMenuView {
                    +"\nC - Craft objects"
                    +"\nV - View the map"
                    +"\nB - Back to the main menu"
-                   +"\n-------------------------------------";
+                   +"\n-------------------------------------");
     }
 
-public void displayGameMenuView() {
-        boolean done = false;
-        do {
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q"))
-                return;
-            done = this.doAction(menuOption);
-            
-        } while (!done);
-    }
-
-    private String getMenuOption() {
-        this.promptMessage = "What to do now?";
-        value = "";
-        Scanner keyboard = new Scanner(System.in);
-        boolean valid = false;
-        while (!valid){
-            System.out.println("\n"+this.menu);
-            value = keyboard.nextLine();
-            value = value.trim();
-            if(value.length() < 1){
-                System.out.println("Invalid value: The value cannot be blank");
-                continue;
-            }
-            break;
-        }
-        return value;
-    }
-
-    public boolean doAction(String menuOption) {
+    public boolean doAction(String value) {
         value = value.toUpperCase();
+        
         switch (value){
             case "M":
                 this.makeAMove();
@@ -89,7 +59,7 @@ public void displayGameMenuView() {
 
     private void makeAMove() {
         LocationMapView locationMapView = new LocationMapView();
-        locationMapView.DisplayLocationMapView();
+        locationMapView.display();
     }
 
     private void resources() {
