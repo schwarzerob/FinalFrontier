@@ -15,7 +15,7 @@ import java.util.Random;
  *
  * @author rschw
  */
-public class EventView extends View{
+public class EventView {
     //retrieve random integer from Location
     Random rand = new Random();
         int  event = rand.nextInt(5) + 1;
