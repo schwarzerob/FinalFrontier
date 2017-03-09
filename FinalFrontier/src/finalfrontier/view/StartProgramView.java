@@ -42,7 +42,7 @@ public class StartProgramView extends View{
             return false;
         }
         System.out.println("\n========================================="
-                         + "\n Welcome" + player.getName() + ", to the Final Frontier!"
+                         + "\n Welcome " + player.getName() + ", to the Final Frontier!"
                          + "\n We hope you have a lot of fun!"
                          + "\n========================================="
                          );
