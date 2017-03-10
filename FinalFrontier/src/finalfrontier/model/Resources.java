@@ -13,12 +13,20 @@ import java.util.Objects;
  * @author Gabriel
  */
 public class Resources implements Serializable {
-    private int quantity;
-    private String type;
-    
    public Resources () {
    
    }
+    private int quantity;
+    private String type;
+    public static int wood = 10;
+    public static int grain = 10;
+    public static int ore = 10;
+    public static int sheep = 10;
+    public static int swords = 1;
+   
+   
+   
+   
    
    //getter for quantity and type
 

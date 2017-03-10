@@ -27,26 +27,18 @@ public class LocationMapView extends View{
     }
         //run Location with new row, col, and howFar
     @Override
-    public boolean doAction(String direction){
-            direction.toUpperCase();
-        //    if(direction=="N" && 
-        //       direction=="S" && 
-        //       direction=="E" && 
-        //       direction=="W"){
-        //        System.out.println("\n"+ direction + " is not a valid direction"
-        //                            + "\nEnter N, S, E, or W\n");
-        //        return false;
-        //    }else{
-        //        System.out.println("How far?");
-        //        }
+    public boolean doAction(String value){
+            value.toUpperCase();
+            System.out.println("\n direction=" + value);
             System.out.println("How far?");
             
             Scanner howFar = new Scanner(System.in);
+            //int distance = 2;
             int distance = howFar.nextInt();
                 if(distance <= 0 || distance >= 6)
                     System.out.println("");
             
-            switch (direction){
+            switch (value){
                 case "N":
                     if(row+distance < 6){
                     row = row + distance;
@@ -71,6 +63,7 @@ public class LocationMapView extends View{
                 System.out.println("\nInvalid direction");
             }
             
+            System.out.println("\n distance=" + distance);
             System.out.println("row=" + row +"   col="+col);
         
             Map displayMap = new Map();
