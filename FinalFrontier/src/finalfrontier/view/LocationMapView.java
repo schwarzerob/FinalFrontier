@@ -14,8 +14,8 @@ import java.util.Scanner;
  */
 public class LocationMapView extends View{
         //private final String howFar;  //Banner
-        public static int row=1;
-        public static int col=1;
+        public static int row=0;
+        public static int col=0;
         
     public LocationMapView() {
         super("\nWhich way?" + 
@@ -28,14 +28,21 @@ public class LocationMapView extends View{
     @Override
     public boolean doAction(String direction){
             direction.toUpperCase();
-            if(direction!="N"&&direction!="S"&&direction!="E"&&direction!="W"){
-                System.out.println("\n"+ direction + " is not a valid direction"
-                                    + "\n N, S, E, or W\n");
-                getInput();
-                }
-            System.out.println("How far?");
+        //    if(direction=="N" && 
+        //       direction=="S" && 
+        //       direction=="E" && 
+        //       direction=="W"){
+        //        System.out.println("\n"+ direction + " is not a valid direction"
+        //                            + "\nEnter N, S, E, or W\n");
+        //        return false;
+        //    }else{
+        //        System.out.println("How far?");
+        //        }
+            
             Scanner howFar = new Scanner(System.in);
             int distance = howFar.nextInt();
+            
+            System.out.println("How far?");
             
             if(direction=="N"  && row+distance < 6){
                 row = row + distance;
@@ -50,7 +57,7 @@ public class LocationMapView extends View{
                 col = col - distance;
                     }
             else 
-                System.out.println("\nToo far!");
+                System.out.println("\nInvalid direction");
             
             System.out.println("row=" + row +"   col="+col);
         

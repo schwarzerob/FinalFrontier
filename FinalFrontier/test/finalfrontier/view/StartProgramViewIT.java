@@ -33,7 +33,7 @@ public class StartProgramViewIT {
     @Test
     public void testDoAction() {
         System.out.println("doAction");
-        String playersName = "";
+        String playersName = Rob;
         StartProgramView instance = new StartProgramView();
         boolean expResult = false;
         boolean result = instance.doAction(playersName);

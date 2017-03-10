@@ -65,12 +65,12 @@ public class HelpMenuView extends View{
 
     private void howToMove() {
         System.out.println("*** Moving is one of the basic thing you should learn in this game." 
-                + "/n there are 4 direction where you can move; North, East, West, and South.  ***");
+                + "\n there are 4 direction where you can move; North, East, West, and South.  ***");
     }
 
     private void resourceAmount() {
         System.out.println("*** In order to craft and create items youll need a specific amount of reasources" 
-                + "/n depending on what you are crafting or and how big is the item ***");
+                + "\n depending on what you are crafting or and how big is the item ***");
     }
 
     private void harvestResources() {
