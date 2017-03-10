@@ -63,7 +63,9 @@ public class GameMenuView extends View{
     }
 
     private void resources() {
-        System.out.println("*** resources function called ***");
+        ResourceView resourceView = new ResourceView();
+        resourceView.display();
+        //System.out.println("*** resources function called ***");
     }
 
     private void crafting() {

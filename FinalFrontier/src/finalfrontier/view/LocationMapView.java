@@ -19,9 +19,10 @@ public class LocationMapView extends View{
         
     public LocationMapView() {
         super("\nWhich way?" + 
-                                "\n   N "+
-                                "\n  W+E"+
-                                "\n   S ");
+                                "\n    N "+
+                                "\n   W+E"+
+                                "\n    S "+
+                                "\nQ-Quit moving");
         //this.howFar = ("\nHow Far are we going?");
     }
         //run Location with new row, col, and howFar
@@ -38,26 +39,37 @@ public class LocationMapView extends View{
         //    }else{
         //        System.out.println("How far?");
         //        }
+            System.out.println("How far?");
             
             Scanner howFar = new Scanner(System.in);
             int distance = howFar.nextInt();
+                if(distance <= 0 || distance >= 6)
+                    System.out.println("");
             
-            System.out.println("How far?");
-            
-            if(direction=="N"  && row+distance < 6){
-                row = row + distance;
-                }
-            else if(direction=="S" && row-distance > 0){
-                row = row - distance;
+            switch (direction){
+                case "N":
+                    if(row+distance < 6){
+                    row = row + distance;
                     }
-            else if(direction=="E" && col+distance < 5){
-                col = col + distance;
+                    break;
+                case "S":
+                    if(row-distance > 0){
+                    row = row - distance;
                     }
-            else if(direction=="W" && col-distance > 0){
-                col = col - distance;
+                    break;
+                case "E":
+                    if(col+distance < 5){
+                    col = col + distance;
                     }
-            else 
+                    break;
+                case "W":
+                    if(col-distance > 0){
+                    col = col - distance;
+                    }
+                    break;
+                default:
                 System.out.println("\nInvalid direction");
+            }
             
             System.out.println("row=" + row +"   col="+col);
         
