@@ -36,7 +36,7 @@ public class HelpMenuViewTest {
     @Test
     public void testDoAction() {
         System.out.println("doAction");
-        String menuOption = "G";
+        String menuOption = "Gab";
         HelpMenuView instance = new HelpMenuView();
         boolean expResult = false;
         boolean result = instance.doAction(menuOption);
