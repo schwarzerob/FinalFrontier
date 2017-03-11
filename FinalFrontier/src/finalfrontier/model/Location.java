@@ -5,6 +5,7 @@
  */
 package finalfrontier.model;
 
+import finalfrontier.view.LocationMapView;
 import java.io.Serializable;
 
 /**
@@ -18,27 +19,25 @@ public class Location implements Serializable{
     
     public Location(){
         }
+    
 // get and set Row
     public int getRow() {
-        //return row;
-        return row;
+        return LocationMapView.row;
     }
     public void setRow(int row) {
-        this.row = row;
-    }
-    
+        this.row = (char) row;
+    }    
 // get and set Column
     public int getColumn() {
-        //return column;
-        return column;
+        return LocationMapView.col;
     }
-    public void setColumn(int column) {
-        this.column = column;
+    public void setColumn(int col) {
+        this.column = (char) column;
     }
     
     //create random integer to select which event and run to EventView
     
- 
+    
     
 // equals
     @Override
