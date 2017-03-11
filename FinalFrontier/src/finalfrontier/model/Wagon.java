@@ -15,7 +15,7 @@ public class Wagon implements Serializable {
     private int length;
     private int width;
     private int height;
-    int area;
+    public static int area;
     
     public Wagon(){
     }
