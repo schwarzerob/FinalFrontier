@@ -13,12 +13,28 @@ import java.util.Objects;
  * @author Gabriel
  */
 public class Resources implements Serializable {
-    private int quantity;
-    private String type;
-    
    public Resources () {
    
    }
+    private int quantity;
+    private String type;
+    public static int wood = 10;
+    public static int grain = 10;
+    public static int ore = 10;
+    public static int sheep = 10;
+    public static int swords = 1;
+   
+    public int MaxAmount(){
+        int max = wood+grain+ore+sheep+swords;
+        int wagonSpace = Wagon.area;
+        if(max>wagonSpace){
+            System.out.println("Not enough room in the wagon!");
+        }
+        
+    }
+   
+   
+   
    
    //getter for quantity and type
 

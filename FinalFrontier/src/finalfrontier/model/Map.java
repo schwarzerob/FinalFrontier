@@ -25,8 +25,8 @@ public class Map {
         {'_', '_', '_', '_', '_'},         
         {'_', '_', '_', '_', '_'}, 
         };
-    private char mapColumn;
-    private char mapRow;
+    private char mapColumn = (char) LocationMapView.col;
+    private char mapRow = (char) LocationMapView.row;
     
     public Map() {
         

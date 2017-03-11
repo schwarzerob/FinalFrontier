@@ -12,11 +12,11 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Gabriel
+ * @author rschw
  */
-public class StartProgramViewTest {
+public class LocationMapViewIT {
     
-    public StartProgramViewTest() {
+    public LocationMapViewIT() {
     }
     
     @BeforeClass
@@ -28,17 +28,16 @@ public class StartProgramViewTest {
     }
 
     /**
-     * Test of doAction method, of class StartProgramView.
+     * Test of doAction method, of class LocationMapView.
      */
     @Test
     public void testDoAction() {
         System.out.println("doAction");
-        String playersName = "Gob";
-        StartProgramView instance = new StartProgramView();
+        String direction = "";
+        LocationMapView instance = new LocationMapView();
         boolean expResult = false;
-        boolean result = instance.doAction(playersName);
+        boolean result = instance.doAction(direction);
         assertEquals(expResult, result);
-        
     }
     
 }

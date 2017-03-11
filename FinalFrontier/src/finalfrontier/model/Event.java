@@ -20,6 +20,11 @@ public class Event implements Serializable {
     public Event() {
     }
     
+    public void Attack(){
+        symbol = "A";
+        Resources.swords = Resources.swords-1;
+    }
+    
     //Getter for Symbol, description, blockedLocation
     public String getSymbol() {
         return symbol;

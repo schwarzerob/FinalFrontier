@@ -14,9 +14,9 @@ import static org.junit.Assert.*;
  *
  * @author rschw
  */
-public class StartProgramViewIT {
+public class ViewIT {
     
-    public StartProgramViewIT() {
+    public ViewIT() {
     }
     
     @BeforeClass
@@ -28,16 +28,28 @@ public class StartProgramViewIT {
     }
 
     /**
-     * Test of doAction method, of class StartProgramView.
+     * Test of display method, of class View.
      */
     @Test
-    public void testDoAction() {
-        System.out.println("doAction");
-        String playersName = Rob;
-        StartProgramView instance = new StartProgramView();
-        boolean expResult = false;
-        boolean result = instance.doAction(playersName);
+    public void testDisplay() {
+        System.out.println("display");
+        View instance = new ViewImpl();
+        instance.display();
+    }
+
+    /**
+     * Test of getInput method, of class View.
+     */
+    @Test
+    public void testGetInput() {
+        System.out.println("getInput");
+        View instance = new ViewImpl();
+        String expResult = "";
+        String result = instance.getInput();
         assertEquals(expResult, result);
+    }
+
+    public class ViewImpl extends View {
     }
     
 }
