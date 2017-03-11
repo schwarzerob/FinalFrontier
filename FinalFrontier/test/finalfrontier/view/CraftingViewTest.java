@@ -12,11 +12,11 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author rschw
+ * @author Gabriel
  */
-public class ViewIT {
+public class CraftingViewTest {
     
-    public ViewIT() {
+    public CraftingViewTest() {
     }
     
     @BeforeClass
@@ -28,28 +28,17 @@ public class ViewIT {
     }
 
     /**
-     * Test of display method, of class View.
+     * Test of doAction method, of class CraftingView.
      */
     @Test
-    public void testDisplay() {
-        System.out.println("display");
-        View instance = new ViewImpl();
-        instance.display();
-    }
-
-    /**
-     * Test of getInput method, of class View.
-     */
-    @Test
-    public void testGetInput() {
-        System.out.println("getInput");
-        View instance = new ViewImpl();
-        String expResult = "";
-        String result = instance.getInput();
+    public void testDoAction() {
+        System.out.println("doAction");
+        String value = "B";
+        CraftingView instance = new CraftingView();
+        boolean expResult = false;
+        boolean result = instance.doAction(value);
         assertEquals(expResult, result);
-    }
-
-    public class ViewImpl extends View {
+        
     }
     
 }

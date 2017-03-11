@@ -30,6 +30,7 @@ public class Resources implements Serializable {
         if(max>wagonSpace){
             System.out.println("Not enough room in the wagon!");
         }
+       return 0;
         
     }
    
