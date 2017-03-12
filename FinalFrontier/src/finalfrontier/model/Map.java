@@ -25,6 +25,7 @@ public class Map {
         {'_', '_', '_', '_', '_'},         
         {'_', '_', '_', '_', '_'}, 
         };
+    
     private char mapColumn = (char) LocationMapView.col;
     private char mapRow = (char) LocationMapView.row;
     
@@ -53,15 +54,16 @@ public class Map {
 //Display the Map
     public String displayMap(){
         mapMatrix[mapRow][mapColumn] = 'X';
-    System.out.println("   _ _ _ _ _");
-    System.out.println("6 "+"|" + mapMatrix[6][0] + "|" + mapMatrix[6][1] + "|" + mapMatrix[6][2] + "|" + mapMatrix[6][3] + "|" + mapMatrix[0][4] + "|");
-    System.out.println("5 "+"|" + mapMatrix[5][0] + "|" + mapMatrix[5][1] + "|" + mapMatrix[5][2] + "|" + mapMatrix[5][3] + "|" + mapMatrix[0][4] + "|");
-    System.out.println("4 "+"|" + mapMatrix[4][0] + "|" + mapMatrix[4][1] + "|" + mapMatrix[4][2] + "|" + mapMatrix[4][3] + "|" + mapMatrix[0][4] + "|");
-    System.out.println("3 "+"|" + mapMatrix[3][0] + "|" + mapMatrix[3][1] + "|" + mapMatrix[3][2] + "|" + mapMatrix[3][3] + "|" + mapMatrix[0][4] + "|");
-    System.out.println("2 "+"|" + mapMatrix[2][0] + "|" + mapMatrix[2][1] + "|" + mapMatrix[2][2] + "|" + mapMatrix[2][3] + "|" + mapMatrix[0][4] + "|");
-    System.out.println("1 "+"|" + mapMatrix[1][0] + "|" + mapMatrix[1][1] + "|" + mapMatrix[1][2] + "|" + mapMatrix[1][3] + "|" + mapMatrix[0][4] + "|");
-    System.out.println("0 "+"|" + mapMatrix[0][0] + "|" + mapMatrix[0][1] + "|" + mapMatrix[0][2] + "|" + mapMatrix[0][3] + "|" + mapMatrix[0][4] + "|");
-    System.out.println("   0 1 2 3 4");
+    System.out.println("\n   _ _ _ _ _");
+    System.out.println(
+            "6 "+"|" + mapMatrix[6][0] + "|" + mapMatrix[6][1] + "|" + mapMatrix[6][2] + "|" + mapMatrix[6][3] + "|" + mapMatrix[0][4] + "|\n" +
+            "5 "+"|" + mapMatrix[5][0] + "|" + mapMatrix[5][1] + "|" + mapMatrix[5][2] + "|" + mapMatrix[5][3] + "|" + mapMatrix[0][4] + "|\n" +
+            "4 "+"|" + mapMatrix[4][0] + "|" + mapMatrix[4][1] + "|" + mapMatrix[4][2] + "|" + mapMatrix[4][3] + "|" + mapMatrix[0][4] + "|\n" +
+            "3 "+"|" + mapMatrix[3][0] + "|" + mapMatrix[3][1] + "|" + mapMatrix[3][2] + "|" + mapMatrix[3][3] + "|" + mapMatrix[0][4] + "|\n" +
+            "2 "+"|" + mapMatrix[2][0] + "|" + mapMatrix[2][1] + "|" + mapMatrix[2][2] + "|" + mapMatrix[2][3] + "|" + mapMatrix[0][4] + "|\n" +
+            "1 "+"|" + mapMatrix[1][0] + "|" + mapMatrix[1][1] + "|" + mapMatrix[1][2] + "|" + mapMatrix[1][3] + "|" + mapMatrix[0][4] + "|\n" +
+            "0 "+"|" + mapMatrix[0][0] + "|" + mapMatrix[0][1] + "|" + mapMatrix[0][2] + "|" + mapMatrix[0][3] + "|" + mapMatrix[0][4] + "|\n" +
+                      "   0"+                        " 1"+                     " 2"+                  " 3"+                     " 4");
         return null;
     }
     

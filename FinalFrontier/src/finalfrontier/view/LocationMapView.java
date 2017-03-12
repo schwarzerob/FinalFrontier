@@ -29,7 +29,6 @@ public class LocationMapView extends View{
     @Override
     public boolean doAction(String value){
             value.toUpperCase();
-            System.out.println("\n direction=" + value);
             System.out.println("How far?");
             
             Scanner howFar = new Scanner(System.in);
@@ -42,32 +41,29 @@ public class LocationMapView extends View{
                 case "N":
                     if(row+distance < 6){
                     row = row + distance;
-                    }
+                    }else{System.out.println("\nToo far!");}
                     break;
                 case "S":
                     if(row-distance > 0){
                     row = row - distance;
-                    }
+                    }else{System.out.println("\nToo far!");}
                     break;
                 case "E":
                     if(col+distance < 5){
                     col = col + distance;
-                    }
+                    }else{System.out.println("\nToo far!");}
                     break;
                 case "W":
                     if(col-distance > 0){
                     col = col - distance;
-                    }
+                    }else{System.out.println("\nToo far!");}
                     break;
                 default:
                 System.out.println("\nInvalid direction");
             }
-            
-            System.out.println("\n distance=" + distance);
-            System.out.println("row=" + row +"   col="+col);
         
             Map displayMap = new Map();
             displayMap.displayMap();
-            return false;
+            return true;
     }
 }
