@@ -13,8 +13,28 @@ import java.util.Objects;
  * @author Gabriel
  */
 public class Character implements Serializable {
+    
+    
+    
+    /*
+    public enum Character {
+     CHARACTER1("description", gold, grain, etc.);
+    private Character(String desc, int gold, int grain, etc.){
+    this.desc = desc;
+    ...
+    public String getDesc(){
+       return desc; }
+    public int getGold(){
+       return gold; }
+    ...
+    }
+    */
+    
+    
+    
+    // Who is this character, and what are their benefits?
     private String characterName;
-    private String whereIsCharacter;
+    private String whatIsCharacter;
 
 // Character constructor
 public Character (){
@@ -25,7 +45,7 @@ public Character (){
         return characterName;
     }
     public String getWhereIsCharacter() {
-        return whereIsCharacter;
+        return whatIsCharacter;
     }
 
 //Setter characterName and whereIsCharacter
@@ -33,7 +53,7 @@ public Character (){
         this.characterName = characterName;
     }
     public void setWhereIsCharacter(String whereIsCharacter) {
-        this.whereIsCharacter = whereIsCharacter;
+        this.whatIsCharacter = whereIsCharacter;
     }
     
 //hash
@@ -41,7 +61,7 @@ public Character (){
     public int hashCode() {
         int hash = 5;
         hash = 71 * hash + Objects.hashCode(this.characterName);
-        hash = 71 * hash + Objects.hashCode(this.whereIsCharacter);
+        hash = 71 * hash + Objects.hashCode(this.whatIsCharacter);
         return hash;
     }
     
@@ -61,7 +81,7 @@ public Character (){
         if (!Objects.equals(this.characterName, other.characterName)) {
             return false;
         }
-        if (!Objects.equals(this.whereIsCharacter, other.whereIsCharacter)) {
+        if (!Objects.equals(this.whatIsCharacter, other.whatIsCharacter)) {
             return false;
         }
         return true;
@@ -70,7 +90,7 @@ public Character (){
 //toString
     @Override
     public String toString() {
-        return "Character{" + "characterName=" + characterName + ", whereIsCharacter=" + whereIsCharacter + '}';
+        return "Character{" + "characterName=" + characterName + ", whereIsCharacter=" + whatIsCharacter + '}';
     }
     
 }

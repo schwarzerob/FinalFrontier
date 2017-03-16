@@ -16,7 +16,7 @@ public class Map {
     
     
     //save Location specs to array
-    char mapMatrix[][] = {                
+    public char mapMatrix[][] = {                
         {'_', '_', '_', '_', '_'},          
         {'_', '_', '_', '_', '_'},         
         {'_', '_', '_', '_', '_'},         
@@ -64,6 +64,7 @@ public class Map {
             "1 "+"|" + mapMatrix[1][0] + "|" + mapMatrix[1][1] + "|" + mapMatrix[1][2] + "|" + mapMatrix[1][3] + "|" + mapMatrix[0][4] + "|\n" +
             "0 "+"|" + mapMatrix[0][0] + "|" + mapMatrix[0][1] + "|" + mapMatrix[0][2] + "|" + mapMatrix[0][3] + "|" + mapMatrix[0][4] + "|\n" +
                       "   0"+                        " 1"+                     " 2"+                  " 3"+                     " 4");
+        mapMatrix[mapRow][mapColumn] = '0';
         return null;
     }
     
