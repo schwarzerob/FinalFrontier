@@ -68,7 +68,6 @@ public class Attack implements Serializable  {
         return true;
     }
         
-
     // to string
 
     @Override
