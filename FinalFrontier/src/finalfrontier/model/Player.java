@@ -13,18 +13,20 @@ import java.util.Objects;
  * @author rschw
  */
 public class Player implements Serializable{
-    private String name;
+    String name;
     
 // Constructor
     public Player() {
     }
     
     //Player arrayList
+    //record the players name, and the games saved with that name
     
     /*
     public ArrayList<Item> playerName(){
     ArrayList<Item> nameList = new ArrayList<>();
-    gameList.add(new Item(Player name, saved Game);
+    gameList.add(new Item(Player name);
+    gameList.add(new Item(saved Game);
     }
     */
     

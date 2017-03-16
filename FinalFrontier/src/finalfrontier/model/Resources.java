@@ -23,6 +23,7 @@ public class Resources implements Serializable {
     public static int ore = 10;
     public static int sheep = 10;
     public static int swords = 1;
+    public static int gold = 1;
    
     public int MaxAmount(){
         int max = wood+grain+ore+sheep+swords;
