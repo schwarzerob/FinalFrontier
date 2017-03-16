@@ -19,6 +19,17 @@ public class Player implements Serializable{
     public Player() {
     }
     
+    //Player arrayList
+    
+    /*
+    public ArrayList<Item> playerName(){
+    ArrayList<Item> nameList = new ArrayList<>();
+    gameList.add(new Item(Player name, saved Game);
+    }
+    */
+    
+    
+    
 // get and set Name    
 // What is this players name?
     public String getName() {
