@@ -61,5 +61,77 @@ public class CharacterIT {
         String result = instance.getDescription();
         assertEquals(expResult, result);
     }
+
+    /**
+     * Test of getWood method, of class Character.
+     */
+    @Test
+    public void testGetWood() {
+        System.out.println("getWood");
+        Character instance = null;
+        int expResult = 0;
+        int result = instance.getWood();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of getGrain method, of class Character.
+     */
+    @Test
+    public void testGetGrain() {
+        System.out.println("getGrain");
+        Character instance = null;
+        int expResult = 0;
+        int result = instance.getGrain();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of getOre method, of class Character.
+     */
+    @Test
+    public void testGetOre() {
+        System.out.println("getOre");
+        Character instance = null;
+        int expResult = 0;
+        int result = instance.getOre();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of getSheep method, of class Character.
+     */
+    @Test
+    public void testGetSheep() {
+        System.out.println("getSheep");
+        Character instance = null;
+        int expResult = 0;
+        int result = instance.getSheep();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of getSwords method, of class Character.
+     */
+    @Test
+    public void testGetSwords() {
+        System.out.println("getSwords");
+        Character instance = null;
+        int expResult = 0;
+        int result = instance.getSwords();
+        assertEquals(expResult, result);
+    }
+
+    /**
+     * Test of getGold method, of class Character.
+     */
+    @Test
+    public void testGetGold() {
+        System.out.println("getGold");
+        Character instance = null;
+        int expResult = 0;
+        int result = instance.getGold();
+        assertEquals(expResult, result);
+    }
     
 }

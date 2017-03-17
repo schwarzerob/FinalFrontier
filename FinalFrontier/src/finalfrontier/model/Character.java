@@ -10,7 +10,12 @@ package finalfrontier.model;
  * @author rschw
  */
 public enum Character {
-    Banker("has extra gold", 10, 10, 10, 10, 1, 20);
+    LUMBERJACK("The lumberjack goes into the field with more wood.", 20, 10, 10, 10, 1, 10),
+    FARMER("The farmer has more bags of grain.", 10, 20, 10, 10, 1, 10),
+    BLACKSMITH("The blacksmith starts off with some extra ore.", 10, 10, 20, 10, 1, 10),
+    HUNTER("A hunter already has plenty of sheep.", 10, 10, 10, 20, 1, 10),
+    SOLDIER("The soldier already has his swords.", 10, 10, 10, 10, 3, 20),
+    BANKER("The banker has all the remaining gold.", 10, 10, 10, 10, 1, 20);
     private final String description;
     private final int wood;
     private final int grain;
@@ -29,5 +34,23 @@ public enum Character {
     }
     public String getDescription(){
         return description;
+    }
+    public int getWood(){
+        return wood;
+    }
+    public int getGrain(){
+        return grain;
+    }
+    public int getOre(){
+        return ore;
+    }
+    public int getSheep(){
+        return sheep;
+    }
+    public int getSwords(){
+        return swords;
+    }
+    public int getGold(){
+        return gold;
     }
 }

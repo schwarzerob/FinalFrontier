@@ -21,7 +21,7 @@ public class GameControl {
               return null;
             }
     
-            Player player = new Player();
+            Player player = new Player(name);
             player.setName(name);
           
             FinalFrontier.setPlayer(player); //save the player

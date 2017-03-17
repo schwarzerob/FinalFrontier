@@ -7,29 +7,30 @@ package finalfrontier.model;
 
 import java.util.ArrayList;
 import finalfrontier.model.Character;
+import finalfrontier.model.Player;
 
 /**
  *
  * @author rschw
  */
 public class Game {
-    String playerName = Player.name;
-    String charName = Character.characterName;
-
-    public Game() {
+    public Game(String type, int amount){
+        
     }
+    
     //Game arrayList
     //saving the players name with which character played as, their last location, and previous resource amounts
     
+    public ArrayList<Game> addContent(){
     
-    public ArrayList<Game> saveGame(){
-    ArrayList<Game> gameList = new ArrayList<>();
-    gameList.add(new Game(Player.name,0));
-    gameList.add(new Game(Character.characterName));
-    gameList.add(new Game(Map.mapMatrix[mapRow][mapColumn]));
-    //gameList.add(new Game(resources));
-    gameList.add(new Game("Wood", Resources.wood));
-    //...
-        return null;
+    ArrayList<Game> content = new ArrayList<>();
+    content.add(new Game("Wood", Resources.wood));
+    content.add(new Game("Grain", Resources.grain));
+    content.add(new Game("Ore", Resources.ore));
+    content.add(new Game("Sheep", Resources.sheep));
+    content.add(new Game("Swords", Resources.swords));
+    content.add(new Game("Gold", Resources.gold));
+    return content;
     }
+    
 }
