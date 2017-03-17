@@ -18,7 +18,7 @@ public class Resources implements Serializable {
    }
     private int quantity;
     private String type;
-    public static int wood = 10;
+    public static int wood = Character.LUMBERJACK.getWood();
     public static int grain = 10;
     public static int ore = 10;
     public static int sheep = 10;
