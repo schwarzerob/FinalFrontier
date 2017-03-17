@@ -4,91 +4,22 @@
  * and open the template in the editor.
  */
 package finalfrontier.model;
-
-import java.io.Serializable;
-import java.util.Objects;
-
 /**
  *
  * @author Gabriel
  */
-public class Event implements Serializable {
-    private String symbol;
-    private String description;
-    private String blockedLocation = "";
-    
-    public Event() {
+public enum Event  {
+    Attack("You need to defend, this location is infested with goblins"),
+    EmptyLand("You are out of luck, there is nothing here"),
+    LootTreasure("You found some extra resources!");
+    private final String description;
+   
+    Event(String desc){
+        description = desc;
+        
     }
-    
-    public void Attack(){
-        symbol = "A";
-        Resources.swords = Resources.swords-1;
-    }
-    
-    //Getter for Symbol, description, blockedLocation
-    public String getSymbol() {
-        return symbol;
-    }
-
-    public String getDescription() {
+public String getDescription(){
         return description;
     }
-
-    public String getBlockedLocation() {
-        return blockedLocation;
-    }
-   
-    //setter for Symbol, description, blockedLocation
-
-    public void setSymbol(String symbol) {
-        this.symbol = symbol;
-    }
-    public void setDescription(String description) {
-        this.description = description;
-    }
-    public void setBlockedLocation(String blockedLocation) {
-        this.blockedLocation = blockedLocation;
-    }
-    
-    //hashCoode
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 59 * hash + Objects.hashCode(this.symbol);
-        hash = 59 * hash + Objects.hashCode(this.description);
-        hash = 59 * hash + Objects.hashCode(this.blockedLocation);
-        return hash;
-    }
-    
-//Equals
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Event other = (Event) obj;
-        if (!Objects.equals(this.symbol, other.symbol)) {
-            return false;
-        }
-        if (!Objects.equals(this.description, other.description)) {
-            return false;
-        }
-        if (!Objects.equals(this.blockedLocation, other.blockedLocation)) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        System.out.println("Event{" + "symbol=" + symbol + ", description=" + description + ", blockedLocation=" + blockedLocation + '}');
-        return "";
-    }
-    
 }
+
