@@ -6,16 +6,19 @@
 package finalfrontier.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
  *
  * @author Gabriel
  */
-public class Resources implements Serializable {
-   public Resources () {
+public class Resources {
+   public Resources (String Type, int amount) {
    
    }
+   
+   
     private int quantity;
     private String type;
     public static int wood = 10;
@@ -25,6 +28,17 @@ public class Resources implements Serializable {
     public static int swords = 1;
     public static int gold = 1;
    
+    public ArrayList<Resources> addContent(){
+    
+    ArrayList<Resources> content = new ArrayList<>();
+    content.add(new Resources("Wood", wood));
+    content.add(new Resources("Grain", grain));
+    content.add(new Resources("Ore", ore));
+    content.add(new Resources("Sheep", sheep));
+    content.add(new Resources("Swords", swords));
+    content.add(new Resources("Gold", gold));
+    return content;
+    }
     public int MaxAmount(){
         int max = wood+grain+ore+sheep+swords;
         int wagonSpace = Wagon.area;
