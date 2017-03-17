@@ -5,93 +5,52 @@
  */
 package finalfrontier.model;
 
-import java.io.Serializable;
-import java.util.Objects;
-
 /**
  *
- * @author Gabriel
+ * @author rschw
  */
-public class Character implements Serializable {
-    
-    
-    
-    /*
-    public enum Character {
-     CHARACTER1("description", gold, grain, etc.);
-    private Character(String desc, int gold, int grain, etc.){
-    this.desc = desc;
-    ...
-    public String getDesc(){
-       return desc; }
+public enum Character {
+    LUMBERJACK("The lumberjack goes into the field with more wood.", 20, 10, 10, 10, 1, 10),
+    FARMER("The farmer has more bags of grain.", 10, 20, 10, 10, 1, 10),
+    BLACKSMITH("The blacksmith starts off with some extra ore.", 10, 10, 20, 10, 1, 10),
+    HUNTER("A hunter already has plenty of sheep.", 10, 10, 10, 20, 1, 10),
+    SOLDIER("The soldier already has his swords.", 10, 10, 10, 10, 3, 20),
+    BANKER("The banker has all the remaining gold.", 10, 10, 10, 10, 1, 20);
+    private final String description;
+    private final int wood;
+    private final int grain;
+    private final int ore;
+    private final int sheep;
+    private final int swords;    
+    private final int gold;
+    Character(String desc,int woodAmnt, int grainAmnt, int oreAmnt, int sheepAmnt, int swordsAmnt, int goldAmnt){
+        description = desc;
+        wood = woodAmnt;
+        grain = grainAmnt;
+        ore = oreAmnt;
+        sheep = sheepAmnt;
+        swords = swordsAmnt;
+        gold = goldAmnt;
+    }
+    public String getDescription(){
+        return description;
+    }
+    public int getWood(){
+        return wood;
+    }
+    public int getGrain(){
+        return grain;
+    }
+    public int getOre(){
+        return ore;
+    }
+    public int getSheep(){
+        return sheep;
+    }
+    public int getSwords(){
+        return swords;
+    }
     public int getGold(){
-       return gold; }
-    ...
+        return gold;
     }
-    */
-    
-    
-    
-    // Who is this character, and what are their benefits?
-    private String characterName;
-    private String whatIsCharacter;
-
-// Character constructor
-public Character (){
-}   
-
-// getter for characterName and whereIsCharacter
-    public String getCharacterName() {
-        return characterName;
-    }
-    public String getWhereIsCharacter() {
-        return whatIsCharacter;
-    }
-
-//Setter characterName and whereIsCharacter
-    public void setCharacterName(String characterName) {
-        this.characterName = characterName;
-    }
-    public void setWhereIsCharacter(String whereIsCharacter) {
-        this.whatIsCharacter = whereIsCharacter;
-    }
-    
-//hash
-    @Override
-    public int hashCode() {
-        int hash = 5;
-        hash = 71 * hash + Objects.hashCode(this.characterName);
-        hash = 71 * hash + Objects.hashCode(this.whatIsCharacter);
-        return hash;
-    }
-    
-//equals
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Character other = (Character) obj;
-        if (!Objects.equals(this.characterName, other.characterName)) {
-            return false;
-        }
-        if (!Objects.equals(this.whatIsCharacter, other.whatIsCharacter)) {
-            return false;
-        }
-        return true;
-    }
-    
-//toString
-    @Override
-    public String toString() {
-        return "Character{" + "characterName=" + characterName + ", whereIsCharacter=" + whatIsCharacter + '}';
-    }
-    
 }
-

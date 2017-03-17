@@ -5,6 +5,7 @@
  */
 package finalfrontier.model;
 
+import java.util.ArrayList;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -13,11 +14,22 @@ import java.util.Objects;
  * @author rschw
  */
 public class Player implements Serializable{
-    private String name;
+    public String name;
     
 // Constructor
-    public Player() {
+    public Player(String name) {
     }
+
+    
+    public ArrayList<Player> playerName(){
+    ArrayList<Player> nameList = new ArrayList<>();
+    nameList.add(new Player("player name"));
+    nameList.add(new Player("saved game"));
+    nameList.add(new Player("character"));
+    return nameList;
+    }
+    
+    
     
 // get and set Name    
 // What is this players name?

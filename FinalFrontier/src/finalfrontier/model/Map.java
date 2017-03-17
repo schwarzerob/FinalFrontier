@@ -15,7 +15,7 @@ import java.util.Arrays;
  */
 public class Map {
     
-    
+    char thisOne = '0';
     //save Location specs to array
     public char mapMatrix[][] = {                
         {'_', '_', '_', '_', '_'},          
