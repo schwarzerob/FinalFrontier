@@ -15,17 +15,24 @@ import java.util.Objects;
  */
 public class Player implements Serializable{
     public String name;
+    public String character = "LUMBERJACK";
     
 // Constructor
     public Player(String name) {
     }
 
+        /*
+        playerName
+        Character
+        location
+        resources
+        */
     
-    public ArrayList<Player> playerName(){
+    ArrayList<Player> playerName(){
     ArrayList<Player> nameList = new ArrayList<>();
-    nameList.add(new Player("player name"));
+    nameList.add(new Player(name));
     nameList.add(new Player("saved game"));
-    nameList.add(new Player("character"));
+    nameList.add(new Player(character));
     return nameList;
     }
     
@@ -38,39 +45,6 @@ public class Player implements Serializable{
     }
     public void setName(String name) {
         this.name = name;
-    }
-    
-// hashCode
-    @Override
-    public int hashCode() {
-        int hash = 3;
-        hash = 41 * hash + Objects.hashCode(this.name);
-        return hash;
-    }
-    
-// toString
-    @Override
-    public String toString() {
-        return "Player's name = " + name;
-    }
-    
-// equals
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Player other = (Player) obj;
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        return true;
     }
     
 // What character is the Player using?
