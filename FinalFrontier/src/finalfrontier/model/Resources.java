@@ -17,8 +17,7 @@ public class Resources {
    public Resources (String Type, int amount) {
    
    }
-   
-   
+    
     private int quantity;
     private String type;
     public static int wood = Character.LUMBERJACK.getWood();

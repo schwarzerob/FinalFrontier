@@ -7,6 +7,7 @@ package finalfrontier.model;
 
 import finalfrontier.view.LocationMapView;
 import java.io.Serializable;
+import java.util.Random;
 
 /**
  *
@@ -15,7 +16,7 @@ import java.io.Serializable;
 public class Location implements Serializable{
     private int row;
     private int column;
-    private char visited;
+    private char visitedChar = 'X';
     
     public Location(){
         }
@@ -35,8 +36,23 @@ public class Location implements Serializable{
         this.column = (char) column;
     }
     
-    //create random integer to select which event and run to EventView
     
+    //create random integer to select which event and run to EventView
+    Random rand = new Random();
+        public int  event;
+    Map map = new Map();
+    
+    public int getEvent(){
+        if(map.getColumn()==4 && map.getRow()==6){
+            event = 5;
+        }else{event = rand.nextInt(4);}
+        return event;
+    }
+        
+    public String ChooseToGo(){
+        System.out.println("Location Class");
+        return null;
+    }
     
     
 // equals
@@ -58,7 +74,7 @@ public class Location implements Serializable{
         if (this.column != other.column) {
             return false;
         }
-        if (this.visited != other.visited) {
+        if (this.visitedChar != other.visitedChar) {
             return false;
         }
         return true;
@@ -67,7 +83,7 @@ public class Location implements Serializable{
 // toString
     @Override
     public String toString() {
-        System.out.println("Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + '}');
+        System.out.println("Location{" + "row=" + row + ", column=" + column + ", visited=" + visitedChar + '}');
         return "";
     }
     

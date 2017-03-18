@@ -5,6 +5,7 @@
  */
 package finalfrontier.view;
 
+import finalfrontier.model.Location;
 import finalfrontier.model.Map;
 import java.util.Scanner;
 
@@ -13,7 +14,7 @@ import java.util.Scanner;
  * @author rschw
  */
 public class LocationMapView extends View{
-        //private final String howFar;  //Banner
+    
         public static int row=0;
         public static int col=0;
         
@@ -23,9 +24,8 @@ public class LocationMapView extends View{
                                 "\n   W+E"+
                                 "\n    S "+
                                 "\nQ-Quit moving");
-        //this.howFar = ("\nHow Far are we going?");
     }
-        //run Location with new row, col, and howFar
+    
     @Override
     public boolean doAction(String value){
             value.toUpperCase();
@@ -39,29 +39,34 @@ public class LocationMapView extends View{
             
             switch (value){
                 case "N":
-                    if(row+distance < 6){
+                    if(row+distance <= 6){
                     row = row + distance;
                     }else{System.out.println("\nToo far!");}
                     break;
                 case "S":
-                    if(row-distance > 0){
+                    if(row-distance >= 0){
                     row = row - distance;
                     }else{System.out.println("\nToo far!");}
                     break;
                 case "E":
-                    if(col+distance < 5){
+                    if(col+distance <= 5){
                     col = col + distance;
                     }else{System.out.println("\nToo far!");}
                     break;
                 case "W":
-                    if(col-distance > 0){
+                    if(col-distance >= 0){
                     col = col - distance;
                     }else{System.out.println("\nToo far!");}
                     break;
                 default:
                 System.out.println("\nInvalid direction");
             }
-        
+            
+            EventView here = new EventView();
+            here.randomEvent(distance);
+            
+            //System.out.println(here.wasHere);
+            //System.out.println(event1.event);
             Map displayMap = new Map();
             displayMap.displayMap();
             return true;
