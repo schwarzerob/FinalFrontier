@@ -5,6 +5,10 @@
  */
 package finalfrontier.view;
 
+import finalfrontier.control.CraftingControl;
+import finalfrontier.model.Craft;
+import finalfrontier.model.Craft.CraftingItems;
+
 /**
  *
  * @author rschw
@@ -20,7 +24,7 @@ public class CraftingView extends View{
                    +"\nP - Shield"
                    +"\nB - Bow"
                    +"\nW - Wagon"
-                   +"\nC - String"
+                   +"\nC - Rope"
                    +"\nQ - Quit to Game Menu"
                    +"\n-------------------------------------");
     }
@@ -31,19 +35,24 @@ public class CraftingView extends View{
         switch (value){
         
         case "S":
-            this.craftSword();
+            CraftingControl swordCraft = new CraftingControl();
+            swordCraft.craftSword();
             break;
         case "P":
-            this.craftShield();
+            CraftingControl shieldCraft = new CraftingControl();
+            shieldCraft.craftShield();
             break;
         case "B":
-            this.craftBow();
+            CraftingControl bowCraft = new CraftingControl();
+            bowCraft.craftBow();
             break;
         case "W":
-            this.craftWagon();
+            CraftingControl wagonCraft = new CraftingControl();
+            wagonCraft.craftWagon();
             break;
         case "C":
-            this.craftString();
+            CraftingControl ropeCraft = new CraftingControl();
+            ropeCraft.craftRope();
             break;
         default:
             System.out.println("That Item can't be crafted, try again");
@@ -52,6 +61,7 @@ public class CraftingView extends View{
     
     }
     private void craftSword(){
+        System.out.println(CraftingItems.Shield);
             System.out.println("Congratulation you just crafted a sword");
         
     }
@@ -67,7 +77,7 @@ public class CraftingView extends View{
             System.out.println("Congratulation you just made you wagon bigger");
         
     }
-    private void craftString(){
+    private void craftRope(){
             System.out.println("Congratulation you just crafted a string");
         
     }

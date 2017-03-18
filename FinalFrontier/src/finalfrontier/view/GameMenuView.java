@@ -70,6 +70,8 @@ public class GameMenuView extends View{
 
     private void crafting() {
         System.out.println("*** crafting function called ***");
+        CraftingView craft = new CraftingView();
+        craft.display();
     }
 
     private void viewTheMap() {
