@@ -10,17 +10,19 @@ package finalfrontier.model;
  * @author rschw
  */
 public enum CraftingItems {
-    Sword("You just crafted a sword!", 10, 0, 15, 0, 20),
-    Shield("You just crafted a shield!", 15, 0, 20, 0, 21),
-    Bow("You just crafted a bow!", 15, 0, 0, 2, 10),
-    String("You just crafted a string", 0, 5, 0, 20, 10),
-    Wagon("You made your wagon bigger!", 15, 17, 23, 7, 25);
+    SWORD("You just crafted a sword!", 10, 0, 15, 0, 20),
+    SHIELD("You just crafted a shield!", 15, 0, 20, 0, 21),
+    BOW("You just crafted a bow!", 15, 0, 0, 2, 10),
+    STRING("You just crafted a string", 0, 5, 0, 20, 10),
+    WAGON("You made your wagon bigger!", 15, 17, 23, 7, 25);
+
     private final String description;
     private final int wood;
     private final int grain;
     private final int ore;
     private final int sheep;    
     private final int gold;
+    
     CraftingItems(String desc,int woodAmnt, int grainAmnt, int oreAmnt, int sheepAmnt, int goldAmnt){
         description = desc;
         wood = woodAmnt;
@@ -48,4 +50,6 @@ public enum CraftingItems {
     public int getGold(){
         return gold;
     }
+    
+    
 }  

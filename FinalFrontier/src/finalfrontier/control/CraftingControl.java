@@ -6,6 +6,8 @@
 package finalfrontier.control;
 
 import static finalfrontier.model.Character.LUMBERJACK;
+import finalfrontier.model.Craft;
+import finalfrontier.model.CraftingItems;
 import finalfrontier.model.Resources;
 import java.io.Serializable;
 import java.util.Scanner;
@@ -16,6 +18,10 @@ import java.util.Scanner;
  * @author Gabriel
  */
 public class CraftingControl implements Serializable {
+
+    private static void orderPrice(int input) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
   public int craftMaster (int radius, int area) { 
           
           //Variables
@@ -38,14 +44,9 @@ public class CraftingControl implements Serializable {
             default:
                 System.out.println("Invalid input.");
                 break;
-            }
-        
-       
-      
-        
+            } 
    return 0;     
-  }
-
+  }         
         public String whichOne;
         public String whichCharacter(){
              whichOne = "LUMBERJACK";
@@ -85,5 +86,30 @@ public class CraftingControl implements Serializable {
             int rope = 1;
             return rope;
         }
-
+ public static int[] doSelectionSort(int[] arr){
+         
+        for (int i = 0; i < arr.length - 1; i++)
+        {
+            int index = i;
+            for (int j = i + 1; j < arr.length; j++)
+                if (arr[j] < arr[index])
+                    index = j;
+      
+            int smallerNumber = arr[index]; 
+            arr[index] = arr[i];
+            arr[i] = smallerNumber;
+        }
+        return arr;
+    }
+     
+    public static void main(String a[]){
+         
+        int[] arr1 = {10,34,2,56,7,67,88,42};
+        int[] arr2 = doSelectionSort(arr1);
+        for(int i:arr2){
+            System.out.print(i);
+            System.out.print(", ");
+        }
+    }
+    
 }
