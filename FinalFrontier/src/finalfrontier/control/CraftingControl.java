@@ -48,11 +48,11 @@ public class CraftingControl implements Serializable {
 
         public String whichOne;
         public String whichCharacter(){
-             whichOne = "LUMBERJACK";
             Scanner value = new Scanner(System.in);
+             whichOne = value.nextLine();
             
             
-            return whichOne;
+            return whichOne = LUMBERJACK.getDescription();
         }
   
   
