@@ -5,8 +5,8 @@
  */
 package finalfrontier.control;
 
-import static finalfrontier.model.Character.FARMER;
-import static finalfrontier.model.Character.LUMBERJACK;
+import static finalfrontier.model.MyCharacter.FARMER;
+import static finalfrontier.model.MyCharacter.LUMBERJACK;
 import finalfrontier.model.Resources;
 import java.io.Serializable;
 import java.util.Scanner;

@@ -5,6 +5,8 @@
  */
 package finalfrontier.model;
 
+import static finalfrontier.model.MyCharacter.LUMBERJACK;
+import static finalfrontier.model.MyCharacter.LUMBERJACK;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -18,14 +20,16 @@ public class Resources {
    
    }
     
+    //String place = "LUMBERJACK";
+    int place = MyCharacter.LUMBERJACK.ordinal();
     private int quantity;
     private String type;
-    public static int wood = Character.LUMBERJACK.getWood();
-    public static int grain = 10;
-    public static int ore = 10;
-    public static int sheep = 10;
-    public static int swords = 1;
-    public static int gold = 1;
+    public static int wood = MyCharacter.LUMBERJACK.getWood();
+    public static int grain = MyCharacter.LUMBERJACK.getGrain();
+    public static int ore = MyCharacter.LUMBERJACK.getOre();
+    public static int sheep = MyCharacter.LUMBERJACK.getSheep();
+    public static int swords = MyCharacter.LUMBERJACK.getSwords();
+    public static int gold = MyCharacter.LUMBERJACK.getGold();
    
     public ArrayList<Resources> addContent(){
     

@@ -7,7 +7,7 @@ package finalfrontier;
 
 import finalfrontier.model.Attack;
 import finalfrontier.model.Player;
-import finalfrontier.model.Character;
+import finalfrontier.model.MyCharacter;
 import finalfrontier.model.Craft;
 import finalfrontier.model.Event;
 import finalfrontier.model.Homestead;

@@ -9,7 +9,7 @@ package finalfrontier.model;
  *
  * @author rschw
  */
-public enum Character {
+public enum MyCharacter {
     LUMBERJACK("The lumberjack goes into the field with more wood.", 30, 20, 20, 20, 1, 20),
     FARMER("The farmer has more bags of grain.", 20, 30, 20, 20, 1, 20),
     BLACKSMITH("The blacksmith starts off with some extra ore.", 20, 20, 30, 20, 1, 20),
@@ -25,7 +25,7 @@ public enum Character {
     private final int gold;
     
     //Constructor
-    Character(String desc,int woodAmnt, int grainAmnt, int oreAmnt, int sheepAmnt, int swordsAmnt, int goldAmnt){
+    MyCharacter(String desc,int woodAmnt, int grainAmnt, int oreAmnt, int sheepAmnt, int swordsAmnt, int goldAmnt){
         this.description = desc;
         this.wood = woodAmnt;
         this.grain = grainAmnt;

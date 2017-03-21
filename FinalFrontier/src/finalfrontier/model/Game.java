@@ -6,7 +6,7 @@
 package finalfrontier.model;
 
 import java.util.ArrayList;
-import finalfrontier.model.Character;
+import finalfrontier.model.MyCharacter;
 import finalfrontier.model.Player;
 
 /**
