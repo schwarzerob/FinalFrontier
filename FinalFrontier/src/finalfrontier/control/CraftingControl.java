@@ -5,6 +5,7 @@
  */
 package finalfrontier.control;
 
+import static finalfrontier.model.Character.FARMER;
 import static finalfrontier.model.Character.LUMBERJACK;
 import finalfrontier.model.Resources;
 import java.io.Serializable;
@@ -50,8 +51,6 @@ public class CraftingControl implements Serializable {
         public String whichCharacter(){
             Scanner value = new Scanner(System.in);
              whichOne = value.nextLine();
-            
-            
             return whichOne = LUMBERJACK.getDescription();
         }
   
@@ -59,13 +58,13 @@ public class CraftingControl implements Serializable {
         public int craftSword(){
             //cost: 10 wood, 15 ore, 20 gold
             
-            int wood = (LUMBERJACK.getWood());
-            int ore = (LUMBERJACK.getOre());
-            int gold = (LUMBERJACK.getGold());
+            int wood = 10;
+            int ore = 15;
+            int gold = 20;
             Resources.wood -= wood;
             Resources.ore -= ore;
             Resources.gold -= gold;
-            
+            System.out.println(whichOne + " "+ wood +" " + ore + " " + gold);
             Resources.swords += 1;
             return Resources.swords;
             
