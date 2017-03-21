@@ -7,8 +7,6 @@ package finalfrontier.control;
 
 import static finalfrontier.model.MyCharacter.FARMER;
 import static finalfrontier.model.MyCharacter.LUMBERJACK;
-import static finalfrontier.model.Character.FARMER;
-import static finalfrontier.model.Character.LUMBERJACK;
 import finalfrontier.model.Craft;
 import finalfrontier.model.CraftingItems;
 import finalfrontier.model.Resources;
