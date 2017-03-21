@@ -10,12 +10,12 @@ package finalfrontier.model;
  * @author rschw
  */
 public enum Character {
-    LUMBERJACK("The lumberjack goes into the field with more wood.", 20, 10, 10, 10, 1, 10),
-    FARMER("The farmer has more bags of grain.", 10, 20, 10, 10, 1, 10),
-    BLACKSMITH("The blacksmith starts off with some extra ore.", 10, 10, 20, 10, 1, 10),
-    HUNTER("A hunter already has plenty of sheep.", 10, 10, 10, 20, 1, 10),
-    SOLDIER("The soldier already has his swords.", 10, 10, 10, 10, 3, 20),
-    BANKER("The banker has all the remaining gold.", 10, 10, 10, 10, 1, 20);
+    LUMBERJACK("The lumberjack goes into the field with more wood.", 30, 20, 20, 20, 1, 20),
+    FARMER("The farmer has more bags of grain.", 20, 30, 20, 20, 1, 20),
+    BLACKSMITH("The blacksmith starts off with some extra ore.", 20, 20, 30, 20, 1, 20),
+    HUNTER("A hunter already has a large herd of sheep.", 20, 20, 20, 30, 1, 20),
+    SOLDIER("The soldier already has his swords.", 20, 20, 20, 20, 3, 20),
+    BANKER("The banker has all the remaining gold.", 20, 20, 20, 20, 1, 30);
     private final String description;
     private final int wood;
     private final int grain;
@@ -23,34 +23,38 @@ public enum Character {
     private final int sheep;
     private final int swords;    
     private final int gold;
+    
+    //Constructor
     Character(String desc,int woodAmnt, int grainAmnt, int oreAmnt, int sheepAmnt, int swordsAmnt, int goldAmnt){
-        description = desc;
-        wood = woodAmnt;
-        grain = grainAmnt;
-        ore = oreAmnt;
-        sheep = sheepAmnt;
-        swords = swordsAmnt;
-        gold = goldAmnt;
+        this.description = desc;
+        this.wood = woodAmnt;
+        this.grain = grainAmnt;
+        this.ore = oreAmnt;
+        this.sheep = sheepAmnt;
+        this.swords = swordsAmnt;
+        this.gold = goldAmnt;
     }
+    
+    //Getters
     public String getDescription(){
-        return description;
+        return this.description;
     }
     public int getWood(){
-        return wood;
+        return this.wood;
     }
     public int getGrain(){
-        return grain;
+        return this.grain;
     }
     public int getOre(){
-        return ore;
+        return this.ore;
     }
     public int getSheep(){
-        return sheep;
+        return this.sheep;
     }
     public int getSwords(){
-        return swords;
+        return this.swords;
     }
     public int getGold(){
-        return gold;
+        return this.gold;
     }
 }
