@@ -5,6 +5,7 @@
  */
 package finalfrontier.view;
 
+import finalfrontier.model.Craft;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -33,12 +34,14 @@ public class CraftingViewTest {
     @Test
     public void testDoAction() {
         System.out.println("doAction");
-        String value = "B";
+        String value = "SH";
         CraftingView instance = new CraftingView();
         boolean expResult = false;
         boolean result = instance.doAction(value);
         assertEquals(expResult, result);
         
     }
+
+
     
 }

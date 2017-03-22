@@ -6,6 +6,7 @@
 package finalfrontier.control;
 
 import finalfrontier.FinalFrontier;
+import finalfrontier.exceptions.GameControlException;
 import finalfrontier.model.Player;
 import finalfrontier.view.LocationMapView;
 import java.util.Scanner;
@@ -16,9 +17,9 @@ import java.util.Scanner;
  */
 public class GameControl {
 
-        public static Player createPlayer(String name) {
+        public static Player createPlayer(String name) throws GameControlException {
             if(name == null){
-              return null;
+              throw new GameControlException("Not a Valid Name");
             }
     
             Player player = new Player(name);
