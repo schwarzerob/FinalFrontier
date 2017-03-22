@@ -50,6 +50,29 @@ public enum CraftingItems {
     public int getGold(){
         return gold;
     }
-    
+       public static CraftingItems[] leastToMost(CraftingItems[] arr){
+         
+        for (int i = 0; i < arr.length - 1; i++)
+        {
+            int index = i;
+            for (int j = i + 1; j < arr.length; j++)
+                if (arr[j].getGold() < arr[index].getGold())
+                    index = j;
+      
+            CraftingItems smallerNumber = arr[index]; 
+            arr[index] = arr[i];
+            arr[i] = smallerNumber;
+        }
+        return arr;
+    }
+     
+    public static void main(String a[]){
+         
+        CraftingItems[] arr1 = CraftingItems.values();
+        CraftingItems[] arr2 = leastToMost(arr1);
+        for(CraftingItems i:arr2){
+            System.out.println(i.getDescription()+ " " + i.getGold() );
+        }
+    }
     
 }  

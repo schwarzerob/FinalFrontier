@@ -56,9 +56,9 @@ public class CraftingView extends View{
             ropeCraft.craftRope();
             break;
         case "SH":
-            CraftingControl showMeTheMoney = new CraftingControl();
-            showMeTheMoney.leastToMost();
-            
+          
+            this.main();
+            break;
         default:
             System.out.println("That Item can't be crafted, try again");
     }
@@ -99,11 +99,12 @@ public class CraftingView extends View{
             CraftingItems smallerNumber = arr[index]; 
             arr[index] = arr[i];
             arr[i] = smallerNumber;
+            
         }
         return arr;
     }
      
-    public static void main(String a[]){
+    public static void main(){
          
         CraftingItems[] arr1 = CraftingItems.values();
         CraftingItems[] arr2 = leastToMost(arr1);
@@ -111,6 +112,8 @@ public class CraftingView extends View{
             System.out.println(i.getDescription()+ " " + i.getGold() );
         }
     }
+
+    
 }
     
 

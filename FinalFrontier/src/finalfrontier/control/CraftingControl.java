@@ -23,31 +23,7 @@ public class CraftingControl implements Serializable {
     private static void orderPrice(int input) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-  public int craftMaster (int radius, int area) { 
-          
-          //Variables
-          int cost;
-                  
-          if (radius <= -1 ) {
-            return -1; 
-        }
-        switch (radius) {
-            case 7 :
-            case 9 :
-                 cost =((area*2)*2);
-                return cost; 
-               
-            case 5 :
-            case 3 :
-                 cost =((area*2)*2);
-                return cost;   
-                
-            default:
-                System.out.println("Invalid input.");
-                break;
-            } 
-   return 0;     
-  }         
+        
         public String whichOne;
         public String whichCharacter(){
             Scanner value = new Scanner(System.in);
