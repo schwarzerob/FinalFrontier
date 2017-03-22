@@ -21,13 +21,14 @@ public class CharacterControl {
         //define starting strength
         //define starting resources        
     }
-    public static  MyCharacter[] alphabetically(MyCharacter[] args){
-        MyCharacter[] charList1 = MyCharacter.values();
+    public static void sortCharNames(MyCharacter[] args){
+        MyCharacter[] charNames = MyCharacter.values();
         
-        for (MyCharacter name: charList1){
-            System.out.println(name +": "+ name.getDescription());
+        for(MyCharacter name: charNames){
+            System.out.println("Character: "+name);
+            String myName=name.toString();
+            if(myName.compareTo(myName));
         }
-        return charList1;
+        
     }
-    
 }
