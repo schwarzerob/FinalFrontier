@@ -111,7 +111,7 @@ public class CraftingView extends View{
             System.out.println(i.getDescription()+ " " + i.getGold() );
         }
     }
-    }
+}
     
 
 

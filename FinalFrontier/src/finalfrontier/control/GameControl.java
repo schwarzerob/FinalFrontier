@@ -32,12 +32,6 @@ public class GameControl {
 
     public static void createNewGame(Player player) {
         System.out.println("*** CreateNewGame function called ***");
+        
     }
-    
-      
-    
 }  
-    
-
-
-

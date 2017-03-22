@@ -5,17 +5,29 @@
  */
 package finalfrontier.control;
 
+import finalfrontier.model.Craft;
+import finalfrontier.model.MyCharacter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /**
  *
  * @author rschw
  */
 public class CharacterControl {
-    public String Character(String characterName, String whereIsCharacter){
+    public CharacterControl(){
         //Description of the character
         //define starting strength
-        //define starting resources
-        return null;
+        //define starting resources        
+    }
+    public static  MyCharacter[] alphabetically(MyCharacter[] args){
+        MyCharacter[] charList1 = MyCharacter.values();
         
+        for (MyCharacter name: charList1){
+            System.out.println(name +": "+ name.getDescription());
+        }
+        return charList1;
     }
     
 }
