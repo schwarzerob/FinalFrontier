@@ -16,27 +16,21 @@ import java.util.Scanner;
  */
 public class GameControl {
 
-        public static Player createPlayer(String name) {
-            if(name == null){
-              return null;
-            }
-    
-            Player player = new Player(name);
-            player.setName(name);
-          
-            FinalFrontier.setPlayer(player); //save the player
-          
-          return player;
-  }
+    public GameControl() {
+    }
+
+    public static Player createPlayer(String name) {
+        if(name == null){
+            return null;
+        }
+        Player player = new Player(name);
+        player.setName(name);
+        FinalFrontier.setPlayer(player); //save the player
+    return player;
+    }
 
     public static void createNewGame(Player player) {
         System.out.println("*** CreateNewGame function called ***");
+        
     }
-    
-      
-    
 }  
-    
-
-
-

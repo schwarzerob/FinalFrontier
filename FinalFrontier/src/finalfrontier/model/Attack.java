@@ -12,8 +12,8 @@ import java.io.Serializable;
  * @author Gabriel
  */
 public class Attack implements Serializable  {
-    private int healthAttack;
-    private int healthPlayer;
+    private int healthAttack = 20;
+    private int healthPlayer = 30;
     
     public Attack (){
     
@@ -72,6 +72,12 @@ public class Attack implements Serializable  {
 
     @Override
     public String toString() {
+        if (Resources.swords > 0){
+            Resources.swords -= 1;
+            healthAttack -= 5;
+    }
+        healthPlayer -= 5;
+        
         return "Attack{" + "healthAttack=" + healthAttack + ", healthPlayer=" + healthPlayer + '}';
     }
 

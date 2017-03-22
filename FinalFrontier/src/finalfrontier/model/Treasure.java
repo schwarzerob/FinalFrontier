@@ -16,7 +16,7 @@ public class Treasure implements Serializable {
     private int loot;
     private String type;
     Random resource = new Random();
-        int  whichOne = resource.nextInt(4);
+        int  whichOne = resource.nextInt(5);
     Random amount = new Random();
         int  howMuch = amount.nextInt(10);
     
@@ -33,7 +33,8 @@ public class Treasure implements Serializable {
             case 2: type = "Wood";
             case 3: type = "Grain";
             case 4: type = "Ore";
-            case 5: type = "Meat";
+            case 5: type = "Sheep";
+            case 6: type = "Nothing";
                 }
     }
     
@@ -44,6 +45,7 @@ public class Treasure implements Serializable {
      //setter for loot
     public void setLoot(int loot) {
         this.loot = howMuch;
+    System.out.println(type + ": " + howMuch);
     }
     
    //hash
