@@ -21,13 +21,34 @@ public class CharacterControl {
         //define starting strength
         //define starting resources        
     }
+    
+    
     public static void sortCharNames(MyCharacter[] args){
-        MyCharacter[] charNames = MyCharacter.values();
         
-        for(MyCharacter name: charNames){
-            System.out.println("Character: "+name);
-            String myName=name.toString();
-            if(myName.compareTo(myName));
+        MyCharacter charNames[] = MyCharacter.values(); //create Array from MyCharacter enum
+        
+        
+        //Gather character that has the most of a particular resource at the start of the game.
+        int maxValue=0;
+        for(MyCharacter theMost: charNames){
+        //for(int i=0; i<charNames.length-1; i++){
+            if(theMost.getOre()>maxValue){
+                maxValue+=theMost.getOre();
+                System.out.println(theMost.name()+ " with "+maxValue);
+            }
+        }
+            System.out.println(maxValue);
+        
+        
+            //Attempt at alphabetically sorting characters
+        for(int i=0; i<charNames.length-1; i++){
+            System.out.println("Character: "+charNames[i]);
+            if(charNames[i].compareTo(charNames[i+1])>0){
+                MyCharacter temp=charNames[i];
+                charNames[i]=charNames[i+1];
+                charNames[i+1]=temp;
+                boolean flag = true;
+            }
         }
         
     }
