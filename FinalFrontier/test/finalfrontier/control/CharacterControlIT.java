@@ -29,15 +29,13 @@ public class CharacterControlIT {
     }
 
     /**
-     * Test of alphabetically method, of class CharacterControl.
+     * Test of sortCharNames method, of class CharacterControl.
      */
     @Test
-    public void testAlphabetically() {
-        System.out.println("alphabetically");
+    public void testSortCharNames() {
+        System.out.println("sortCharNames");
         MyCharacter[] args = null;
-        MyCharacter[] expResult = null;
-        MyCharacter[] result = CharacterControl.alphabetically(args);
-        assertArrayEquals(expResult, result);
+        CharacterControl.sortCharNames(args);
     }
     
 }
