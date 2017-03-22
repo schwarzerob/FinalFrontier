@@ -25,6 +25,7 @@ public class CraftingView extends View{
                    +"\nB - Bow"
                    +"\nW - Wagon"
                    +"\nC - Rope"
+                   +"\nSH - Show Cheapest Craft"
                    +"\nQ - Quit to Game Menu"
                    +"\n-------------------------------------");
     }
@@ -55,8 +56,8 @@ public class CraftingView extends View{
             ropeCraft.craftRope();
             break;
         case "SH":
-            CraftingControl leastToMost = new CraftingControl();
-            leastToMost.craftRope();
+            CraftingControl showMeTheMoney = new CraftingControl();
+            showMeTheMoney.leastToMost();
             
         default:
             System.out.println("That Item can't be crafted, try again");
@@ -86,7 +87,7 @@ public class CraftingView extends View{
         
     }
     
-        public static CraftingItems[] leastToMost(CraftingItems[] arr){
+    public static CraftingItems[] leastToMost(CraftingItems[] arr){
          
         for (int i = 0; i < arr.length - 1; i++)
         {
