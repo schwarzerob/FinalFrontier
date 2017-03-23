@@ -20,14 +20,14 @@ public class GameControl {
     public GameControl() {
     }
 
-        public String createPlayer(String name, String charChoice) 
+        public String createPlayer(String name) 
                     throws GameControlException {
             if(name == null){
               throw new GameControlException("Not a Valid Name");
             }
     
             String playerName = Player.class.getName();
-            String character = Player.class.getCharacter();
+            //String character = Player.class.getCharacter();
           
           return playerName;
   }
