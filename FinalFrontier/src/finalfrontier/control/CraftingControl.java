@@ -5,6 +5,7 @@
  */
 package finalfrontier.control;
 
+import finalfrontier.exceptions.CraftingControlException;
 import static finalfrontier.model.MyCharacter.FARMER;
 import static finalfrontier.model.MyCharacter.LUMBERJACK;
 import finalfrontier.model.Craft;
@@ -20,19 +21,18 @@ import java.util.Scanner;
  */
 public class CraftingControl implements Serializable {
 
-    private static void orderPrice(int input) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    /*private static void orderPrice(int input) {
     }
-        
         public String whichOne;
         public String whichCharacter(){
             Scanner value = new Scanner(System.in);
              whichOne = value.nextLine();
             return whichOne = LUMBERJACK.getDescription();
         }
+        */
   
-  
-        public int craftSword(){
+        public int craftSword()
+                throws CraftingControlException {
             //cost: 10 wood, 15 ore, 20 gold
             
             int wood = 10;
@@ -41,8 +41,11 @@ public class CraftingControl implements Serializable {
             Resources.wood -= wood;
             Resources.ore -= ore;
             Resources.gold -= gold;
-            System.out.println(whichOne + " "+ wood +" " + ore + " " + gold);
+            System.out.println(wood +" " + ore + " " + gold);
             Resources.swords += 1;
+            if(Resources.wood < wood || Resources.ore < ore || Resources.gold < gold){
+                throw new CraftingControlException("You can't afford that!");
+            }
             return Resources.swords;
             
             

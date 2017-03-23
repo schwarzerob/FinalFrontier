@@ -21,9 +21,9 @@ public class GameControl {
     }
 
         public String createPlayer(String name) 
-                    throws GameControlException {
+                    throws GameControlException {                   //throws...
             if(name == null){
-              throw new GameControlException("Not a Valid Name");
+              throw new GameControlException("Not a Valid Name");   //throw new
             }
     
             String playerName = Player.class.getName();

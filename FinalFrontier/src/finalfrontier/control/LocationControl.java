@@ -5,6 +5,7 @@
  */
 package finalfrontier.control;
 
+import finalfrontier.exceptions.LocationControlExceptions;
 import java.io.Serializable;
 import java.util.Scanner;
 
@@ -21,7 +22,8 @@ be changed by the value of either the row, or the column.
 */
 public class LocationControl implements Serializable {
     
-    public int Location(int row, int column, char visited){
+    public static void Location(int row, int column, char visited)
+            throws LocationControlExceptions{
        row = 1;
        column = 1;
        Scanner whichWay = new Scanner(System.in);
@@ -30,10 +32,6 @@ public class LocationControl implements Serializable {
        Scanner howFar = new Scanner(System.in);
        int distance = howFar.nextInt();
        visited = '_';
-        
-        if (direction != 'N' || direction != 'E' || direction != 'S' || direction != 'W') {
-            return visited = '_';
-        }
             
         switch (direction) {
             case 'N':
@@ -60,8 +58,8 @@ public class LocationControl implements Serializable {
             System.out.println("Invalid input.");
             break;
         }
-    
-//input size
-        return row;    
+        if(row>6 || row<0 || column>4 || column<0){
+            throw new LocationControlExceptions("That's out of the map!");
+        }   
     }
 }
