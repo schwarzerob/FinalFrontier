@@ -18,7 +18,7 @@ public class Player implements Serializable{
     public String character;
     
 // Constructor
-    public Player(String name) {
+    public Player(String name, String character1) {
     }
 
         /*
@@ -30,9 +30,7 @@ public class Player implements Serializable{
     
     ArrayList<Player> playerName(){
     ArrayList<Player> nameList = new ArrayList<>();
-    nameList.add(new Player(name));
-    nameList.add(new Player("saved game"));
-    nameList.add(new Player(character));
+    nameList.add(new Player(name, character));
     return nameList;
     }
     

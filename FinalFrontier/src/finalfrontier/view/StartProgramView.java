@@ -23,15 +23,16 @@ import java.util.logging.Logger;
     //call PlayerControl to create a player object
     //If successfull, display welcome banner
 public class StartProgramView extends View{
-    String player="me";
     public StartProgramView(){
         super(
-        "************************"
+        " ************************"
         + "\n * Description of the game"
         + "\n * The description fits well over many rows like this."
-        + "\n************************"
+        + "\n ************************"
         + "\n \nWhat's your name?");
     }
+    String player="me";
+    
     
 @Override
     public boolean doAction(String playersName) {
@@ -42,21 +43,20 @@ public class StartProgramView extends View{
             return false;
         }
         // call createPlayer() control function
+        
         player = Player.class.getName();
         if(player == null){
             System.out.println("\nError creating player.");
             return false;
         }
         getCharacter();
-    MainMenuView mainMenu = new MainMenuView();
-    mainMenu.display();
         return true;
     }
         
     public String getCharacter(){
         MyCharacter charNames[] = MyCharacter.values(); //create Array from MyCharacter enum
         //Which character?
-        System.out.println(" ************************"
+        displayMessage=("\n ************************"
                        + "\n * Which character do you want to play?"
                        + "\n * Here is a list of characters and their bonuses."
                        + "\n ************************");
@@ -66,16 +66,18 @@ public class StartProgramView extends View{
                             +"\n    Sheep: "+charNames[i].getSheep()+",  Swords: "+charNames[i].getSwords()+",  Gold: "+charNames[i].getGold());
         }
         
-        int value=1;
-        Scanner keyboard = new Scanner(System.in);
-        value = keyboard.nextInt();
-        String myChar =charNames[value].toString();
+        int value=0;
+        do{
+        getInput();
+        value=Integer.parseInt(getInput());            
+        } while (value <0 || value >= charNames.length);
         System.out.println("\n========================================="
                          + "\n Welcome " + player + ", to the Final Frontier!"
                          + "\n We hope you have a lot of fun as the "+charNames[value]
                          + "\n========================================="
                          );
-        Player.setCharacter(myChar);
+    MainMenuView mainMenu = new MainMenuView();
+    mainMenu.display();
         return null;
   }
 }

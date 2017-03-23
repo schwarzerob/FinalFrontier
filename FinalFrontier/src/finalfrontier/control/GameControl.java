@@ -22,7 +22,7 @@ public class GameControl {
               throw new GameControlException("Not a Valid Name");
             }
     
-            Player player = new Player(name);
+            Player player = new Player(name, character);
             player.setName(name);
           
             FinalFrontier.setPlayer(player); //save the player
