@@ -69,8 +69,11 @@ public class StartProgramView extends View{
         int value=0;
         do{
         getInput();
-        value=Integer.parseInt(getInput());            
+        value=Integer.parseInt(getInput());
         } while (value <0 || value >= charNames.length);
+        
+        
+        
         System.out.println("\n========================================="
                          + "\n Welcome " + player + ", to the Final Frontier!"
                          + "\n We hope you have a lot of fun as the "+charNames[value]

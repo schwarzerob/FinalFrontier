@@ -17,20 +17,22 @@ import java.util.Scanner;
  */
 public class GameControl {
 
-        public Player createPlayer(String name) throws GameControlException {
+    public GameControl() {
+    }
+
+        public String createPlayer(String name, String charChoice) 
+                    throws GameControlException {
             if(name == null){
               throw new GameControlException("Not a Valid Name");
             }
     
-            Player player = new Player(name, character);
-            player.setName(name);
+            String playerName = Player.class.getName();
+            String character = Player.class.getCharacter();
           
-            FinalFrontier.setPlayer(player); //save the player
-          
-          return player;
+          return playerName;
   }
 
-    public static void createNewGame(Player player) {
+    public static void createNewGame(String player) {
         System.out.println("*** CreateNewGame function called ***");
         
     }

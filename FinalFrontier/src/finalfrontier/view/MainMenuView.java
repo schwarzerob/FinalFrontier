@@ -52,7 +52,7 @@ public class MainMenuView extends View{
     }
 
     private void startNewGame() {
-        GameControl.createNewGame(FinalFrontier.getPlayer());
+        GameControl.createPlayer(FinalFrontier.getPlayer());
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
     }

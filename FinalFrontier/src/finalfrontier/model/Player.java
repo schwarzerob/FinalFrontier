@@ -18,7 +18,7 @@ public class Player implements Serializable{
     public String character;
     
 // Constructor
-    public Player(String name, String character1) {
+    public Player(String name1, String character1) {
     }
 
         /*
@@ -50,9 +50,7 @@ public class Player implements Serializable{
     public String getCharacter() {
         return character;
     }
-
     public void setCharacter(String character) {
         this.character = character;
     }
-    
 }
