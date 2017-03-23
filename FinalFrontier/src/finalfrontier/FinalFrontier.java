@@ -30,7 +30,8 @@ import finalfrontier.view.StartProgramView;
  */
 public class FinalFrontier {
    
-   private static Player player = null;
+   private Player playerName = null;
+   private Player characterChoice = null;
     
     /**
      * @param args the command line arguments
@@ -42,15 +43,22 @@ public class FinalFrontier {
         startProgramView.display();
      }
 
-
-    public static Player getPlayer() {
-        return player;
+    public Player getPlayerName() {
+        return playerName;
     }
 
-    public static void setPlayer(Player player) {
-        FinalFrontier.player = player;
+    public void setPlayerName(Player playerName) {
+        this.playerName = playerName;
     }
-         
+
+    public Player getCharacterChoice() {
+        return characterChoice;
+    }
+
+    public void setCharacterChoice(Player characterChoice) {
+        this.characterChoice = characterChoice;
+    }
+       
         
 }
 

@@ -15,7 +15,7 @@ import java.util.Objects;
  */
 public class Player implements Serializable{
     public String name;
-    public String character = "LUMBERJACK";
+    public String character;
     
 // Constructor
     public Player(String name) {
@@ -48,5 +48,13 @@ public class Player implements Serializable{
     }
     
 // What character is the Player using?
+
+    public String getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(String character) {
+        this.character = character;
+    }
     
 }

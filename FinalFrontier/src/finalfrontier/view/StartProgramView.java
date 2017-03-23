@@ -7,8 +7,12 @@ package finalfrontier.view;
 
 import finalfrontier.FinalFrontier;
 import finalfrontier.control.GameControl;
+import finalfrontier.exceptions.GameControlException;
+import finalfrontier.model.MyCharacter;
 import finalfrontier.model.Player;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -19,6 +23,7 @@ import java.util.Scanner;
     //call PlayerControl to create a player object
     //If successfull, display welcome banner
 public class StartProgramView extends View{
+    String player="me";
     public StartProgramView(){
         super(
         "************************"
@@ -30,26 +35,47 @@ public class StartProgramView extends View{
     
 @Override
     public boolean doAction(String playersName) {
+        playersName="me";
         if(playersName.length()<2){
             System.out.println("\nInvalid players name: "
                                 + "The name must be greater than one character in length");
             return false;
         }
         // call createPlayer() control function
-        Player player = GameControl.createPlayer(playersName);
+        player = Player.class.getName();
         if(player == null){
             System.out.println("\nError creating player.");
             return false;
         }
-        System.out.println("\n========================================="
-                         + "\n Welcome " + player.getName() + ", to the Final Frontier!"
-                         + "\n We hope you have a lot of fun!"
-                         + "\n========================================="
-                         );
+        getCharacter();
     MainMenuView mainMenu = new MainMenuView();
     mainMenu.display();
         return true;
+    }
+        
+    public String getCharacter(){
+        MyCharacter charNames[] = MyCharacter.values(); //create Array from MyCharacter enum
+        //Which character?
+        System.out.println(" ************************"
+                       + "\n * Which character do you want to play?"
+                       + "\n * Here is a list of characters and their bonuses."
+                       + "\n ************************");
+        for(int i=0; i<charNames.length; i++){
+            System.out.println("Character "+i+": "+charNames[i]);
+            System.out.println("    Wood:  "+charNames[i].getWood()+",  Grain: "+charNames[i].getGrain()+",  Ore: "+charNames[i].getOre()
+                            +"\n    Sheep: "+charNames[i].getSheep()+",  Swords: "+charNames[i].getSwords()+",  Gold: "+charNames[i].getGold());
+        }
+        
+        int value=1;
+        Scanner keyboard = new Scanner(System.in);
+        value = keyboard.nextInt();
+        String myChar =charNames[value].toString();
+        System.out.println("\n========================================="
+                         + "\n Welcome " + player + ", to the Final Frontier!"
+                         + "\n We hope you have a lot of fun as the "+charNames[value]
+                         + "\n========================================="
+                         );
+        Player.setCharacter(myChar);
+        return null;
   }
 }
-
-// stopped at start of pg 17 before the "Implement the getPlayersName() function" part

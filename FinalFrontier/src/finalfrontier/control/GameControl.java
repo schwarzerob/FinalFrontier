@@ -17,7 +17,7 @@ import java.util.Scanner;
  */
 public class GameControl {
 
-        public static Player createPlayer(String name) throws GameControlException {
+        public Player createPlayer(String name) throws GameControlException {
             if(name == null){
               throw new GameControlException("Not a Valid Name");
             }
@@ -33,5 +33,10 @@ public class GameControl {
     public static void createNewGame(Player player) {
         System.out.println("*** CreateNewGame function called ***");
         
+    }
+    public String mostItem(){
+        //print list of resources with quantity
+        
+        return null;
     }
 }  
