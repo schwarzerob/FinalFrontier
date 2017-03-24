@@ -23,10 +23,6 @@ public class EventView {
 
     public EventView() {
     }
-    
-    public char getWasHere(){
-        return wasHere;
-    }
     //retrieve random integer from Location
     
 
@@ -36,7 +32,7 @@ public class EventView {
             event = destination.getEvent();
         switch (event){
             case 1:
-                this.lootTreasure();
+                EventControl.lootTreasure();
                 System.out.println("Treasure chest!");
                 wasHere = '$';
                 break;
@@ -63,6 +59,10 @@ public class EventView {
             System.out.println("Random number: "+event);
         System.out.println("Event character: "+wasHere);
         return false;
+    }
+    
+    public char getWasHere(){
+        return wasHere;
     }
     //event funtion
     //

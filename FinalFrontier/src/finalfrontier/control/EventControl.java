@@ -5,13 +5,18 @@
  */
 package finalfrontier.control;
 
+import finalfrontier.model.Treasure;
+
 /**
  *
  * @author rschw
  */
 public class EventControl {
 
-    public static void lootTreasure() {
+    public static void lootTreasure(){
+        EventControl.lootTreasure();
+        Treasure treasure = new Treasure();
+        treasure.getLoot();
         /*
         The type and amount of the resource to be gathered is from the EventView triggered Treasure model, and then applied to individual amounts in Resources model.
         */

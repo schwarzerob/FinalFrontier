@@ -30,10 +30,15 @@ public class Treasure implements Serializable {
     public void setResource(String type) {
         switch(whichOne){
             case 1: type = "Gold";
+                    Resources.gold+=howMuch;
             case 2: type = "Wood";
+                    Resources.wood+=howMuch;
             case 3: type = "Grain";
+                    Resources.grain+=howMuch;
             case 4: type = "Ore";
+                    Resources.ore+=howMuch;
             case 5: type = "Sheep";
+                    Resources.sheep+=howMuch;
             case 6: type = "Nothing";
                 }
     }
@@ -46,32 +51,6 @@ public class Treasure implements Serializable {
     public void setLoot(int loot) {
         this.loot = howMuch;
     System.out.println(type + ": " + howMuch);
-    }
-    
-   //hash
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 89 * hash + this.loot;
-        return 0;
-    }
-// equals
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Treasure other = (Treasure) obj;
-        if (this.loot != other.loot) {
-            return false;
-        }
-        return true;
     }
 
     @Override

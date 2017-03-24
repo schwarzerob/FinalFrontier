@@ -21,9 +21,13 @@ the method is complete, the location on the map will
 be changed by the value of either the row, or the column.
 */
 public class LocationControl implements Serializable {
+
+    public LocationControl() {
+    }
+    
     
     public static void Location(int row, int column, char visited)
-            throws LocationControlExceptions{
+            throws LocationControlExceptions{                           //throws
        row = 1;
        column = 1;
        Scanner whichWay = new Scanner(System.in);
@@ -59,7 +63,7 @@ public class LocationControl implements Serializable {
             break;
         }
         if(row>6 || row<0 || column>4 || column<0){
-            throw new LocationControlExceptions("That's off the map!");
+            throw new LocationControlExceptions("That's off the map!");    //throw new
         }   
     }
 }

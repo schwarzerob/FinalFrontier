@@ -32,12 +32,12 @@ public class CraftingControl implements Serializable {
         */
   
         public static void craftSword()
-                throws CraftingControlException {
+                throws CraftingControlException {           //throws
             //cost: 10 wood, 15 ore, 20 gold
             
             int wood = 5, ore = 15, gold = 10;
             if(Resources.wood < wood || Resources.ore < ore || Resources.gold < gold){
-                throw new CraftingControlException("You can't afford that!");
+                throw new CraftingControlException("You can't afford that!");           //throw new
             }
             Resources.wood -= wood;
             Resources.ore -= ore;
@@ -49,11 +49,11 @@ public class CraftingControl implements Serializable {
         }
         
         public static void craftShield()
-                throws CraftingControlException {
+                throws CraftingControlException {           //throws
             //cost: 10 wood, 5 ore
             int wood = 10, ore = 5;
             if(Resources.wood < wood || Resources.ore < ore){
-                throw new CraftingControlException("You can't afford that!");
+                throw new CraftingControlException("You can't afford that!");           //throw new
             }
             Resources.wood-=wood;
             Resources.ore-=ore;
