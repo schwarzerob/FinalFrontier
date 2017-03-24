@@ -33,7 +33,7 @@ public class CharacterControl {
         for(MyCharacter theMost: charNames){
         //for(int i=0; i<charNames.length-1; i++){
             if(theMost.getOre()>maxValue){
-                maxValue+=theMost.getOre();
+                maxValue=theMost.getOre();
                 System.out.println(theMost.name()+ " with "+maxValue);
             }
         }
@@ -41,6 +41,7 @@ public class CharacterControl {
         
         
             //Attempt at alphabetically sorting characters
+            /*
         for(int i=0; i<charNames.length-1; i++){
             System.out.println("Character: "+charNames[i]);
             if(charNames[i].compareTo(charNames[i+1])>0){
@@ -50,6 +51,7 @@ public class CharacterControl {
                 boolean flag = true;
             }
         }
+            */
         
     }
 }
