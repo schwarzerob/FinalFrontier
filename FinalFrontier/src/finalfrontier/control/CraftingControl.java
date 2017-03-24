@@ -31,39 +31,34 @@ public class CraftingControl implements Serializable {
         }
         */
   
-        public int craftSword()
+        public static void craftSword()
                 throws CraftingControlException {
             //cost: 10 wood, 15 ore, 20 gold
             
-            int wood = 10;
-            int ore = 15;
-            int gold = 20;
-            Resources.wood -= wood;
-            Resources.ore -= ore;
-            Resources.gold -= gold;
-            System.out.println(wood +" " + ore + " " + gold);
-            Resources.swords += 1;
+            int wood = 10, ore = 15, gold = 20;
             if(Resources.wood < wood || Resources.ore < ore || Resources.gold < gold){
                 throw new CraftingControlException("You can't afford that!");
             }
-            return Resources.swords;
-            
-            
-            
-            
-        }public int craftShield(){
-            int shield = 1;
-            return shield;
-        }public int craftBow(){
-            int bows = 1;
-            return bows;
-        }public int craftWagon(){
-            int wagon = 1;
-            return wagon;
-        }public int craftRope(){
-            int rope = 1;
-            return rope;
+            Resources.wood -= wood;
+            Resources.ore -= ore;
+            Resources.gold -= gold;
+            Resources.swords += 1;
+            System.out.println("Left over resources: " +Resources.wood +" wood, " + Resources.ore + "ore, and " + Resources.gold+" gold");
+            System.out.println(Resources.swords);
         }
+        
+        public int craftShield(){
+            int shield = 1;
+            return shield;}
+        public int craftBow(){
+            int bows = 1;
+            return bows;}
+        public int craftWagon(){
+            int wagon = 1;
+            return wagon;}
+        public int craftRope(){
+            int rope = 1;
+            return rope;}
  
     public void leastToMost() {
        

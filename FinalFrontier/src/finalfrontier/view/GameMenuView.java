@@ -15,7 +15,7 @@ import java.util.Scanner;
  * @author rschw
  */
 public class GameMenuView extends View{
-    String displayMessage = "What to do now?";
+    
     public GameMenuView(){
         super("\n"
                    +"\n-------------------------------------"
@@ -29,6 +29,7 @@ public class GameMenuView extends View{
                    +"\n-------------------------------------");
     }
 
+    @Override
     public boolean doAction(String value) {
         value = value.toUpperCase();
         

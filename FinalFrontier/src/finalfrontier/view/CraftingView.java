@@ -6,8 +6,12 @@
 package finalfrontier.view;
 
 import finalfrontier.control.CraftingControl;
+import finalfrontier.exceptions.CraftingControlException;
 import finalfrontier.model.Craft;
 import finalfrontier.model.Craft.CraftingItems;
+import finalfrontier.model.Resources;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -32,38 +36,42 @@ public class CraftingView extends View{
 
     @Override
     public boolean doAction(String value) {
-        value = value.toUpperCase();
-        switch (value){
-        
-        case "S":
-            CraftingControl swordCraft = new CraftingControl();
-            swordCraft.craftSword();
-            break;
-        case "P":
-            CraftingControl shieldCraft = new CraftingControl();
-            shieldCraft.craftShield();
-            break;
-        case "B":
-            CraftingControl bowCraft = new CraftingControl();
-            bowCraft.craftBow();
-            break;
-        case "W":
-            CraftingControl wagonCraft = new CraftingControl();
-            wagonCraft.craftWagon();
-            break;
-        case "C":
-            CraftingControl ropeCraft = new CraftingControl();
-            ropeCraft.craftRope();
-            break;
-        case "SH":
-          
-            this.main();
-            break;
-        default:
-            System.out.println("That Item can't be crafted, try again");
-    }
-        return false;
-    
+        try {
+            value = value.toUpperCase();
+            switch (value){
+                
+                case "S":
+                    CraftingControl swordCraft = new CraftingControl();
+                    swordCraft.craftSword();
+                    break;
+                case "P":
+                    CraftingControl shieldCraft = new CraftingControl();
+                    shieldCraft.craftShield();
+                    break;
+                case "B":
+                    CraftingControl bowCraft = new CraftingControl();
+                    bowCraft.craftBow();
+                    break;
+                case "W":
+                    CraftingControl wagonCraft = new CraftingControl();
+                    wagonCraft.craftWagon();
+                    break;
+                case "C":
+                    CraftingControl ropeCraft = new CraftingControl();
+                    ropeCraft.craftRope();
+                    break;
+                case "SH":
+                    
+                    this.main();
+                    break;
+                default:
+                    System.out.println("That isn't an item to be crafted, try again");
+            }
+            return false;
+        } catch (CraftingControlException ex) {
+            System.out.println("Error");
+        }
+        return true;
     }
     private void craftSword(){
         System.out.println(CraftingItems.Shield);
