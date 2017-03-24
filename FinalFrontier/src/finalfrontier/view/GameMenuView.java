@@ -7,6 +7,7 @@ package finalfrontier.view;
 
 import finalfrontier.FinalFrontier;
 import finalfrontier.control.GameControl;
+import finalfrontier.exceptions.GameControlException;
 import finalfrontier.model.Map;
 import java.util.Scanner;
 
@@ -17,8 +18,7 @@ import java.util.Scanner;
 public class GameMenuView extends View{
     
     public GameMenuView(){
-        super("\n"
-                   +"\n-------------------------------------"
+        super(       " -------------------------------------"
                    +"\n|   Game Menu                       |"
                    +"\n-------------------------------------"
                    +"\nM - Move locations"
@@ -32,7 +32,6 @@ public class GameMenuView extends View{
     @Override
     public boolean doAction(String value) {
         value = value.toUpperCase();
-        
         switch (value){
             case "M":
                 this.makeAMove();
@@ -51,10 +50,9 @@ public class GameMenuView extends View{
                 break;
             default:
                 System.out.println("\n*** Invalid selection ***"
-                                  +"\n    Try again");
+                        +"\n    Try again");
                 break;
         }
-        
         return false;
     }
 

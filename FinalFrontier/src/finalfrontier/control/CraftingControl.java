@@ -35,7 +35,7 @@ public class CraftingControl implements Serializable {
                 throws CraftingControlException {
             //cost: 10 wood, 15 ore, 20 gold
             
-            int wood = 10, ore = 15, gold = 20;
+            int wood = 5, ore = 15, gold = 10;
             if(Resources.wood < wood || Resources.ore < ore || Resources.gold < gold){
                 throw new CraftingControlException("You can't afford that!");
             }
@@ -43,13 +43,24 @@ public class CraftingControl implements Serializable {
             Resources.ore -= ore;
             Resources.gold -= gold;
             Resources.swords += 1;
-            System.out.println("Left over resources: " +Resources.wood +" wood, " + Resources.ore + "ore, and " + Resources.gold+" gold");
-            System.out.println(Resources.swords);
+            
+            System.out.println("Left over resources: " +Resources.wood +" wood, " + Resources.ore + " ore, and " + Resources.gold+" gold");
+            System.out.println("You now have "+Resources.swords + " swords");
         }
         
-        public int craftShield(){
-            int shield = 1;
-            return shield;}
+        public static void craftShield()
+                throws CraftingControlException {
+            //cost: 10 wood, 5 ore
+            int wood = 10, ore = 5;
+            if(Resources.wood < wood || Resources.ore < ore){
+                throw new CraftingControlException("You can't afford that!");
+            }
+            Resources.wood-=wood;
+            Resources.ore-=ore;
+            Resources.shields+=1;
+            System.out.println("Left over resources: " +Resources.wood +" wood, and " + Resources.ore + " ore");
+            System.out.println("You now have "+Resources.swords + " swords");
+        }
         public int craftBow(){
             int bows = 1;
             return bows;}

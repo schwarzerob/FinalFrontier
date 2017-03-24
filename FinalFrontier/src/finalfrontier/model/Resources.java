@@ -30,6 +30,8 @@ public class Resources {
     public static int sheep = MyCharacter.LUMBERJACK.getSheep();
     public static int swords = MyCharacter.LUMBERJACK.getSwords();
     public static int gold = MyCharacter.LUMBERJACK.getGold();
+    public static int shields = 1;
+    public static int bows = 1;
    
     public ArrayList<Resources> addContent(){
     
@@ -40,6 +42,7 @@ public class Resources {
     content.add(new Resources("Sheep", sheep));
     content.add(new Resources("Swords", swords));
     content.add(new Resources("Gold", gold));
+    content.add(new Resources("Shields", shields));
     return content;
     }
     public int MaxAmount(){

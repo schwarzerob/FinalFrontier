@@ -20,10 +20,9 @@ public class GameControl {
     public GameControl() {
     }
 
-        public String createPlayer(String name) 
-                    throws GameControlException {                   //throws...
+        public String createPlayer(String name){
             if(name == null){
-              throw new GameControlException("Not a Valid Name");   //throw new
+                System.out.println("Enter a name");
             }
     
             String playerName = Player.class.getName();

@@ -69,7 +69,7 @@ public class CraftingView extends View{
             }
             return false;
         } catch (CraftingControlException ex) {
-            System.out.println("Error");
+            System.out.println("You can't afford that one!");
         }
         return true;
     }

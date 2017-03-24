@@ -14,8 +14,7 @@ import finalfrontier.model.Resources;
  */
 public class ResourceView extends View{
     public ResourceView(){
-        super("\n"
-                   +"\n-------------------------------------"
+        super(      " -------------------------------------"
                    +"\n|   Resource Display                |"
                    +"\n-------------------------------------"
                    +"\nSelect which resource to view content"
@@ -32,6 +31,9 @@ public class ResourceView extends View{
     int amountOre = Resources.ore;
     int amountSheep = Resources.sheep;
     int amountSwords = Resources.swords;
+    int amountGold = Resources.gold;
+    int amountShields = Resources.shields;
+    int amountBows = Resources.bows;
 
     @Override
     public boolean doAction(String value) {
@@ -50,7 +52,7 @@ public class ResourceView extends View{
             this.resourceSheep();
             break;
         case "B":
-            this.resourceSwords();
+            this.resourceBattle();
             break;
         default:
             System.out.println("We don't have that type of resource. \n What type?");
@@ -74,8 +76,8 @@ public class ResourceView extends View{
             System.out.println("You have "+amountSheep+" sheep.");
         
     }
-    private void resourceSwords(){
-            System.out.println("You have "+amountSwords+" swords.");
+    private void resourceBattle(){
+            System.out.println("You have "+amountSwords+" swords, "+amountShields+" shields, and "+amountBows+" bows.");
         
     }
 }

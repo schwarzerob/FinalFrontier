@@ -59,7 +59,7 @@ public class LocationControl implements Serializable {
             break;
         }
         if(row>6 || row<0 || column>4 || column<0){
-            throw new LocationControlExceptions("That's out of the map!");
+            throw new LocationControlExceptions("That's off the map!");
         }   
     }
 }
