@@ -37,5 +37,17 @@ public class CharacterControlIT {
         MyCharacter[] args = null;
         CharacterControl.sortCharNames(args);
     }
+
+    /**
+     * Test of sortStringExchange method, of class CharacterControl.
+     */
+    @Test
+    public void testSortStringExchange() {
+        System.out.println("sortStringExchange");
+        MyCharacter[] x = null;
+        CharacterControl.sortStringExchange(x);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
     
 }

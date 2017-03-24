@@ -22,7 +22,7 @@ public class ResourceView extends View{
                    +"\nG - Grain"
                    +"\nO - Ore"
                    +"\nS - Sheep"
-                   +"\nB - Battle"
+                   +"\nB - Battle equipment"
                    +"\nQ - Quit to Game Menu"
                    +"\n-------------------------------------");
     }
