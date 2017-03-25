@@ -11,6 +11,7 @@ import static finalfrontier.model.MyCharacter.LUMBERJACK;
 import finalfrontier.model.Craft;
 import finalfrontier.model.CraftingItems;
 import finalfrontier.model.Resources;
+import finalfrontier.view.WagonView;
 import java.io.Serializable;
 import java.util.Scanner;
 
@@ -35,7 +36,7 @@ public class CraftingControl implements Serializable {
                 throws CraftingControlException {           //throws
             //cost: 3 wood, 15 ore, 5 gold
             
-            int wood = 5, ore = 15, gold = 10;
+            int wood = 1, ore = 5, gold = 1;
             if(Resources.wood < wood || Resources.ore < ore || Resources.gold < gold){
                 throw new CraftingControlException("You can't afford that!");           //throw new
             }
@@ -87,10 +88,12 @@ public class CraftingControl implements Serializable {
             System.out.println("Left over resources: " +Resources.grain + " rope");
             System.out.println("You now have "+Resources.rope + " ropes");
         }
-        public int craftWagon(){
+        public static void craftWagon()
+            throws CraftingControlException{
             //go to wagon
-            int wagon = 1;
-            return wagon;}
+            WagonView craftWagon = new WagonView();
+            craftWagon.display();
+        }
  
     public void leastToMost() {
        

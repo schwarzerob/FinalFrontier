@@ -5,7 +5,6 @@
  */
 package finalfrontier.view;
 
-import finalfrontier.model.Player;
 import finalfrontier.model.Resources;
 import finalfrontier.model.Wagon;
 
@@ -18,13 +17,13 @@ public class ResourceView extends View{
         super(      " -------------------------------------"
                    +"\n|   Resource Display                |"
                    +"\n-------------------------------------"
-                   +"\nYou have "+Resources.current+" items, with "+(Wagon.area-Resources.current)+" space remaining."
                    +"\nSelect which resource to view content"
                    +"\nW - Wood"
                    +"\nG - Grain"
                    +"\nO - Ore"
                    +"\nS - Sheep"
                    +"\nB - Battle equipment"
+                   +"\nT - Total count"
                    +"\nQ - Quit to Game Menu"
                    +"\n-------------------------------------");
     }
@@ -80,6 +79,5 @@ public class ResourceView extends View{
     }
     private void resourceBattle(){
             System.out.println("You have "+amountSwords+" swords, "+amountShields+" shields, and "+amountBows+" bows.");
-        
     }
 }

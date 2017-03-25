@@ -25,6 +25,9 @@ public class WagonView extends View{
                 + "W  Wider \n"
                 + "L  Longer");
     }
+
+    public WagonView() {
+    }
     
 
     @Override

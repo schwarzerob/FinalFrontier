@@ -11,11 +11,11 @@ package finalfrontier.model;
  */
 public enum MyCharacter {
     LUMBERJACK("The lumberjack goes into the field with more wood.", 10, 5, 5, 5, 1, 5, 5, 1),
-    FARMER("The farmer starts off with more sacks of grain in the wagon.", 20, 30, 20, 20, 1, 20, 20, 1),
-    BLACKSMITH("The blacksmith leaves with some extra ore.", 20, 20, 30, 20, 1, 20, 20, 1),
-    HUNTER("A hunter already has the biggest herd of sheep.", 20, 20, 20, 30, 1, 20, 20, 1),
-    SOLDIER("The soldier recovered his fathers swords.", 20, 20, 20, 20, 3, 20, 30, 1),
-    BANKER("The banker takes the remaining gold fron the register.", 20, 20, 20, 20, 1, 30, 20, 1);
+    FARMER("The farmer starts off with more sacks of grain in the wagon.", 5, 10, 5, 5, 1, 5, 5, 1),
+    BLACKSMITH("The blacksmith leaves with some extra ore.", 5, 5, 10, 5, 1, 2, 5, 1),
+    HUNTER("A hunter already has the biggest herd of sheep.", 5, 5, 5, 10, 1, 5, 5, 1),
+    SOLDIER("The soldier recovered his fathers swords.", 5, 5, 5, 5, 3, 5, 10, 1),
+    BANKER("The banker takes the remaining gold fron the register.", 5, 5, 5, 5, 1, 10, 5, 1);
     private final String description;
     private final int wood;
     private final int grain;

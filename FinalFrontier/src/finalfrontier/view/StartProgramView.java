@@ -81,12 +81,12 @@ public class StartProgramView extends View{
                          + "\n We hope you have a lot of fun as the "+charNames[value]
                          + "\n========================================="
                          );
-        Resources.wood=charNames[value].getWood();
-        Resources.grain=charNames[value].getGrain();
-        Resources.ore=charNames[value].getOre();
-        Resources.sheep=charNames[value].getSheep();
-        Resources.swords=charNames[value].getSwords();
-        Resources.gold=charNames[value].getGold();
+        Resources.wood+=charNames[value].getWood();
+        Resources.grain+=charNames[value].getGrain();
+        Resources.ore+=charNames[value].getOre();
+        Resources.sheep+=charNames[value].getSheep();
+        Resources.swords+=charNames[value].getSwords();
+        Resources.gold+=charNames[value].getGold();
     MainMenuView mainMenu = new MainMenuView();
     mainMenu.display();
         return null;
