@@ -29,7 +29,7 @@ public class GameControl {
             //String character = Player.class.getCharacter();
           
           return playerName;
-  }
+        }
 
     public static void createNewGame(String player) {
         System.out.println("*** CreateNewGame function called ***");

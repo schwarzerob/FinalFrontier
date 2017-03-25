@@ -25,17 +25,6 @@ public class CharacterControl {
     
     public static void sortCharNames(MyCharacter[] args){
         MyCharacter charNames[] = MyCharacter.values(); //create Array from MyCharacter enum
-        /*
-        for(int i=0; i<charNames.length-1; i++){
-            for(int j=0; j<charNames.length; j++){
-            if(charNames[i].compareTo(charNames[i+1])>0){
-                MyCharacter temp=charNames[i];
-                charNames[i]=charNames[i+1];
-                charNames[i+1]=temp;
-            }
-            }
-        }
-        */
         
         //Gather character that has the most of a particular resource at the start of the game.
         Arrays.sort(charNames);

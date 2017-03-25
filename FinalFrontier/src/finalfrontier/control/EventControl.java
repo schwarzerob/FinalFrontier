@@ -14,7 +14,6 @@ import finalfrontier.model.Treasure;
 public class EventControl {
 
     public static void lootTreasure(){
-        EventControl.lootTreasure();
         Treasure treasure = new Treasure();
         treasure.getLoot();
         /*

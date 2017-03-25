@@ -16,7 +16,7 @@ public class Treasure implements Serializable {
     private int loot;
     private String type;
     Random resource = new Random();
-        int  whichOne = resource.nextInt(5);
+        int  whichOne = resource.nextInt(5);  
     Random amount = new Random();
         int  howMuch = amount.nextInt(10);
     

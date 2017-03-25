@@ -6,6 +6,8 @@
 package finalfrontier.control;
 
 import finalfrontier.exceptions.LocationControlExceptions;
+import finalfrontier.model.Map;
+import static finalfrontier.view.LocationMapView.row;
 import java.io.Serializable;
 import java.util.Scanner;
 
@@ -24,7 +26,45 @@ public class LocationControl implements Serializable {
 
     public LocationControl() {
     }
-    
+    public static int row = 0;
+    public static int col = 0;
+            
+    public static void goNorth(int distance, int row)
+        throws LocationControlExceptions{
+            if(row+distance <= 6){
+                row += distance;}
+        Map displayMap = new Map();
+        displayMap.displayMap();
+        System.out.println("North");
+            throw new LocationControlExceptions("\nToo far!");
+    }        
+    public static void goSouth(int distance, int row)
+        throws LocationControlExceptions{
+            if(row+distance <= 6){
+                row -= distance;}
+        Map displayMap = new Map();
+        displayMap.displayMap();
+        System.out.println("South");
+            throw new LocationControlExceptions("\nToo far!");
+    }        
+    public static void goEast(int distance, int col)
+        throws LocationControlExceptions{
+            if(col+distance <= 6){
+                col += distance;}
+        Map displayMap = new Map();
+        displayMap.displayMap();
+        System.out.println("East");
+            throw new LocationControlExceptions("\nToo far!");
+    }        
+    public static void goWest(int distance, int col)
+        throws LocationControlExceptions{
+            if(col+distance <= 6){
+                col -= distance;}
+        Map displayMap = new Map();
+        displayMap.displayMap();
+        System.out.println("West");
+            throw new LocationControlExceptions("\nToo far!");
+    }
     
     public static void Location(int row, int column, char visited)
             throws LocationControlExceptions{                           //throws
@@ -36,7 +76,6 @@ public class LocationControl implements Serializable {
        Scanner howFar = new Scanner(System.in);
        int distance = howFar.nextInt();
        visited = '_';
-            
         switch (direction) {
             case 'N':
             case 'n':

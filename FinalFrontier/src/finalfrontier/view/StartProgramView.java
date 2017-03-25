@@ -69,7 +69,11 @@ public class StartProgramView extends View{
         int value=0;
         do{
         getInput();
+        try{
         value=Integer.parseInt(getInput());
+        }catch(NumberFormatException nf){
+            System.out.println("Not a number");
+        }
         } while (value <0 || value >= charNames.length);
         
         
