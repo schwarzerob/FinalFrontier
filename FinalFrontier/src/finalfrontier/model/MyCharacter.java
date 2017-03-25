@@ -10,7 +10,7 @@ package finalfrontier.model;
  * @author rschw
  */
 public enum MyCharacter {
-    LUMBERJACK("The lumberjack goes into the field with more wood.", 30, 20, 20, 20, 1, 20, 20, 1),
+    LUMBERJACK("The lumberjack goes into the field with more wood.", 10, 5, 5, 5, 1, 5, 5, 1),
     FARMER("The farmer starts off with more sacks of grain in the wagon.", 20, 30, 20, 20, 1, 20, 20, 1),
     BLACKSMITH("The blacksmith leaves with some extra ore.", 20, 20, 30, 20, 1, 20, 20, 1),
     HUNTER("A hunter already has the biggest herd of sheep.", 20, 20, 20, 30, 1, 20, 20, 1),

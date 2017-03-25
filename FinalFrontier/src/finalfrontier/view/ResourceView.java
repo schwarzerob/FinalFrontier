@@ -7,6 +7,7 @@ package finalfrontier.view;
 
 import finalfrontier.model.Player;
 import finalfrontier.model.Resources;
+import finalfrontier.model.Wagon;
 
 /**
  *
@@ -17,6 +18,7 @@ public class ResourceView extends View{
         super(      " -------------------------------------"
                    +"\n|   Resource Display                |"
                    +"\n-------------------------------------"
+                   +"\nYou have "+Resources.current+" items, with "+(Wagon.area-Resources.current)+" space remaining."
                    +"\nSelect which resource to view content"
                    +"\nW - Wood"
                    +"\nG - Grain"

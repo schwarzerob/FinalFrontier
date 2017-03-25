@@ -24,6 +24,7 @@ import java.util.logging.Logger;
     //call PlayerControl to create a player object
     //If successfull, display welcome banner
 public class StartProgramView extends View{
+    String player;
     public StartProgramView(){
         super(
         " ************************"
@@ -32,12 +33,11 @@ public class StartProgramView extends View{
         + "\n ************************"
         + "\n \nWhat's your name?");
     }
-    String player="me";
     
     
 @Override
     public boolean doAction(String playersName) {
-        playersName="me";
+        player=playersName;
         if(playersName.length()<2){
             System.out.println("\nInvalid players name: "
                                 + "The name must be greater than one character in length");
@@ -45,8 +45,8 @@ public class StartProgramView extends View{
         }
         // call createPlayer() control function
         
-        player = Player.class.getName();
-        if(player == null){
+        playersName = Player.class.getName();
+        if(playersName == null){
             System.out.println("\nError creating player.");
             return false;
         }

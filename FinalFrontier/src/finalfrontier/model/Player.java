@@ -14,8 +14,8 @@ import java.util.Objects;
  * @author rschw
  */
 public class Player implements Serializable{
-    public String name;
-    public String character;
+    public static String name;
+    public static String character;
     
 // Constructor
     public Player(String name1, String character1) {

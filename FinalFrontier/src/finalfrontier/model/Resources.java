@@ -5,6 +5,7 @@
  */
 package finalfrontier.model;
 
+import finalfrontier.control.wagonControl;
 import static finalfrontier.model.MyCharacter.LUMBERJACK;
 import static finalfrontier.model.MyCharacter.LUMBERJACK;
 import java.io.Serializable;
@@ -30,6 +31,10 @@ public class Resources {
     public static int shields = 1;
     public static int bows = 1;
     public static int rope = 1;
+    public static int current=wood+grain+ore+sheep+swords+gold+shields+bows+rope;
+
+    public Resources() {
+    }
    
     public ArrayList<Resources> addContent(){
     
@@ -43,13 +48,13 @@ public class Resources {
     content.add(new Resources("Shields", shields));
     return content;
     }
-    public int MaxAmount(){
-        int max = wood+grain+ore+sheep+swords+gold+shields+bows+rope;
+    public static int MaxAmount(){
+        current = wood+grain+ore+sheep+swords+gold+shields+bows+rope;
         int wagonSpace = Wagon.area;
-        if(max>wagonSpace){
+        if(current>wagonSpace){
             System.out.println("Not enough room in the wagon!");
         }
-       return 0;
+       return current;
         
     }
    

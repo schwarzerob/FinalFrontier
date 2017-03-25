@@ -6,9 +6,9 @@
 package finalfrontier.control;
 
 import finalfrontier.exceptions.WagonException;
+import finalfrontier.model.Resources;
 import finalfrontier.model.Wagon;
 import java.io.Serializable;
-import java.util.Scanner;
 
 /**
  *
@@ -18,30 +18,32 @@ public class wagonControl implements Serializable {
 
     public wagonControl() {
     }
-    public static int height = 2;
-    public static int width = 2;
-    public static int length= 2;
-    public static int area = height*length*width;
     
     public static void longer(int howFar) 
         throws WagonException{
             //cost: 1 wood per increased area
-            int increase = height*width*howFar;
-            area += increase;
+            Wagon.length+=howFar;
+            int increase = Wagon.height*Wagon.width*howFar;
+            Wagon.area += increase;
+            Resources.wood-=increase;
         throw new WagonException();
     }
     public static void wider(int howWide) 
         throws WagonException{
             //cost: 1 wood per increased area
-            int increase = length*height*howWide;
-            area += increase;
+            Wagon.width+=howWide;
+            int increase = Wagon.length*Wagon.height*howWide;
+            Wagon.area += increase;
+            Resources.wood-=increase;
         throw new WagonException();
     }
     public static void taller(int howTall) 
         throws WagonException{
             //cost: 1 wood per increased area
-            int increase = length*width*howTall;
-            area += increase;
+            Wagon.height+=howTall;
+            int increase = Wagon.length*Wagon.width*howTall;
+            Wagon.area += increase;
+            Resources.wood-=increase;
         throw new WagonException();
     }
 

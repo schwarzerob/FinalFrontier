@@ -12,9 +12,9 @@ import java.io.Serializable;
  * @author rschw
  */
 public class Wagon implements Serializable {
-    public static int length;
-    public static int width;
-    public static int height;
+    public static int length=5;
+    public static int width=3;
+    public static int height=3;
     public static int area;
     
     public Wagon(){
