@@ -19,19 +19,17 @@ public class Resources {
    public Resources (String Type, int amount) {
    
    }
-    
-    //String place = "LUMBERJACK";
-    int place = MyCharacter.LUMBERJACK.ordinal();
     private int quantity;
     private String type;
-    public static int wood = MyCharacter.LUMBERJACK.getWood();
-    public static int grain = MyCharacter.LUMBERJACK.getGrain();
-    public static int ore = MyCharacter.LUMBERJACK.getOre();
-    public static int sheep = MyCharacter.LUMBERJACK.getSheep();
-    public static int swords = MyCharacter.LUMBERJACK.getSwords();
-    public static int gold = MyCharacter.LUMBERJACK.getGold();
+    public static int wood;
+    public static int grain;
+    public static int ore;
+    public static int sheep;
+    public static int swords;
+    public static int gold;
     public static int shields = 1;
     public static int bows = 1;
+    public static int rope = 1;
    
     public ArrayList<Resources> addContent(){
     
@@ -46,7 +44,7 @@ public class Resources {
     return content;
     }
     public int MaxAmount(){
-        int max = wood+grain+ore+sheep+swords;
+        int max = wood+grain+ore+sheep+swords+gold+shields+bows+rope;
         int wagonSpace = Wagon.area;
         if(max>wagonSpace){
             System.out.println("Not enough room in the wagon!");

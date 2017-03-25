@@ -31,78 +31,39 @@ public class LocationControl implements Serializable {
             
     public static void goNorth(int distance, int row)
         throws LocationControlExceptions{
-            if(row+distance <= 6){
-                row += distance;}
+        if(row+distance > 6 || row+distance <0){
+            throw new LocationControlExceptions("\nToo far!");
+        }
+        row += distance;
         Map displayMap = new Map();
         displayMap.displayMap();
         System.out.println("North");
-            throw new LocationControlExceptions("\nToo far!");
     }        
     public static void goSouth(int distance, int row)
         throws LocationControlExceptions{
-            if(row+distance <= 6){
-                row -= distance;}
+        if(row+distance > 6 || row+distance <0){
+            throw new LocationControlExceptions("\nToo far!");
+        }
         Map displayMap = new Map();
         displayMap.displayMap();
         System.out.println("South");
-            throw new LocationControlExceptions("\nToo far!");
     }        
     public static void goEast(int distance, int col)
         throws LocationControlExceptions{
-            if(col+distance <= 6){
-                col += distance;}
+        if(col+distance > 6 || col+distance <0){
+            throw new LocationControlExceptions("\nToo far!");
+        }
         Map displayMap = new Map();
         displayMap.displayMap();
         System.out.println("East");
-            throw new LocationControlExceptions("\nToo far!");
     }        
     public static void goWest(int distance, int col)
         throws LocationControlExceptions{
-            if(col+distance <= 6){
-                col -= distance;}
+        if(col+distance > 6 || col+distance <0){
+            throw new LocationControlExceptions("\nToo far!");
+        }
         Map displayMap = new Map();
         displayMap.displayMap();
         System.out.println("West");
-            throw new LocationControlExceptions("\nToo far!");
-    }
-    
-    public static void Location(int row, int column, char visited)
-            throws LocationControlExceptions{                           //throws
-       row = 1;
-       column = 1;
-       Scanner whichWay = new Scanner(System.in);
-       char direction = whichWay.next().charAt(0);
-       
-       Scanner howFar = new Scanner(System.in);
-       int distance = howFar.nextInt();
-       visited = '_';
-        switch (direction) {
-            case 'N':
-            case 'n':
-                 row = row + distance;
-                 //return row;
-                 break;
-            case 'E':
-            case 'e':
-                 column = column - distance;
-                 //return column;
-                 break;                 
-            case 'S':
-            case 's':
-                 row = row - distance;
-                 //return row;
-                 break;
-            case 'W':
-            case 'w':
-                 column = column + distance;
-                 //return column;
-                 break;
-        default:
-            System.out.println("Invalid input.");
-            break;
-        }
-        if(row>6 || row<0 || column>4 || column<0){
-            throw new LocationControlExceptions("That's off the map!");    //throw new
-        }   
     }
 }

@@ -10,6 +10,7 @@ import finalfrontier.control.GameControl;
 import finalfrontier.exceptions.GameControlException;
 import finalfrontier.model.MyCharacter;
 import finalfrontier.model.Player;
+import finalfrontier.model.Resources;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -75,14 +76,17 @@ public class StartProgramView extends View{
             System.out.println("Not a number");
         }
         } while (value <0 || value >= charNames.length);
-        
-        
-        
         System.out.println("\n========================================="
                          + "\n Welcome " + player + ", to the Final Frontier!"
                          + "\n We hope you have a lot of fun as the "+charNames[value]
                          + "\n========================================="
                          );
+        Resources.wood=charNames[value].getWood();
+        Resources.grain=charNames[value].getGrain();
+        Resources.ore=charNames[value].getOre();
+        Resources.sheep=charNames[value].getSheep();
+        Resources.swords=charNames[value].getSwords();
+        Resources.gold=charNames[value].getGold();
     MainMenuView mainMenu = new MainMenuView();
     mainMenu.display();
         return null;

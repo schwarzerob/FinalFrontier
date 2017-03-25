@@ -5,6 +5,8 @@
  */
 package finalfrontier.control;
 
+import finalfrontier.exceptions.WagonException;
+import finalfrontier.model.Wagon;
 import java.io.Serializable;
 import java.util.Scanner;
 
@@ -13,43 +15,34 @@ import java.util.Scanner;
  * @author rschw
  */
 public class wagonControl implements Serializable {
-    public int calcMaxContent(String dimension, int length, int width, int height, int increase) {
-        
-        //Variables
-               int cost;
-               int size;
-        
-        if (dimension == null) {
-            return -1;
-        }
-        switch (dimension) {
-            case "L":
-            case "l":
-                 cost =(((width + height)*2)*increase);
-                return cost;
-             
-            case "W":
-            case "w":
-                cost =(((length + height)*2)*increase);
-                return cost;
-               
-            case "H":
-            case "h":
-                cost =(((width + length)*2)*increase);
-                return cost;
-                
-            default:
-                System.out.println("Invalid input.");
-                break;
-        }
-//input size
-    Scanner inputSize = new Scanner(System.in);
-        size = inputSize.nextInt();
-        if (size > 10 || size <0) {
-      
-        }
-        //calculate area
-        return 0;
+
+    public wagonControl() {
+    }
+    public static int height = 2;
+    public static int width = 2;
+    public static int length= 2;
+    public static int area = height*length*width;
+    
+    public static void longer(int howFar) 
+        throws WagonException{
+            //cost: 1 wood per increased area
+            int increase = height*width*howFar;
+            area += increase;
+        throw new WagonException();
+    }
+    public static void wider(int howWide) 
+        throws WagonException{
+            //cost: 1 wood per increased area
+            int increase = length*height*howWide;
+            area += increase;
+        throw new WagonException();
+    }
+    public static void taller(int howTall) 
+        throws WagonException{
+            //cost: 1 wood per increased area
+            int increase = length*width*howTall;
+            area += increase;
+        throw new WagonException();
     }
 
     //void calcMaxContent(double length, double width, double height) {

@@ -33,7 +33,7 @@ public class CraftingControl implements Serializable {
   
         public static void craftSword()
                 throws CraftingControlException {           //throws
-            //cost: 10 wood, 15 ore, 20 gold
+            //cost: 3 wood, 15 ore, 5 gold
             
             int wood = 5, ore = 15, gold = 10;
             if(Resources.wood < wood || Resources.ore < ore || Resources.gold < gold){
@@ -59,17 +59,38 @@ public class CraftingControl implements Serializable {
             Resources.ore-=ore;
             Resources.shields+=1;
             System.out.println("Left over resources: " +Resources.wood +" wood, and " + Resources.ore + " ore");
-            System.out.println("You now have "+Resources.swords + " swords");
+            System.out.println("You now have "+Resources.shields + " shields");
         }
-        public int craftBow(){
-            int bows = 1;
-            return bows;}
+        public static void craftBow()
+            throws CraftingControlException {
+            //cost: 6 wood, 4 rope
+            int wood = 1, rope = 1;
+            if(Resources.wood < wood || Resources.rope < rope){
+                throw new CraftingControlException("You can't afford that!");           //throw new
+            }
+            Resources.wood -= wood;
+            Resources.rope -= rope;
+            Resources.bows += 1;
+            System.out.println("Left over resources: " +Resources.wood +" wood, and " + Resources.rope + " rope");
+            System.out.println("You now have "+Resources.bows + " bows");
+            
+        }
+        public static void craftRope()
+            throws CraftingControlException{
+            //cost: 15 grain
+            int grain = 15;
+            if(Resources.grain < grain){
+                throw new CraftingControlException("You can't afford that!");           //throw new
+            }
+            Resources.grain -= grain;
+            Resources.rope += 1;
+            System.out.println("Left over resources: " +Resources.grain + " rope");
+            System.out.println("You now have "+Resources.rope + " ropes");
+        }
         public int craftWagon(){
+            //go to wagon
             int wagon = 1;
             return wagon;}
-        public int craftRope(){
-            int rope = 1;
-            return rope;}
  
     public void leastToMost() {
        

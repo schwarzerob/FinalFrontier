@@ -10,6 +10,8 @@ import finalfrontier.exceptions.LocationControlExceptions;
 import finalfrontier.model.Location;
 import finalfrontier.model.Map;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -30,36 +32,37 @@ public class LocationMapView extends View{
     
     @Override
     public boolean doAction(String value){
-        try{
-        value.toUpperCase();
-        System.out.println("How far?");
-        Scanner keyboard = new Scanner(System.in);
-        int distance = keyboard.nextInt();
-        if(distance <= 0 || distance >= 6)
-            System.out.println("");
-        
-        switch (value){
-            case "N":
-                LocationControl.goNorth(distance, row);
-                break;
-            case "S":
-                LocationControl.goSouth(distance, row);
-                break;
-            case "E":
-                LocationControl.goEast(distance, col);
-                break;
-            case "W":
-                LocationControl.goWest(distance, col);
-                break;
-            default:
-        }
-        EventView here = new EventView();
-        here.randomEvent(distance);
-        //System.out.println(here.wasHere);
-        //System.out.println(event1.event);
-        }catch(LocationControlExceptions){
-            
-        }
-        return true;
+            try {
+                value.toUpperCase();
+                System.out.println("How far?");
+                //Scanner keyboard = new Scanner(System.in);
+                //int distance = keyboard.nextInt();
+                int distance =10;
+                if(distance <= 0 || distance >= 6)
+                    System.out.println("");
+                
+                switch (value){
+                    case "N":
+                        LocationControl.goNorth(distance, row);
+                        break;
+                    case "S":
+                        LocationControl.goSouth(distance, row);
+                        break;
+                    case "E":
+                        LocationControl.goEast(distance, col);
+                        break;
+                    case "W":
+                        LocationControl.goWest(distance, col);
+                        break;
+                    default:
+                }
+                EventView here = new EventView();
+                here.randomEvent(distance);
+                //System.out.println(here.wasHere);
+                //System.out.println(event1.event);
+            } catch (LocationControlExceptions ex) {
+                Logger.getLogger(LocationMapView.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            return false;
     }
 }
