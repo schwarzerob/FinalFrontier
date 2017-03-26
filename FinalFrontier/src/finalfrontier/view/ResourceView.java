@@ -52,6 +52,11 @@ public class ResourceView extends View{
         case "S":
             this.resourceSheep();
             break;
+        case "T":
+            System.out.println(
+            amountWood+amountGrain+amountOre+amountSheep+amountSwords+amountGold+
+            amountShields+amountBows+" items, and "+Wagon.area+" space in the wagon");
+            break;
         case "B":
             this.resourceBattle();
             break;

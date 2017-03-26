@@ -41,5 +41,60 @@ public class CraftingControlIT {
         assertEquals(expResult, result);
       
     }
+
+    /**
+     * Test of craftSword method, of class CraftingControl.
+     */
+    @Test
+    public void testCraftSword() throws Exception {
+        System.out.println("craftSword");
+        CraftingControl.craftSword();
+    }
+
+    /**
+     * Test of craftShield method, of class CraftingControl.
+     */
+    @Test
+    public void testCraftShield() throws Exception {
+        System.out.println("craftShield");
+        CraftingControl.craftShield();
+    }
+
+    /**
+     * Test of craftBow method, of class CraftingControl.
+     */
+    @Test
+    public void testCraftBow() throws Exception {
+        System.out.println("craftBow");
+        CraftingControl.craftBow();
+    }
+
+    /**
+     * Test of craftRope method, of class CraftingControl.
+     */
+    @Test
+    public void testCraftRope() throws Exception {
+        System.out.println("craftRope");
+        CraftingControl.craftRope();
+    }
+
+    /**
+     * Test of craftWagon method, of class CraftingControl.
+     */
+    @Test
+    public void testCraftWagon() throws Exception {
+        System.out.println("craftWagon");
+        CraftingControl.craftWagon();
+    }
+
+    /**
+     * Test of leastToMost method, of class CraftingControl.
+     */
+    @Test
+    public void testLeastToMost() {
+        System.out.println("leastToMost");
+        CraftingControl instance = new CraftingControl();
+        instance.leastToMost();
+    }
     
 }
