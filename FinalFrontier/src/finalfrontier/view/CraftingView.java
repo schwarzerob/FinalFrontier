@@ -73,6 +73,7 @@ public class CraftingView extends View{
         }
         return true;
     }
+    
     private void craftSword(){
         System.out.println(CraftingItems.Shield);
             System.out.println("Congratulation you just crafted a sword");

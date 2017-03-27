@@ -20,7 +20,7 @@ public class MainMenuView extends View{
                    +"\n|   Main Menu                       |"
                    +"\n-------------------------------------"
                    +"\nN - Start new game"
-                   +"\nG - Get and start saved game"
+                   +"\nL - Load game"
                    +"\nH - Get help on how to play the game"
                    +"\nS - Save game"
                    +"\nQ - Quit"
@@ -33,8 +33,8 @@ public class MainMenuView extends View{
             case "N":
                 this.startNewGame();
                 break;
-            case "G":
-                this.startExistingGame();
+            case "L":
+                this.loadGame();
                 break;
             case "S":
                 this.saveGame();
@@ -57,8 +57,8 @@ public class MainMenuView extends View{
         gameMenu.display();
     }
 
-    private void startExistingGame() {
-        System.out.println("*** StartExistingGame function called ***");
+    private void loadGame() {
+        System.out.println("*** loadGame function called ***");
     }
 
     private void saveGame() {

@@ -5,8 +5,8 @@
  */
 package finalfrontier.view;
 
-import finalfrontier.model.Player;
 import finalfrontier.model.Resources;
+import finalfrontier.model.Wagon;
 
 /**
  *
@@ -22,7 +22,8 @@ public class ResourceView extends View{
                    +"\nG - Grain"
                    +"\nO - Ore"
                    +"\nS - Sheep"
-                   +"\nB - Battle"
+                   +"\nB - Battle equipment"
+                   +"\nT - Total count"
                    +"\nQ - Quit to Game Menu"
                    +"\n-------------------------------------");
     }
@@ -51,6 +52,11 @@ public class ResourceView extends View{
         case "S":
             this.resourceSheep();
             break;
+        case "T":
+            System.out.println(
+            amountWood+amountGrain+amountOre+amountSheep+amountSwords+amountGold+
+            amountShields+amountBows+" items, and "+Wagon.area+" space in the wagon");
+            break;
         case "B":
             this.resourceBattle();
             break;
@@ -78,6 +84,5 @@ public class ResourceView extends View{
     }
     private void resourceBattle(){
             System.out.println("You have "+amountSwords+" swords, "+amountShields+" shields, and "+amountBows+" bows.");
-        
     }
 }

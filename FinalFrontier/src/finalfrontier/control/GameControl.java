@@ -39,6 +39,13 @@ public class GameControl {
         throw new GameControlException();
         //print list of resources with quantity
         
+    }
+    public static void resumeGame(String player) {
+        System.out.println("*** resumeGame function called ***");
         
+    }
+    public String sacedGames(){
+        //print list of resources with quantity
+        return null;
     }
 }  

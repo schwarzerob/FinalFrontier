@@ -5,8 +5,7 @@
  */
 package finalfrontier.model;
 
-import static finalfrontier.model.MyCharacter.LUMBERJACK;
-import static finalfrontier.model.MyCharacter.LUMBERJACK;
+import finalfrontier.control.wagonControl;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -16,24 +15,27 @@ import java.util.Objects;
  * @author Gabriel
  */
 public class Resources {
+
+    private int quantity;
+    private String type;
+    public static int wood=0;
+    public static int grain=0;
+    public static int ore=0;
+    public static int sheep=0;
+    public static int swords=0;
+    public static int gold=0;
+    public static int shields = 1;
+    public static int bows = 1;
+    public static int rope = 1;
+    public static int current;
    public Resources (String Type, int amount) {
    
    }
-    
-    //String place = "LUMBERJACK";
-    int place = MyCharacter.LUMBERJACK.ordinal();
-    private int quantity;
-    private String type;
-    public static int wood = MyCharacter.LUMBERJACK.getWood();
-    public static int grain = MyCharacter.LUMBERJACK.getGrain();
-    public static int ore = MyCharacter.LUMBERJACK.getOre();
-    public static int sheep = MyCharacter.LUMBERJACK.getSheep();
-    public static int swords = MyCharacter.LUMBERJACK.getSwords();
-    public static int gold = MyCharacter.LUMBERJACK.getGold();
-    public static int shields = 1;
-    public static int bows = 1;
+
+    public Resources() {
+    }
    
-    public ArrayList<Resources> addContent(){
+    /*public ArrayList<Resources> addContent(){
     
     ArrayList<Resources> content = new ArrayList<>();
     content.add(new Resources("Wood", wood));
@@ -44,14 +46,15 @@ public class Resources {
     content.add(new Resources("Gold", gold));
     content.add(new Resources("Shields", shields));
     return content;
-    }
-    public int MaxAmount(){
-        int max = wood+grain+ore+sheep+swords;
+    }*/
+    public static int MaxAmount(){
+        current = wood+grain+ore+sheep+swords+gold+shields+bows+rope;
         int wagonSpace = Wagon.area;
-        if(max>wagonSpace){
+        if(current>wagonSpace){
             System.out.println("Not enough room in the wagon!");
         }
-       return 0;
+        System.out.println("You have "+Resources.current+" items, with "+(Wagon.area-Resources.current)+" space remaining.");
+       return current;
         
     }
    
