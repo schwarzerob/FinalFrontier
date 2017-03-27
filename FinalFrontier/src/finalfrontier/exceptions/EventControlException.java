@@ -9,24 +9,24 @@ package finalfrontier.exceptions;
  *
  * @author Gabriel
  */
-public class GameControlException extends Exception {
+public class EventControlException extends Exception {
 
-    public GameControlException() {
+    public EventControlException() {
     }
 
-    public GameControlException(String message) {
+    public EventControlException(String message) {
         super(message);
     }
 
-    public GameControlException(String message, Throwable cause) {
+    public EventControlException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public GameControlException(Throwable cause) {
+    public EventControlException(Throwable cause) {
         super(cause);
     }
 
-    public GameControlException(String message, Throwable cause, boolean enableSuppression , boolean writableStackTrace) {
+    public EventControlException(String message, Throwable cause, boolean enableSuppression , boolean writableStackTrace) {
         super(message, cause, enableSuppression, writableStackTrace);
     }
     

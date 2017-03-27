@@ -20,9 +20,9 @@ public class GameControl {
     public GameControl() {
     }
 
-        public String createPlayer(String name){
+        public String createPlayer(String name) throws GameControlException{
             if(name == null){
-                System.out.println("Enter a name");
+                throw new GameControlException("Enter name");
             }
     
             String playerName = Player.class.getName();
@@ -35,9 +35,10 @@ public class GameControl {
         System.out.println("*** CreateNewGame function called ***");
         
     }
-    public String mostItem(){
+    public String mostItem() throws GameControlException{
+        throw new GameControlException();
         //print list of resources with quantity
         
-        return null;
+        
     }
 }  

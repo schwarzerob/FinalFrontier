@@ -5,6 +5,7 @@
  */
 package finalfrontier.control;
 
+import finalfrontier.exceptions.wagonControlException;
 import java.io.Serializable;
 import java.util.Scanner;
 
@@ -13,7 +14,7 @@ import java.util.Scanner;
  * @author rschw
  */
 public class wagonControl implements Serializable {
-    public int calcMaxContent(String dimension, int length, int width, int height, int increase) {
+    public int calcMaxContent(String dimension, int length, int width, int height, int increase) throws wagonControlException {
         
         //Variables
                int cost;
@@ -49,7 +50,7 @@ public class wagonControl implements Serializable {
       
         }
         //calculate area
-        return 0;
+        throw new wagonControlException();
     }
 
     //void calcMaxContent(double length, double width, double height) {
