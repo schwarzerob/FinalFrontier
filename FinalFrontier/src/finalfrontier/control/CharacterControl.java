@@ -31,11 +31,11 @@ public class CharacterControl {
         int a = charNames[i].ordinal();
         characterName = charNames[a].name();
         Resources.wood=charNames[a].getWood();
-        Resources.wood=charNames[a].getGrain();
-        Resources.wood=charNames[a].getOre();
-        Resources.wood=charNames[a].getSheep();
-        Resources.wood=charNames[a].getSwords();
-        Resources.wood=charNames[a].getGold();
+        Resources.grain=charNames[a].getGrain();
+        Resources.ore=charNames[a].getOre();
+        Resources.sheep=charNames[a].getSheep();
+        Resources.swords=charNames[a].getSwords();
+        Resources.gold=charNames[a].getGold();
         return characterName;
     }
     

@@ -63,24 +63,11 @@ public class CharacterView extends View{
                         +"\n    Try again");
                 break;
         }
-        return false;
+        return true;
         }catch(CharacterControlException ex){
             System.out.println("Error");
         }
-        return true;
-    }
-
-    public String getResources(int i) {
-        MyCharacter charNames[] = MyCharacter.values();
-        int a = charNames[i].ordinal();
-        characterName = charNames[a].name();
-        Resources.wood=charNames[a].getWood();
-        Resources.wood=charNames[a].getGrain();
-        Resources.wood=charNames[a].getOre();
-        Resources.wood=charNames[a].getSheep();
-        Resources.wood=charNames[a].getSwords();
-        Resources.wood=charNames[a].getGold();
-        return characterName;
+        return false;
     }
     
 }

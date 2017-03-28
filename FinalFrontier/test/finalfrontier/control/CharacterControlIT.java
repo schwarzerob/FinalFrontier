@@ -40,6 +40,7 @@ public class CharacterControlIT {
 
     /**
      * Test of getResources method, of class CharacterControl.
+     * @throws java.lang.Exception
      */
     @Test
     public void testGetResources() throws Exception {
