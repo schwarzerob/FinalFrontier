@@ -6,6 +6,7 @@
 package finalfrontier.view;
 
 import finalfrontier.FinalFrontier;
+import finalfrontier.control.CharacterControl;
 import finalfrontier.control.GameControl;
 import finalfrontier.exceptions.GameControlException;
 import finalfrontier.model.MyCharacter;
@@ -54,7 +55,7 @@ public class StartProgramView extends View{
         charView.display();
         System.out.println("\n========================================="
                          + "\n Welcome " + player + ", to the Final Frontier!"
-                         + "\n We hope you have a lot of fun as the " + CharacterView.characterName
+                         + "\n We hope you have a lot of fun as the " + CharacterControl.characterName
                          + "\n========================================="
                          );
     MainMenuView mainMenu = new MainMenuView();

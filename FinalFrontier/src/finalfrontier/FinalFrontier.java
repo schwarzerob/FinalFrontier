@@ -5,21 +5,6 @@
  */
 package finalfrontier;
 
-import finalfrontier.model.Attack;
-import finalfrontier.model.Player;
-import finalfrontier.model.MyCharacter;
-import finalfrontier.model.Craft;
-import finalfrontier.model.Event;
-import finalfrontier.model.Homestead;
-import finalfrontier.model.Location;
-import finalfrontier.model.Map;
-import finalfrontier.model.Resources;
-import finalfrontier.model.Treasure;
-import finalfrontier.model.Puzzle;
-import finalfrontier.model.ToolsAndWeapons;
-import finalfrontier.model.Wagon;
-import finalfrontier.control.wagonControl;
-import finalfrontier.control.LocationControl;
 import finalfrontier.view.StartProgramView;
 
 
@@ -47,19 +32,5 @@ public class FinalFrontier {
             startProgramView.display();
         }
      }
-
-    public String getPlayer() {
-        return playerName;
-    }
-    public void setPlayerName(String playerName) {
-        this.playerName = playerName;
-    }
-
-    public String getCharacterChoice() {
-        return characterChoice;
-    }
-    public void setCharacterChoice(String characterChoice) {
-        this.characterChoice = characterChoice;
-    }  
 }
 

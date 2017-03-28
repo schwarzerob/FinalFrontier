@@ -7,7 +7,6 @@ package finalfrontier.model;
 
 import java.util.ArrayList;
 import java.io.Serializable;
-import java.util.Objects;
 
 /**
  *
@@ -42,7 +41,7 @@ public class Player implements Serializable{
         return name;
     }
     public void setName(String name) {
-        this.name = name;
+        Player.name = name;
     }
     
 // What character is the Player using?
@@ -51,6 +50,6 @@ public class Player implements Serializable{
         return character;
     }
     public void setCharacter(String character) {
-        this.character = character;
+        Player.character = character;
     }
 }

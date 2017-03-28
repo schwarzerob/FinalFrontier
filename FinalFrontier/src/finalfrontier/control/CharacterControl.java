@@ -23,7 +23,7 @@ public class CharacterControl {
         //define starting strength
         //define starting resources        
     }
-    public String characterName;
+    public static String characterName;
 
     public String getResources(int i) 
         throws CharacterControlException{

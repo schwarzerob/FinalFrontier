@@ -16,7 +16,7 @@ import finalfrontier.model.Resources;
  */
 public class CharacterView extends View{
 
-    static String characterName;
+    public static String characterName;
     public CharacterView() {
         super("\n ************************"
             + "\n * Which character do you want to play?"
