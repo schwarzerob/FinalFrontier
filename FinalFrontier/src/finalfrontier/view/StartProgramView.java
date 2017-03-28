@@ -50,45 +50,15 @@ public class StartProgramView extends View{
             System.out.println("\nError creating player.");
             return false;
         }
-        getCharacter();
-        return true;
-    }
-        
-    public String getCharacter(){
-        MyCharacter charNames[] = MyCharacter.values(); //create Array from MyCharacter enum
-        //Which character?
-        displayMessage=("\n ************************"
-                       + "\n * Which character do you want to play?"
-                       + "\n * Here is a list of characters and their bonuses."
-                       + "\n ************************");
-        for(int i=0; i<charNames.length; i++){
-            System.out.println("Character "+i+": "+charNames[i]);
-            System.out.println("    Wood:  "+charNames[i].getWood()+",  Grain: "+charNames[i].getGrain()+",  Ore: "+charNames[i].getOre()
-                            +"\n    Sheep: "+charNames[i].getSheep()+",  Swords: "+charNames[i].getSwords()+",  Gold: "+charNames[i].getGold());
-        }
-        
-        int value=0;
-        do{
-        getInput();
-        try{
-        value=Integer.parseInt(getInput());
-        }catch(NumberFormatException nf){
-            System.out.println("Not a number");
-        }
-        } while (value <0 || value >= charNames.length);
+        CharacterView charView =new CharacterView();
+        charView.display();
         System.out.println("\n========================================="
                          + "\n Welcome " + player + ", to the Final Frontier!"
-                         + "\n We hope you have a lot of fun as the "+charNames[value]
+                         + "\n We hope you have a lot of fun as the " + CharacterView.characterName
                          + "\n========================================="
                          );
-        Resources.wood+=charNames[value].getWood();
-        Resources.grain+=charNames[value].getGrain();
-        Resources.ore+=charNames[value].getOre();
-        Resources.sheep+=charNames[value].getSheep();
-        Resources.swords+=charNames[value].getSwords();
-        Resources.gold+=charNames[value].getGold();
     MainMenuView mainMenu = new MainMenuView();
     mainMenu.display();
-        return null;
+        return true;
   }
 }

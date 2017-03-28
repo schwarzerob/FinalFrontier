@@ -13,22 +13,23 @@ import finalfrontier.model.Resources;
  * @author rschw
  */
 public class CharacterView extends View{
+
+    static String characterName;
     public CharacterView() {
         super("\n ************************"
             + "\n * Which character do you want to play?"
-            + "\n *L - Lumberjack"
-            + "\n *F - Farmer"
-            + "\n *B - Blacksmith"
-            + "\n *H - Hunter"
-            + "\n *S - Soldier"
-            + "\n *C - Cashier"
+            + "\n *L - Lumberjack begins with more wood than the others."
+            + "\n *F - Farmer leaves with extra grain for the trip."
+            + "\n *B - the Blacksmith has more ore for the crafting."
+            + "\n *H - Hunter already has extra food when he leaves."
+            + "\n *S - a Soldier has more battle equipment to start with."
+            + "\n *C - the Cashier, well of course, he's already got extra cash."
             + "\n ************************");
     }
 
     @Override
     public boolean doAction(String value) {
         value = value.toUpperCase();
-        int i;
         switch (value){
             case "L":
                 this.getResources(0);
@@ -54,17 +55,20 @@ public class CharacterView extends View{
                 break;
         }
         
-        return false;
+        return true;
     }
 
-    private void getResources(int i) {
+    public String getResources(int i) {
         MyCharacter charNames[] = MyCharacter.values();
-        Resources.wood=charNames[i].getWood();
-        Resources.wood=charNames[i].getGrain();
-        Resources.wood=charNames[i].getOre();
-        Resources.wood=charNames[i].getSheep();
-        Resources.wood=charNames[i].getSwords();
-        Resources.wood=charNames[i].getGold();
+        int a = charNames[i].ordinal();
+        characterName = charNames[a].name();
+        Resources.wood=charNames[a].getWood();
+        Resources.wood=charNames[a].getGrain();
+        Resources.wood=charNames[a].getOre();
+        Resources.wood=charNames[a].getSheep();
+        Resources.wood=charNames[a].getSwords();
+        Resources.wood=charNames[a].getGold();
+        return characterName;
     }
     
 }
