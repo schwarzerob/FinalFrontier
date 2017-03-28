@@ -28,7 +28,6 @@ public class FinalFrontier {
         startProgramView.display();
         }catch(Throwable te){
             System.out.println(te.getMessage());
-            te.printStackTrace();
             startProgramView.display();
         }
      }
