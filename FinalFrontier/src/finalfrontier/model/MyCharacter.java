@@ -10,12 +10,12 @@ package finalfrontier.model;
  * @author rschw
  */
 public enum MyCharacter {
-    LUMBERJACK("The lumberjack goes into the field with more wood.", 10, 5, 5, 5, 1, 5, 5, 1),
-    FARMER("The farmer starts off with more sacks of grain in the wagon.", 5, 10, 5, 5, 1, 5, 5, 1),
-    BLACKSMITH("The blacksmith leaves with some extra ore.", 5, 5, 10, 5, 1, 2, 5, 1),
-    HUNTER("A hunter already has the biggest herd of sheep.", 5, 5, 5, 10, 1, 5, 5, 1),
-    SOLDIER("The soldier recovered his fathers swords.", 5, 5, 5, 5, 3, 5, 10, 1),
-    BANKER("The banker takes the remaining gold fron the register.", 5, 5, 5, 5, 1, 10, 5, 1);
+    LUMBERJACK("Lumberjack begins with more wood than the others.", 10, 5, 5, 5, 1, 5, 5, 1),
+    FARMER("Farmer leaves with extra grain for the trip.", 5, 10, 5, 5, 1, 5, 5, 1),
+    BLACKSMITH("the Blacksmith has more ore for the crafting.", 5, 5, 10, 5, 1, 2, 5, 1),
+    HUNTER("Hunters already have extra food when he leaves.", 5, 5, 5, 10, 1, 5, 5, 1),
+    SOLDIER("a Soldier has more battle equipment to start with.", 5, 5, 5, 5, 3, 5, 10, 1),
+    CACHIER("Cashier from the bank, well of course, he's already got extra cash in his pocket.", 5, 5, 5, 5, 1, 10, 5, 1);
     private final String description;
     private final int wood;
     private final int grain;

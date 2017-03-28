@@ -5,6 +5,8 @@
  */
 package finalfrontier.view;
 
+import finalfrontier.control.CharacterControl;
+import finalfrontier.exceptions.CharacterControlException;
 import finalfrontier.model.MyCharacter;
 import finalfrontier.model.Resources;
 
@@ -21,40 +23,50 @@ public class CharacterView extends View{
             + "\n *L - Lumberjack begins with more wood than the others."
             + "\n *F - Farmer leaves with extra grain for the trip."
             + "\n *B - the Blacksmith has more ore for the crafting."
-            + "\n *H - Hunter already has extra food when he leaves."
+            + "\n *H - Hunters already have extra food when he leaves."
             + "\n *S - a Soldier has more battle equipment to start with."
-            + "\n *C - the Cashier, well of course, he's already got extra cash."
+            + "\n *C - Cashier from the bank, well of course, he's already got extra cash in his pocket."
             + "\n ************************");
     }
 
     @Override
     public boolean doAction(String value) {
+        try{
         value = value.toUpperCase();
         switch (value){
             case "L":
-                this.getResources(0);
+                CharacterControl char0 = new CharacterControl();
+                char0.getResources(0);
                 break;
             case "F":
-                this.getResources(1);
+                CharacterControl char1 = new CharacterControl();
+                char1.getResources(1);
                 break;
             case "B":
-                this.getResources(2);
+                CharacterControl char2 = new CharacterControl();
+                char2.getResources(2);
                 break;
             case "H":
-                this.getResources(3);
+                CharacterControl char3 = new CharacterControl();
+                char3.getResources(3);
                 break;
             case "S":
-                this.getResources(4);
+                CharacterControl char4 = new CharacterControl();
+                char4.getResources(4);
                 break;
             case "C":
-                this.getResources(5);
+                CharacterControl char5 = new CharacterControl();
+                char5.getResources(5);
                 break;
             default:
                 System.out.println("\n*** Invalid selection ***"
-                                  +"\n    Try again");
+                        +"\n    Try again");
                 break;
         }
-        
+        return false;
+        }catch(CharacterControlException ex){
+            System.out.println("Error");
+        }
         return true;
     }
 

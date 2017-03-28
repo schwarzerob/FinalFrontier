@@ -5,8 +5,10 @@
  */
 package finalfrontier.control;
 
+import finalfrontier.exceptions.CharacterControlException;
 import finalfrontier.model.Craft;
 import finalfrontier.model.MyCharacter;
+import finalfrontier.model.Resources;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -21,7 +23,21 @@ public class CharacterControl {
         //define starting strength
         //define starting resources        
     }
-    
+    public String characterName;
+
+    public String getResources(int i) 
+        throws CharacterControlException{
+        MyCharacter charNames[] = MyCharacter.values();
+        int a = charNames[i].ordinal();
+        characterName = charNames[a].name();
+        Resources.wood=charNames[a].getWood();
+        Resources.wood=charNames[a].getGrain();
+        Resources.wood=charNames[a].getOre();
+        Resources.wood=charNames[a].getSheep();
+        Resources.wood=charNames[a].getSwords();
+        Resources.wood=charNames[a].getGold();
+        return characterName;
+    }
     
     public static void sortCharNames(MyCharacter[] args){
         MyCharacter charNames[] = MyCharacter.values(); //create Array from MyCharacter enum
@@ -37,6 +53,6 @@ public class CharacterControl {
                 withMost = theMost.name();
             }
         }
-                System.out.println("\n"+withMost+ " has the most with "+maxValue);
+        System.out.println("\n"+withMost+ " has the most with "+maxValue);
     }
 }

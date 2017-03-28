@@ -37,5 +37,18 @@ public class CharacterControlIT {
         MyCharacter[] args = null;
         CharacterControl.sortCharNames(args);
     }
+
+    /**
+     * Test of getResources method, of class CharacterControl.
+     */
+    @Test
+    public void testGetResources() throws Exception {
+        System.out.println("getResources");
+        int i = 0;
+        CharacterControl instance = new CharacterControl();
+        String expResult = "";
+        String result = instance.getResources(i);
+        assertEquals(expResult, result);
+    }
     
 }
