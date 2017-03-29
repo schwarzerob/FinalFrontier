@@ -5,6 +5,9 @@
  */
 package finalfrontier.view;
 
+import finalfrontier.FinalFrontier;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 /**
@@ -13,6 +16,10 @@ import java.util.Scanner;
  */
 public abstract class View implements ViewInterface{
     protected String displayMessage;
+    
+    protected final BufferedReader keyboard = FinalFrontier.getInFile();
+    protected final PrintWriter console = FinalFrontier.getOutFile();
+    
     public View() {
     }
     
@@ -36,7 +43,6 @@ public abstract class View implements ViewInterface{
 
     @Override
     public String getInput() {
-        Scanner keyboard = new Scanner(System.in);
         boolean valid = false;
         String value = null;
         
@@ -45,7 +51,7 @@ public abstract class View implements ViewInterface{
             System.out.println("\n"+this.displayMessage);
             
             // get the value entered from the keyboard
-            value = keyboard.nextLine();
+            value = this.keyboard.readLine();
             value = value.trim().toUpperCase();
             
             

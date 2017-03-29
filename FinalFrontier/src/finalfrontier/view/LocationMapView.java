@@ -35,8 +35,6 @@ public class LocationMapView extends View{
             try {
                 value.toUpperCase();
                 System.out.println("How far?");
-                //Scanner keyboard = new Scanner(System.in);
-                //int distance = keyboard.nextInt();
                 int distance =10;
                 if(distance <= 0 || distance >= 6)
                     System.out.println("");
@@ -58,8 +56,6 @@ public class LocationMapView extends View{
                 }
                 EventView here = new EventView();
                 here.randomEvent(distance);
-                //System.out.println(here.wasHere);
-                //System.out.println(event1.event);
             } catch (LocationControlExceptions ex) {
                 Logger.getLogger(LocationMapView.class.getName()).log(Level.SEVERE, null, ex);
             }

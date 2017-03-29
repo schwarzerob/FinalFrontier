@@ -21,16 +21,6 @@ import java.util.Scanner;
  * @author Gabriel
  */
 public class CraftingControl implements Serializable {
-
-    /*private static void orderPrice(int input) {
-    }
-        public String whichOne;
-        public String whichCharacter(){
-            Scanner value = new Scanner(System.in);
-             whichOne = value.nextLine();
-            return whichOne = LUMBERJACK.getDescription();
-        }
-        */
   
         public static void craftSword()
                 throws CraftingControlException {           //throws

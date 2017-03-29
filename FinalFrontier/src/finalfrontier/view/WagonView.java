@@ -8,6 +8,7 @@ package finalfrontier.view;
 import finalfrontier.control.wagonControl;
 import finalfrontier.exceptions.WagonException;
 import finalfrontier.model.Wagon;
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -34,21 +35,22 @@ public class WagonView extends View{
     public boolean doAction(String value) {
         try {
             String side = value.toUpperCase();
-            Scanner keyboard = new Scanner(System.in);
             switch (side){
                 case "T":
-                    int howFar = keyboard.nextInt();
+                    int howFar = this.keyboard.read();
                     wagonControl.longer(howFar);
                 case "W":
-                    int howWide = keyboard.nextInt();
+                    int howWide = this.keyboard.read();
                     wagonControl.wider(howWide);
                 case "L":
-                    int howLong = keyboard.nextInt();
+                    int howLong = this.keyboard.read();
                     wagonControl.taller(howLong);
             }
             return false;
             //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
         } catch (WagonException ex) {
+            Logger.getLogger(WagonView.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
             Logger.getLogger(WagonView.class.getName()).log(Level.SEVERE, null, ex);
         }
         return false;
