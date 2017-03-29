@@ -5,7 +5,11 @@
  */
 package finalfrontier;
 
+import finalfrontier.model.Game;
+import finalfrontier.model.Player;
 import finalfrontier.view.StartProgramView;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 
 
 
@@ -14,10 +18,14 @@ import finalfrontier.view.StartProgramView;
  * @author rschw
  */
 public class FinalFrontier {
-   
-   public String playerName = null;
-   public String characterChoice = null;
     
+   public String characterChoice = null;
+   
+   private static Game currentGame = null;
+   private static Player playerName =null;
+   
+   private static PrintWriter outFile = null;
+   private static BufferedReader inFile = null;
     /**
      * @param args the command line arguments
      */
