@@ -35,7 +35,7 @@ public class LocationMapView extends View{
             try {
                 value.toUpperCase();
                 System.out.println("How far?");
-                int distance =10;
+                int distance =0;
                 if(distance <= 0 || distance >= 6)
                     System.out.println("");
                 
@@ -57,7 +57,7 @@ public class LocationMapView extends View{
                 EventView here = new EventView();
                 here.randomEvent(distance);
             } catch (LocationControlExceptions ex) {
-                Logger.getLogger(LocationMapView.class.getName()).log(Level.SEVERE, null, ex);
+                System.out.println("Error. Invalid direction.");
             }
             return false;
     }

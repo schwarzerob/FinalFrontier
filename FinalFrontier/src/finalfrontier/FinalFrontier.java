@@ -48,7 +48,7 @@ public class FinalFrontier {
         startProgramView.display();
         }catch(Throwable te){
             System.out.println("Exception" + te.toString() +
-                                "\nCause: " + te.getCause +
+                                //"\nCause: " + e.getCause +
                                 "\nMessage" + te.getMessage());
             startProgramView.display();
         }
