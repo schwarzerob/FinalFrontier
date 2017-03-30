@@ -7,8 +7,11 @@ package finalfrontier.view;
 
 import finalfrontier.FinalFrontier;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -43,24 +46,31 @@ public abstract class View implements ViewInterface{
 
     @Override
     public String getInput() {
-        Scanner keyboard = new Scanner(System.in);
+        
+        //Scanner keyboard = new Scanner(System.in);
         boolean valid = false;
         String value = null;
         
         // while a valid name has not been retrieved
-        while (!valid){
-            System.out.println("\n"+this.displayMessage);
-            
-            // get the value entered from the keyboard
-            value = keyboard.nextLine();
-            value = value.trim().toUpperCase();
-            
-            
-            if(value.length() < 1){ // blank value entered
-                System.out.println("\n ****You must enter a value****");
-                continue;
+        try{
+            while (!valid){
+                System.out.println("\n"+this.displayMessage);
+                
+                // get the value entered from the keyboard
+                
+                //value = keyboard.nextLine();
+                value = keyboard.readLine();
+                value = value.trim().toUpperCase();
+                
+                
+                if(value.length() < 1){ // blank value entered
+                    System.out.println("\n ****You must enter a value****");
+                    continue;
+                }
+                break;
             }
-            break;
+        } catch (Exception ex) {
+            System.out.println("Error getting input: "+ex);
         }
         return value;  // return the name
     }

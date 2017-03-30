@@ -52,6 +52,10 @@ public class LocationMapView extends View{
                     case "W":
                         LocationControl.goWest(distance, col);
                         break;
+                    case "Q":
+                        GameMenuView gameMenu = new GameMenuView();
+                        gameMenu.display();
+                        break;
                     default:
                 }
                 EventView here = new EventView();
