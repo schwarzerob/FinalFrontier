@@ -5,6 +5,9 @@
  */
 package finalfrontier.control;
 
+import finalfrontier.model.Attack;
+import finalfrontier.model.Dragon;
+import finalfrontier.model.Puzzle;
 import finalfrontier.model.Treasure;
 
 /**
@@ -19,22 +22,35 @@ public class EventControl {
         /*
         The type and amount of the resource to be gathered is from the EventView triggered Treasure model, and then applied to individual amounts in Resources model.
         */
-        System.out.println("*** The Treasure was looted ***");
     }
 
     public static void puzzleEvent() {
+        Puzzle puzzle = new Puzzle();
+        puzzle.getDescription();  
+        puzzle.getCorrectAnswer();
         /*
         The puzzle to be solved is retrieved Puzzle model through the EventView.
         */
-        System.out.println("*** Riddle me this! ***");
     }
 
     public static void timeToAttack() {
+        Attack attack = new Attack();
+        attack.getHealthAttack();
+        attack.getHealthPlayer();
         /*
         An attack with attackers strength is triggered through EventView. A menu of tools and weapons is 
         offered for defense against attack and after chosen, players and attackers heath is displayed
         */
-        System.out.println("*** Pull your sword out because you are under attack! ***");
+    }
+
+    public static void theDragon() {
+        Dragon dragon = new Dragon();
+        dragon.getHealthAttack();
+        dragon.getHealthPlayer();
+        /*
+        An attack with attackers strength is triggered through EventView. A menu of tools and weapons is 
+        offered for defense against attack and after chosen, players and attackers heath is displayed
+        */
     }
 
     public static void harvestResources() {

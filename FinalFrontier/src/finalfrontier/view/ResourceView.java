@@ -22,6 +22,7 @@ public class ResourceView extends View{
                    +"\nG - Grain"
                    +"\nO - Ore"
                    +"\nS - Sheep"
+                   +"\nC - Cash"
                    +"\nB - Battle equipment"
                    +"\nT - Total count"
                    +"\nQ - Quit to Game Menu"
@@ -53,36 +54,47 @@ public class ResourceView extends View{
             this.resourceSheep();
             break;
         case "T":
-            System.out.println(
-            amountWood+amountGrain+amountOre+amountSheep+amountSwords+amountGold+
-            amountShields+amountBows+" items, and "+Wagon.area+" space in the wagon");
+            this.totalResource();
             break;
         case "B":
             this.resourceBattle();
             break;
+        case "C":
+            this.resourceGold();
+            break;
         default:
-            System.out.println("We don't have that type of resource. \n What type?");
+            this.console.println("We don't have that type of resource. \n What type?");
     }
         return false;
     }
     
     private void resourceWood(){
-            System.out.println("You have "+amountWood+" wood.");
+            this.console.println("You have "+amountWood+" wood.");
         
     }
     private void resourceGrain(){
-            System.out.println("You have "+amountGrain+" grain.");
+            this.console.println("You have "+amountGrain+" grain.");
         
     }
     private void resourceOre(){
-            System.out.println("You have "+amountOre+" ore.");
+            this.console.println("You have "+amountOre+" ore.");
         
     }
     private void resourceSheep(){
-            System.out.println("You have "+amountSheep+" sheep.");
+            this.console.println("You have "+amountSheep+" sheep.");
         
     }
     private void resourceBattle(){
-            System.out.println("You have "+amountSwords+" swords, "+amountShields+" shields, and "+amountBows+" bows.");
+            this.console.println("You have "+amountSwords+" swords, "+amountShields+" shields, and "+amountBows+" bows.");
+    }
+    private void resourceGold(){
+            this.console.println("You have "+amountGold+" gold.");
+        
+    }
+    private void totalResource(){
+            int sum=amountWood+amountGrain+amountOre+amountSheep+amountSwords+amountGold+
+            amountShields+amountBows;
+        this.console.println(sum+" items, and "+Wagon.area+" space in the wagon");
+        
     }
 }

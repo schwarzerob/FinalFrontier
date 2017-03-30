@@ -49,7 +49,7 @@ public class GameMenuView extends View{
                 this.backToMainMenu();
                 break;
             default:
-                System.out.println("\n*** Invalid selection ***"
+                this.console.println("\n*** Invalid selection ***"
                         +"\n    Try again");
                 break;
         }
@@ -64,11 +64,11 @@ public class GameMenuView extends View{
     private void resources() {
         ResourceView resourceView = new ResourceView();
         resourceView.display();
-        //System.out.println("*** resources function called ***");
+        //this.console.println("*** resources function called ***");
     }
 
     private void crafting() {
-        System.out.println("*** crafting function called ***");
+        this.console.println("*** crafting function called ***");
         CraftingView craft = new CraftingView();
         craft.display();
     }

@@ -40,7 +40,7 @@ public class StartProgramView extends View{
     public boolean doAction(String playersName) {
         player=playersName;
         if(playersName.length()<2){
-            System.out.println("\nInvalid players name: "
+            this.console.println("\nInvalid players name: "
                                 + "The name must be greater than one character in length");
             return false;
         }
@@ -48,12 +48,12 @@ public class StartProgramView extends View{
         
         playersName = Player.class.getName();
         if(playersName == null){
-            System.out.println("\nError creating player.");
+            this.console.println("\nError creating player.");
             return false;
         }
         CharacterView charView =new CharacterView();
         charView.display();
-        System.out.println("\n========================================="
+        this.console.println("\n========================================="
                          + "\n Welcome " + player + ", to the Final Frontier!"
                          + "\n We hope you have a lot of fun as the " + CharacterControl.characterName
                          + "\n========================================="

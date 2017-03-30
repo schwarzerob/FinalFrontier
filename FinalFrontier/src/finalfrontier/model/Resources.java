@@ -33,7 +33,6 @@ public class Resources {
    }
 
     public Resources() {
-    }
    
     /*public ArrayList<Resources> addContent(){
     
@@ -46,7 +45,7 @@ public class Resources {
     content.add(new Resources("Gold", gold));
     content.add(new Resources("Shields", shields));
     return content;
-    }*/
+    }
     public static int MaxAmount(){
         current = wood+grain+ore+sheep+swords+gold+shields+bows+rope;
         int wagonSpace = Wagon.area;
@@ -55,7 +54,7 @@ public class Resources {
         }
         System.out.println("You have "+Resources.current+" items, with "+(Wagon.area-Resources.current)+" space remaining.");
        return current;
-        
+    */    
     }
    
    

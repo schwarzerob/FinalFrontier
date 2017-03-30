@@ -34,10 +34,10 @@ public class LocationMapView extends View{
     public boolean doAction(String value){
             try {
                 value.toUpperCase();
-                System.out.println("How far?");
+                this.console.println("How far?");
                 int distance =0;
                 if(distance <= 0 || distance >= 6)
-                    System.out.println("");
+                    this.console.println("");
                 
                 switch (value){
                     case "N":
@@ -61,7 +61,7 @@ public class LocationMapView extends View{
                 EventView here = new EventView();
                 here.randomEvent(distance);
             } catch (LocationControlExceptions ex) {
-                System.out.println("Error. Invalid direction.");
+                this.console.println("Error. Invalid direction.");
             }
             return false;
     }

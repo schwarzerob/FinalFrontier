@@ -59,13 +59,13 @@ public class CharacterView extends View{
                 char5.getResources(5);
                 break;
             default:
-                System.out.println("\n*** Invalid selection ***"
+                this.console.println("\n*** Invalid selection ***"
                         +"\n    Try again");
                 break;
         }
         return true;
         }catch(CharacterControlException ex){
-            System.out.println("Error");
+            this.console.println("Error");
         }
         return false;
     }

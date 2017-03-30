@@ -17,7 +17,7 @@ import java.util.Random;
  *
  * @author rschw
  */
-public class EventView {
+public class EventView extends View{
         public char wasHere = 'X';
         int event;
 
@@ -30,68 +30,46 @@ public class EventView {
     public boolean randomEvent(int createEvent) {
             Location destination = new Location();
             event = destination.getEvent();
+            EventControl eventControl = new EventControl();
         switch (event){
             case 1:
-                EventControl.lootTreasure();
-                System.out.println("Treasure chest!");
+                eventControl.lootTreasure();
+                this.console.println("Treasure chest!");
                 wasHere = '$';
                 break;
             case 2:
-                this.puzzleEvent();
-                System.out.println("Solve the puzzle!");
+                eventControl.puzzleEvent();
+                this.console.println("Solve the puzzle!");
                 wasHere = '?';
                 break;
             case 3:
-                this.timeToAttack();
-                System.out.println("Attack!");
+                eventControl.timeToAttack();
+                this.console.println("Attack!");
                 wasHere = 'ƚ';
                 break;
             case 5:
-                this.theDragon();
-                System.out.println("Oh no! It's the Dragon!");
+                eventControl.theDragon();
+                this.console.println("Oh no! It's the Dragon!");
                 wasHere = '§';
                 break;
             default:
-                System.out.println("Nothing here!");
+                this.console.println("Nothing here!");
                 wasHere = 'Ø';
                 break;
         }
-            System.out.println("Random number: "+event);
-        System.out.println("Event character: "+wasHere);
+            this.console.println("Random number: "+event);
+        this.console.println("Event character: "+wasHere);
         return false;
     }
     
     public char getWasHere(){
         return wasHere;
     }
-    //event funtion
-    //
-    
-    private void lootTreasure() {
-        EventControl.lootTreasure();
-        Treasure treasure = new Treasure();
-        treasure.getLoot();  
-    }
-    
-    private void puzzleEvent() {
-        EventControl.puzzleEvent();
-        Puzzle puzzle = new Puzzle();
-        puzzle.getDescription();  
-        puzzle.getCorrectAnswer();
-    }
-    
-    private void timeToAttack() {
-        EventControl.timeToAttack();
-        Attack attack = new Attack();
-        attack.getHealthAttack();
-        attack.getHealthPlayer();
-    }
-    
-    private void theDragon() {
-        EventControl.timeToAttack();
-        Dragon dragon = new Dragon();
-        dragon.getHealthAttack();
-        dragon.getHealthPlayer();
+
+    @Override
+    public boolean doAction(String value) {
+        this.console.println("doAction function");
+            return false;
     }
    
     

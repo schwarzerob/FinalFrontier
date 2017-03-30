@@ -36,6 +36,7 @@ public class FinalFrontier {
      */
     public static void main(String[] args) {
         // create StartProgramViewOrig and display the start program view
+        
         try{
             FinalFrontier.inFile = 
                     new BufferedReader(new InputStreamReader(System.in));

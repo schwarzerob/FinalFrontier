@@ -35,8 +35,7 @@ public class CraftingControl implements Serializable {
             Resources.gold -= gold;
             Resources.swords += 1;
             
-            System.out.println("Left over resources: " +Resources.wood +" wood, " + Resources.ore + " ore, and " + Resources.gold+" gold");
-            System.out.println("You now have "+Resources.swords + " swords");
+            
         }
         
         public static void craftShield()
@@ -49,8 +48,6 @@ public class CraftingControl implements Serializable {
             Resources.wood-=wood;
             Resources.ore-=ore;
             Resources.shields+=1;
-            System.out.println("Left over resources: " +Resources.wood +" wood, and " + Resources.ore + " ore");
-            System.out.println("You now have "+Resources.shields + " shields");
         }
         public static void craftBow()
             throws CraftingControlException {
@@ -62,8 +59,6 @@ public class CraftingControl implements Serializable {
             Resources.wood -= wood;
             Resources.rope -= rope;
             Resources.bows += 1;
-            System.out.println("Left over resources: " +Resources.wood +" wood, and " + Resources.rope + " rope");
-            System.out.println("You now have "+Resources.bows + " bows");
             
         }
         public static void craftRope()
@@ -75,8 +70,6 @@ public class CraftingControl implements Serializable {
             }
             Resources.grain -= grain;
             Resources.rope += 1;
-            System.out.println("Left over resources: " +Resources.grain + " rope");
-            System.out.println("You now have "+Resources.rope + " ropes");
         }
         public static void craftWagon()
             throws CraftingControlException{

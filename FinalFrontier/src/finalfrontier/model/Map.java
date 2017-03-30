@@ -58,7 +58,7 @@ public class Map {
     public String displayMap(){
         EventView hereChar = new EventView();
         //thisOne = hereChar.getWasHere();
-        System.out.println("Current character: "+hereChar.wasHere);
+        //System.out.println("Current character: "+hereChar.wasHere);
         mapMatrix[6][4] = '§';
         mapMatrix[mapRow][mapColumn] = hereChar.wasHere;
     System.out.println("\n   _ _ _ _ _");

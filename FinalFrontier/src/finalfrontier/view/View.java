@@ -54,7 +54,7 @@ public abstract class View implements ViewInterface{
         // while a valid name has not been retrieved
         try{
             while (!valid){
-                System.out.println("\n"+this.displayMessage);
+                this.console.println("\n"+this.displayMessage);
                 
                 // get the value entered from the keyboard
                 
@@ -64,13 +64,13 @@ public abstract class View implements ViewInterface{
                 
                 
                 if(value.length() < 1){ // blank value entered
-                    System.out.println("\n ****You must enter a value****");
+                    this.console.println("\n ****You must enter a value****");
                     continue;
                 }
                 break;
             }
         } catch (Exception ex) {
-            System.out.println("Error getting input: "+ex);
+            this.console.println("Error getting input: "+ex);
         }
         return value;  // return the name
     }

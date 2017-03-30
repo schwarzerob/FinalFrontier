@@ -61,38 +61,39 @@ public class CraftingView extends View{
                     ropeCraft.craftRope();
                     break;
                 case "SH":
-                    
-                    this.main();
                     break;
                 default:
-                    System.out.println("That isn't an item to be crafted, try again");
+                    this.console.println("That isn't an item to be crafted, try again");
             }
+            
+            this.console.println("Left over resources: " +Resources.wood +" wood, " + Resources.ore + " ore, and " + Resources.gold+" gold");
+            this.console.println("You now have "+Resources.swords + " swords");
             return false;
         } catch (CraftingControlException ex) {
-            System.out.println("You can't afford that one!");
+            this.console.println("You can't afford that one!");
         }
         return true;
     }
     
     private void craftSword(){
-        System.out.println(CraftingItems.Shield);
-            System.out.println("Congratulation you just crafted a sword");
+        this.console.println(CraftingItems.Shield);
+            this.console.println("Congratulation you just crafted a sword");
         
     }
     private void craftShield(){
-            System.out.println("Congratulation you just crafted a shield");
+            this.console.println("Congratulation you just crafted a shield");
         
     }
     private void craftBow(){
-            System.out.println("Congratulation you just crafted a bow");
+            this.console.println("Congratulation you just crafted a bow");
         
     }
     private void craftWagon(){
-            System.out.println("Congratulation you just made you wagon bigger");
+            this.console.println("Congratulation you just made you wagon bigger");
         
     }
     private void craftRope(){
-            System.out.println("Congratulation you just crafted a string");
+            this.console.println("Congratulation you just crafted a string");
         
     }
     
@@ -111,15 +112,6 @@ public class CraftingView extends View{
             
         }
         return arr;
-    }
-     
-    public static void main(){
-         
-        CraftingItems[] arr1 = CraftingItems.values();
-        CraftingItems[] arr2 = leastToMost(arr1);
-        for(CraftingItems i:arr2){
-            System.out.println(i.getDescription()+ " " + i.getGold() );
-        }
     }
 
     
