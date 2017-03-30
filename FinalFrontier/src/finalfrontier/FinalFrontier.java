@@ -36,7 +36,6 @@ public class FinalFrontier {
      */
     public static void main(String[] args) {
         // create StartProgramViewOrig and display the start program view
-        StartProgramView startProgramView = new StartProgramView();
         try{
             FinalFrontier.inFile = 
                     new BufferedReader(new InputStreamReader(System.in));
@@ -45,12 +44,13 @@ public class FinalFrontier {
             String filePath = "log.txt";
             FinalFrontier.logFile = new PrintWriter(filePath);
             
+        StartProgramView startProgramView = new StartProgramView();
         startProgramView.display();
         }catch(Throwable te){
             System.out.println("Exception" + te.toString() +
                                 //"\nCause: " + e.getCause +
                                 "\nMessage" + te.getMessage());
-            startProgramView.display();
+            //startProgramView.display();
         }
         finally {
             try {

@@ -59,7 +59,7 @@ public abstract class View implements ViewInterface{
                 // get the value entered from the keyboard
                 
                 //value = keyboard.nextLine();
-                value = keyboard.readLine();
+                value = this.keyboard.readLine();
                 value = value.trim().toUpperCase();
                 
                 
