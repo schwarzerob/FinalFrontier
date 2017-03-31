@@ -34,15 +34,18 @@ public class LocationMapView extends View{
     @Override
     public boolean doAction(String value){
         int distance;
+        String direction=value;
             try {
-                value.toUpperCase();
+                direction.toUpperCase();
                 this.console.println("How far?");
                 value = this.keyboard.readLine();
                 distance = Integer.parseInt(value);
-                if(distance <= 0 || distance >= 6)
-                    ErrorView.display(this.getClass().getName(), "****You must enter a proper value****");
+                if(distance <= 0 || distance >= 6){
+                    this.console.println("****You must enter a proper value****");
+                    
+                }
                 
-                switch (value){
+                switch (direction){
                     case "N":
                         LocationControl.setRow(row);
                         Map.setRow(row);

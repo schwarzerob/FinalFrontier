@@ -65,7 +65,7 @@ public class CharacterView extends View{
         }
         return true;
         }catch(CharacterControlException ex){
-            this.console.println("Error");
+            ErrorView.display(this.getClass().getName(),"Error");
         }
         return false;
     }
