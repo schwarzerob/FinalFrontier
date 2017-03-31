@@ -34,7 +34,7 @@ public class LocationControl implements Serializable {
         if(row+distance > 6 || row+distance <0){
             throw new LocationControlExceptions("\nToo far!");
         }
-        LocationControl.row += distance;
+        row = row + distance;
         Map displayMap = new Map();
         displayMap.displayMap();
         System.out.println("North");
@@ -45,6 +45,7 @@ public class LocationControl implements Serializable {
         if(row+distance > 6 || row+distance <0){
             throw new LocationControlExceptions("\nToo far!");
         }
+        row = row - distance;
         Map displayMap = new Map();
         displayMap.displayMap();
         System.out.println("South");
@@ -54,6 +55,7 @@ public class LocationControl implements Serializable {
         if(col+distance > 6 || col+distance <0){
             throw new LocationControlExceptions("\nToo far!");
         }
+        col = col + distance;
         Map displayMap = new Map();
         displayMap.displayMap();
         System.out.println("East");
@@ -63,6 +65,7 @@ public class LocationControl implements Serializable {
         if(col+distance > 6 || col+distance <0){
             throw new LocationControlExceptions("\nToo far!");
         }
+        col = col - distance;
         Map displayMap = new Map();
         displayMap.displayMap();
         System.out.println("West");
@@ -71,15 +74,12 @@ public class LocationControl implements Serializable {
     public static int getRow() {
         return row;
     }
-
     public static void setRow(int row) {
         LocationControl.row = row;
     }
-
     public static int getCol() {
         return col;
     }
-
     public static void setCol(int col) {
         LocationControl.col = col;
     }

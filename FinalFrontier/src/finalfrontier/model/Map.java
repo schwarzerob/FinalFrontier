@@ -34,35 +34,41 @@ public class Map {
     public Map() {
         
     }
-    public char mapColumn = (char) LocationControl.getCol();
-    public char mapRow = (char) LocationControl.getRow();
+
+    public static char column=0;
+    public static char row=0;
     
 // get and set Row
-    public int getRow() {
-        return mapRow;
+    public static int getRow() {
+        return row;
     }
-    public void setRow(int row) {
-        this.mapRow = (char) row;
+    public static void setRow(int row) {
+        row = (char) row;
     }
     
 // get and set Column
-    public int getColumn() {
-        return mapColumn;
+    public static int getColumn() {
+        return column;
     }
-    public void setColumn(int column) {
-        this.mapColumn = (char) column;
+    public static void setColumn(int column) {
+        column = (char) column;
     }
     
 // equals
+
     
 //Display the Map
     public String displayMap(){
+        //this.column = (char) LocationControl.getCol();
+        //this.row = (char) LocationControl.getRow();
         EventView hereChar = new EventView();
         //thisOne = hereChar.getWasHere();
         //System.out.println("Current character: "+hereChar.wasHere);
-    System.out.println(mapRow + " : " + mapColumn);
+        System.out.println(this.row + " : " + this.column);
+        System.out.println(LocationControl.row + " : " + LocationControl.col);
+        System.out.println(LocationMapView.row + " : " + LocationMapView.col);
         mapMatrix[6][4] = '§';
-        mapMatrix[mapRow][mapColumn] = hereChar.wasHere;
+        mapMatrix[row][column] = hereChar.wasHere;
     System.out.println("\n   _ _ _ _ _");
     System.out.println(
             "6 "+"|" + mapMatrix[6][0] + "|" + mapMatrix[6][1] + "|" + mapMatrix[6][2] + "|" + mapMatrix[6][3] + "|" + mapMatrix[6][4] + "|\n" +
