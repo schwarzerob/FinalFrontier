@@ -64,13 +64,13 @@ public abstract class View implements ViewInterface{
                 
                 
                 if(value.length() < 1){ // blank value entered
-                    this.console.println("\n ****You must enter a value****");
+                    ErrorView.display(this.getClass().getName(), "\n ****You must enter a value****");
                     continue;
                 }
                 break;
             }
         } catch (Exception ex) {
-            this.console.println("Error getting input: "+ex);
+            ErrorView.display(this.getClass().getName(), "Error getting input: "+ex);
         }
         return value;  // return the name
     }

@@ -63,14 +63,14 @@ public class CraftingView extends View{
                 case "SH":
                     break;
                 default:
-                    this.console.println("That isn't an item to be crafted, try again");
+                    ErrorView.display(this.getClass().getName(), "That isn't an item to be crafted, try again");
             }
             
             this.console.println("Left over resources: " +Resources.wood +" wood, " + Resources.ore + " ore, and " + Resources.gold+" gold");
             this.console.println("You now have "+Resources.swords + " swords");
             return false;
         } catch (CraftingControlException ex) {
-            this.console.println("You can't afford that one!");
+            ErrorView.display(this.getClass().getName(), "You can't afford that one!");
         }
         return true;
     }
@@ -116,13 +116,3 @@ public class CraftingView extends View{
 
     
 }
-    
-
-
-
-
-  
-            
-    
-
-

@@ -9,6 +9,7 @@ import finalfrontier.control.LocationControl;
 import finalfrontier.exceptions.LocationControlExceptions;
 import finalfrontier.model.Location;
 import finalfrontier.model.Map;
+import java.io.IOException;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -32,24 +33,30 @@ public class LocationMapView extends View{
     
     @Override
     public boolean doAction(String value){
+        int distance;
             try {
                 value.toUpperCase();
                 this.console.println("How far?");
-                int distance =0;
+                value = this.keyboard.readLine();
+                distance = Integer.parseInt(value);
                 if(distance <= 0 || distance >= 6)
-                    this.console.println("");
+                    ErrorView.display(this.getClass().getName(), "****You must enter a proper value****");
                 
                 switch (value){
                     case "N":
+                        LocationControl.setRow(row);
                         LocationControl.goNorth(distance, row);
                         break;
                     case "S":
+                        LocationControl.setRow(row);
                         LocationControl.goSouth(distance, row);
                         break;
                     case "E":
+                        LocationControl.setCol(col);
                         LocationControl.goEast(distance, col);
                         break;
                     case "W":
+                        LocationControl.setCol(col);
                         LocationControl.goWest(distance, col);
                         break;
                     case "Q":
@@ -61,8 +68,26 @@ public class LocationMapView extends View{
                 EventView here = new EventView();
                 here.randomEvent(distance);
             } catch (LocationControlExceptions ex) {
-                this.console.println("Error. Invalid direction.");
+                ErrorView.display(this.getClass().getName(),"Error: Invalid direction.");
+            } catch (IOException ex) {
+                ErrorView.display(this.getClass().getName(),"Error: Invalid distance.");
             }
             return false;
+    }
+
+    public static int getRow() {
+        return row;
+    }
+
+    public static void setRow(int row) {
+        LocationMapView.row = row;
+    }
+
+    public static int getCol() {
+        return col;
+    }
+
+    public static void setCol(int col) {
+        LocationMapView.col = col;
     }
 }

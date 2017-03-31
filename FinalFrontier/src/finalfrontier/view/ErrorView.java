@@ -13,6 +13,10 @@ import java.io.PrintWriter;
  * @author rschw
  */
 public class ErrorView {
+
+    public ErrorView() {
+    }
+    
     private static final PrintWriter errorFile = FinalFrontier.getOutFile();
     private static final PrintWriter logFile = FinalFrontier.getLogFile();
     
