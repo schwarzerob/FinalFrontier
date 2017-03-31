@@ -5,6 +5,7 @@
  */
 package finalfrontier.model;
 
+import finalfrontier.control.LocationControl;
 import java.io.Serializable;
 import finalfrontier.view.LocationMapView;
 import finalfrontier.model.Location;
@@ -29,12 +30,12 @@ public class Map {
         {'_', '_', '_', '_', '_'}, 
         };
     
-    private char mapColumn = (char) LocationMapView.col;
-    private char mapRow = (char) LocationMapView.row;
     
     public Map() {
         
     }
+    public char mapColumn = (char) LocationControl.getCol();
+    public char mapRow = (char) LocationControl.getRow();
     
 // get and set Row
     public int getRow() {
@@ -59,6 +60,7 @@ public class Map {
         EventView hereChar = new EventView();
         //thisOne = hereChar.getWasHere();
         //System.out.println("Current character: "+hereChar.wasHere);
+    System.out.println(mapRow + " : " + mapColumn);
         mapMatrix[6][4] = '§';
         mapMatrix[mapRow][mapColumn] = hereChar.wasHere;
     System.out.println("\n   _ _ _ _ _");
