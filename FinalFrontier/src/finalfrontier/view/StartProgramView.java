@@ -5,16 +5,8 @@
  */
 package finalfrontier.view;
 
-import finalfrontier.FinalFrontier;
 import finalfrontier.control.CharacterControl;
-import finalfrontier.control.GameControl;
-import finalfrontier.exceptions.GameControlException;
-import finalfrontier.model.MyCharacter;
 import finalfrontier.model.Player;
-import finalfrontier.model.Resources;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -44,6 +36,7 @@ public class StartProgramView extends View{
                                 + "The name must be greater than one character in length");
             return false;
         }
+        this.console.println(player);
         // call createPlayer() control function
         
         playersName = Player.class.getName();
@@ -51,13 +44,18 @@ public class StartProgramView extends View{
             this.console.println("\nError creating player.");
             return false;
         }
+        
         CharacterView charView =new CharacterView();
         charView.display();
+        String charName = CharacterControl.characterName;
         this.console.println("\n========================================="
                          + "\n Welcome " + player + ", to the Final Frontier!"
-                         + "\n We hope you have a lot of fun as the " + CharacterControl.characterName
+                         + "\n We hope you have a lot of fun as the " + charName
                          + "\n========================================="
                          );
+        Player players = new Player(player, charName);
+        players.setName(player);
+        players.setCharacter(charName);
     MainMenuView mainMenu = new MainMenuView();
     mainMenu.display();
         return true;

@@ -6,7 +6,9 @@
 package finalfrontier.view;
 
 import finalfrontier.FinalFrontier;
+import finalfrontier.control.CharacterControl;
 import finalfrontier.control.GameControl;
+import finalfrontier.model.Player;
 import java.util.Scanner;
 
 /**
@@ -52,7 +54,8 @@ public class MainMenuView extends View{
     }
 
     private void startNewGame() {
-        //GameControl.createPlayer(FinalFrontier.getPlayer());
+        
+        StartProgramView playerName = new StartProgramView();
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
     }
