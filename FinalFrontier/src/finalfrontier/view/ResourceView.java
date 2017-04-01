@@ -5,6 +5,7 @@
  */
 package finalfrontier.view;
 
+import finalfrontier.FinalFrontier;
 import finalfrontier.model.Resources;
 import finalfrontier.model.Wagon;
 
@@ -36,7 +37,7 @@ public class ResourceView extends View{
     int amountGold = Resources.gold;
     int amountShields = Resources.shields;
     int amountBows = Resources.bows;
-
+    
     @Override
     public boolean doAction(String value) {
         value = value.toUpperCase();
