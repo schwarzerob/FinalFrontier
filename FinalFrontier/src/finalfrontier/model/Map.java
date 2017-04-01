@@ -35,23 +35,23 @@ public class Map {
         
     }
 
-    public static char column=0;
-    public static char row=0;
+    public int column=0;
+    public int row=0;
     
 // get and set Row
-    public static int getRow() {
+    public int getRow() {
         return row;
     }
-    public static void setRow(int row) {
-        row = (char) row;
+    public void setRow(int row) {
+        row = row;
     }
     
 // get and set Column
-    public static int getColumn() {
+    public int getColumn() {
         return column;
     }
-    public static void setColumn(int column) {
-        column = (char) column;
+    public void setColumn(int column) {
+        column = column;
     }
     
 // equals
@@ -59,14 +59,13 @@ public class Map {
     
 //Display the Map
     public String displayMap(){
-        //this.column = (char) LocationControl.getCol();
-        //this.row = (char) LocationControl.getRow();
+        
         EventView hereChar = new EventView();
-        //thisOne = hereChar.getWasHere();
-        //System.out.println("Current character: "+hereChar.wasHere);
-        System.out.println(this.row + " : " + this.column);
+        
+        System.out.println(row + " : " + column);
         System.out.println(LocationControl.row + " : " + LocationControl.col);
         System.out.println(LocationMapView.row + " : " + LocationMapView.col);
+        
         mapMatrix[6][4] = '§';
         mapMatrix[row][column] = hereChar.wasHere;
     System.out.println("\n   _ _ _ _ _");

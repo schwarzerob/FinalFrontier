@@ -51,6 +51,7 @@ public class FinalFrontier {
             System.out.println("Exception" + te.toString() +
                                 //"\nCause: " + e.getCause +
                                 "\nMessage" + te.getMessage());
+            te.printStackTrace();
             //startProgramView.display();
         }
         finally {
@@ -69,6 +70,30 @@ public class FinalFrontier {
             }
         }
      }
+
+    public String getCharacterChoice() {
+        return characterChoice;
+    }
+
+    public void setCharacterChoice(String characterChoice) {
+        this.characterChoice = characterChoice;
+    }
+
+    public static Game getCurrentGame() {
+        return currentGame;
+    }
+
+    public static void setCurrentGame(Game currentGame) {
+        FinalFrontier.currentGame = currentGame;
+    }
+
+    public static Player getPlayerName() {
+        return playerName;
+    }
+
+    public static void setPlayerName(Player playerName) {
+        FinalFrontier.playerName = playerName;
+    }
 
     public static PrintWriter getOutFile() {
         return outFile;

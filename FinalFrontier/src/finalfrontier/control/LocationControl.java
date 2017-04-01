@@ -5,6 +5,7 @@
  */
 package finalfrontier.control;
 
+import finalfrontier.FinalFrontier;
 import finalfrontier.exceptions.LocationControlExceptions;
 import finalfrontier.model.Map;
 import static finalfrontier.view.LocationMapView.row;
@@ -34,7 +35,9 @@ public class LocationControl implements Serializable {
         if(row+distance > 6 || row+distance <0){
             throw new LocationControlExceptions("\nToo far!");
         }
+        Map map = FinalFrontier.
         row = row + distance;
+        Map.setRow(row);
         Map displayMap = new Map();
         displayMap.displayMap();
         System.out.println("North");
@@ -46,6 +49,7 @@ public class LocationControl implements Serializable {
             throw new LocationControlExceptions("\nToo far!");
         }
         row = row - distance;
+        Map.setRow(row);
         Map displayMap = new Map();
         displayMap.displayMap();
         System.out.println("South");
@@ -56,6 +60,7 @@ public class LocationControl implements Serializable {
             throw new LocationControlExceptions("\nToo far!");
         }
         col = col + distance;
+        Map.setColumn(col);
         Map displayMap = new Map();
         displayMap.displayMap();
         System.out.println("East");
@@ -66,6 +71,7 @@ public class LocationControl implements Serializable {
             throw new LocationControlExceptions("\nToo far!");
         }
         col = col - distance;
+        Map.setColumn(col);
         Map displayMap = new Map();
         displayMap.displayMap();
         System.out.println("West");

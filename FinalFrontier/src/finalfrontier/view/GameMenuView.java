@@ -49,7 +49,7 @@ public class GameMenuView extends View{
                 this.backToMainMenu();
                 break;
             default:
-                this.console.println("\n*** Invalid selection ***"
+                this.console.println("\n*** Not an option ***"
                         +"\n    Try again");
                 break;
         }
