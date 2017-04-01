@@ -6,6 +6,7 @@
 package finalfrontier.control;
 
 import finalfrontier.exceptions.LocationControlExceptions;
+import finalfrontier.model.Location;
 import finalfrontier.model.Map;
 import java.io.Serializable;
 
@@ -21,10 +22,12 @@ the method is complete, the location on the map will
 be changed by the value of either the row, or the column.
 */
 public class LocationControl implements Serializable {
-    public int row = 0;
-    public int col = 0;
+    public int row=0;
+    public int col=0;
     public LocationControl() {
     }
+        Location location = new Location();
+        Map displayMap = new Map();
             
     public void goNorth(int distance)
         throws LocationControlExceptions{
@@ -33,11 +36,12 @@ public class LocationControl implements Serializable {
         }
         //int map = FinalFrontier.
         row += distance;
-        Map displayMap = new Map();
-        displayMap.setRow(row);
-        displayMap.setColumn(col);
+        location.setRow(row);
+        location.setColumn(col);
         displayMap.displayMap();
         System.out.println("North");
+        //System.out.println(row + " : " + col);  //test view
+        System.out.println(location.toString());  //test view
         
     }        
     public void goSouth(int distance)
@@ -46,11 +50,12 @@ public class LocationControl implements Serializable {
             throw new LocationControlExceptions("\nToo far!");
         }
         row -= distance;
-        Map displayMap = new Map();
-        displayMap.setRow(row);
-        displayMap.setColumn(col);
+        location.setRow(row);
+        location.setColumn(col);
         displayMap.displayMap();
         System.out.println("South");
+        //System.out.println(row + " : " + col);  //test view
+        System.out.println(location.toString());  //test view
     }        
     public void goEast(int distance)
         throws LocationControlExceptions{
@@ -58,11 +63,12 @@ public class LocationControl implements Serializable {
             throw new LocationControlExceptions("\nToo far!");
         }
         col += distance;
-        Map displayMap = new Map();
-        displayMap.setRow(row);
-        displayMap.setColumn(col);
+        location.setRow(row);
+        location.setColumn(col);
         displayMap.displayMap();
         System.out.println("East");
+        //System.out.println(row + " : " + col);  //test view
+        System.out.println(location.toString());  //test view
     }        
     public void goWest(int distance)
         throws LocationControlExceptions{
@@ -70,11 +76,12 @@ public class LocationControl implements Serializable {
             throw new LocationControlExceptions("\nToo far!");
         }
         col -= distance;
-        Map displayMap = new Map();
-        displayMap.setRow(row);
-        displayMap.setColumn(col);
+        location.setRow(row);
+        location.setColumn(col);
         displayMap.displayMap();
         System.out.println("West");
+        //System.out.println(row + " : " + col);  //test view
+        System.out.println(location.toString());  //test view
     }
 
     public int getRow() {

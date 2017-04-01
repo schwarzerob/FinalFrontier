@@ -32,11 +32,10 @@ public class Map {
     
     
     public Map() {
-        
     }
 
-    public int column;
-    public int row;
+    public int column=0;
+    public int row=0;
     
 // get and set Row
     public int getRow() {
@@ -45,8 +44,6 @@ public class Map {
     public void setRow(int row) {
         this.row = row;
     }
-    
-// get and set Column
     public int getColumn() {
         return column;
     }
@@ -59,7 +56,9 @@ public class Map {
     
 //Display the Map
     public String displayMap(){
-        
+        Location location = new Location();
+        column = location.getColumn();
+        row = location.getRow();
         EventView hereChar = new EventView();
         
         System.out.println(row + " : " + column);
