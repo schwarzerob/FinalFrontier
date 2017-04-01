@@ -12,8 +12,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 
 
@@ -31,9 +29,11 @@ public class FinalFrontier {
    private static BufferedReader inFile = null;
    
    private static PrintWriter logFile = null;
-    /**
+   
+     /**
      * @param args the command line arguments
      */
+   
     public static void main(String[] args) {
         // create StartProgramViewOrig and display the start program view
         

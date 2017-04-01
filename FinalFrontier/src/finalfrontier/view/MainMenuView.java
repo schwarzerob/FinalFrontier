@@ -66,6 +66,12 @@ public class MainMenuView extends View{
 
     private void saveGame() {
         this.console.println("*** saveGame function called ***");
+        this.console.println("\n\nEnter the file path for where the game will be saved.");
+        String filePath = this.getInput();
+        try{
+        GameControl.saveGame(FinalFrontier.getCurrentGame(), filePath);
+        }catch(Exception ex){
+            ErrorView.display("MainMenuView", displayMessage);}
     }
 
     private void displayHelpMenu() {
