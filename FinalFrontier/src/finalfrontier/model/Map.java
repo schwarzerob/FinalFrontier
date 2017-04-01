@@ -35,8 +35,8 @@ public class Map {
         
     }
 
-    public int column=0;
-    public int row=0;
+    public int column;
+    public int row;
     
 // get and set Row
     public int getRow() {
@@ -64,7 +64,7 @@ public class Map {
         
         System.out.println(row + " : " + column);
         //System.out.println(LocationControl.row + " : " + LocationControl.col);
-        System.out.println(LocationMapView.row + " : " + LocationMapView.col);
+        //System.out.println(LocationMapView.row + " : " + LocationMapView.col);
         
         mapMatrix[6][4] = '§';
         mapMatrix[row][column] = hereChar.wasHere;

@@ -7,12 +7,7 @@ package finalfrontier.view;
 
 import finalfrontier.control.LocationControl;
 import finalfrontier.exceptions.LocationControlExceptions;
-import finalfrontier.model.Location;
-import finalfrontier.model.Map;
 import java.io.IOException;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -20,8 +15,6 @@ import java.util.logging.Logger;
  */
 public class LocationMapView extends View{
     
-        public static int row=0;
-        public static int col=0;
         
     public LocationMapView() {
         super("\nWhich way?" + 
@@ -30,11 +23,13 @@ public class LocationMapView extends View{
                                 "\n    S "+
                                 "\nQ-Quit moving");
     }
+        public int row;
+        public int col;
     
     @Override
     public boolean doAction(String value){
         int distance=0;
-        Map map = new Map();
+        LocationControl locationControl = new LocationControl();
         String direction=value.toUpperCase();
             try {
                 this.console.println("How far?");
@@ -51,20 +46,20 @@ public class LocationMapView extends View{
                 
                 switch (direction){
                     case "N":
-                        map.setRow(row);
-                        LocationControl.goNorth(distance, row);
+                        //map.setRow(row);
+                        locationControl.goNorth(distance);
                         break;
                     case "S":
-                        map.setRow(row);
-                        LocationControl.goSouth(distance, row);
+                        //map.setRow(row);
+                        locationControl.goSouth(distance);
                         break;
                     case "E":
-                        map.setColumn(col);
-                        LocationControl.goEast(distance, col);
+                        //map.setColumn(col);
+                        locationControl.goEast(distance);
                         break;
                     case "W":
-                        map.setColumn(col);
-                        LocationControl.goWest(distance, col);
+                        //map.setColumn(col);
+                        locationControl.goWest(distance);
                         break;
                     case "Q":
                         GameMenuView gameMenu = new GameMenuView();
@@ -80,19 +75,19 @@ public class LocationMapView extends View{
         return false;
     }
 
-    public static int getRow() {
+    public int getRow() {
         return row;
     }
 
-    public static void setRow(int row) {
-        LocationMapView.row = row;
+    public void setRow(int row) {
+        this.row = row;
     }
 
-    public static int getCol() {
+    public int getCol() {
         return col;
     }
 
-    public static void setCol(int col) {
-        LocationMapView.col = col;
+    public void setCol(int col) {
+        this.col = col;
     }
 }

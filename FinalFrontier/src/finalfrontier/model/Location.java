@@ -20,17 +20,18 @@ public class Location implements Serializable{
     
     public Location(){
         }
+    LocationMapView locationMapView = new LocationMapView();
     
 // get and set Row
     public int getRow() {
-        return LocationMapView.row;
+        return locationMapView.row;
     }
     public void setRow(int row) {
         this.row = (char) row;
     }    
 // get and set Column
     public int getColumn() {
-        return LocationMapView.col;
+        return locationMapView.col;
     }
     public void setColumn(int col) {
         this.column = (char) column;
@@ -78,6 +79,15 @@ public class Location implements Serializable{
             return false;
         }
         return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 73 * hash + this.row;
+        hash = 73 * hash + this.column;
+        hash = 73 * hash + this.visitedChar;
+        return hash;
     }
     
 // toString
