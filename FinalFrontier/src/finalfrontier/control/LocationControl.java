@@ -27,18 +27,19 @@ public class LocationControl implements Serializable {
 
     public LocationControl() {
     }
-    public static int row = 0;
-    public static int col = 0;
+    public int row = 0;
+    public int col = 0;
             
     public static void goNorth(int distance, int row)
         throws LocationControlExceptions{
         if(row+distance > 6 || row+distance <0){
             throw new LocationControlExceptions("\nToo far!");
         }
-        int map = FinalFrontier.
-        row = row + distance;
-        setRow(row);
+        //int map = FinalFrontier.
+        row += distance;
+        //setRow(row);
         Map displayMap = new Map();
+        displayMap.setRow(row);
         displayMap.displayMap();
         System.out.println("North");
         
@@ -48,9 +49,10 @@ public class LocationControl implements Serializable {
         if(row+distance > 6 || row+distance <0){
             throw new LocationControlExceptions("\nToo far!");
         }
-        row = row - distance;
-        setRow(row);
+        row -= distance;
+        //setRow(row);
         Map displayMap = new Map();
+        displayMap.setRow(row);
         displayMap.displayMap();
         System.out.println("South");
     }        
@@ -59,9 +61,10 @@ public class LocationControl implements Serializable {
         if(col+distance > 6 || col+distance <0){
             throw new LocationControlExceptions("\nToo far!");
         }
-        col = col + distance;
-        setCol(col);
+        col += distance;
+        //setCol(col);
         Map displayMap = new Map();
+        displayMap.setColumn(col);
         displayMap.displayMap();
         System.out.println("East");
     }        
@@ -70,23 +73,24 @@ public class LocationControl implements Serializable {
         if(col+distance > 6 || col+distance <0){
             throw new LocationControlExceptions("\nToo far!");
         }
-        col = col - distance;
-        setCol(col);
+        col -= distance;
+        //setCol(col);
         Map displayMap = new Map();
+        displayMap.setColumn(col);
         displayMap.displayMap();
         System.out.println("West");
     }
 
-    public static int getRow() {
+    public int getRow() {
         return row;
     }
-    public static void setRow(int row) {
-        LocationControl.row = row;
+    public void setRow(int row) {
+        this.row = row;
     }
-    public static int getCol() {
+    public int getCol() {
         return col;
     }
-    public static void setCol(int col) {
-        LocationControl.col = col;
+    public void setCol(int col) {
+        this.col = col;
     }
 }

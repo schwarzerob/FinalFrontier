@@ -43,7 +43,7 @@ public class Map {
         return row;
     }
     public void setRow(int row) {
-        row = row;
+        this.row = row;
     }
     
 // get and set Column
@@ -51,7 +51,7 @@ public class Map {
         return column;
     }
     public void setColumn(int column) {
-        column = column;
+        this.column = column;
     }
     
 // equals
@@ -63,7 +63,7 @@ public class Map {
         EventView hereChar = new EventView();
         
         System.out.println(row + " : " + column);
-        System.out.println(LocationControl.row + " : " + LocationControl.col);
+        //System.out.println(LocationControl.row + " : " + LocationControl.col);
         System.out.println(LocationMapView.row + " : " + LocationMapView.col);
         
         mapMatrix[6][4] = '§';

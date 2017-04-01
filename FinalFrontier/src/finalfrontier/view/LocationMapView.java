@@ -33,37 +33,37 @@ public class LocationMapView extends View{
     
     @Override
     public boolean doAction(String value){
-        int distance;
-        String direction=value;
+        int distance=0;
+        Map map = new Map();
+        String direction=value.toUpperCase();
             try {
-                direction.toUpperCase();
                 this.console.println("How far?");
-                value = this.keyboard.readLine();
-                distance = Integer.parseInt(value);
-                if(distance <= 0 || distance >= 6){
+                
+                try {
+                    value = this.keyboard.readLine();
+                    distance = Integer.parseInt(value);
+                    if(distance <= 0 || distance >= 6){
                     this.console.println("****You must enter a proper value****");
-                    
+                }
+                } catch (IOException ex) {
+                ErrorView.display(this.getClass().getName(),"Error: Invalid distance.");
                 }
                 
                 switch (direction){
                     case "N":
-                        LocationControl.setRow(row);
-                        Map.setRow(row);
+                        map.setRow(row);
                         LocationControl.goNorth(distance, row);
                         break;
                     case "S":
-                        LocationControl.setRow(row);
-                        Map.setRow(row);
+                        map.setRow(row);
                         LocationControl.goSouth(distance, row);
                         break;
                     case "E":
-                        LocationControl.setCol(col);
-                        Map.setColumn(col);
+                        map.setColumn(col);
                         LocationControl.goEast(distance, col);
                         break;
                     case "W":
-                        LocationControl.setCol(col);
-                        Map.setColumn(col);
+                        map.setColumn(col);
                         LocationControl.goWest(distance, col);
                         break;
                     case "Q":
@@ -75,9 +75,7 @@ public class LocationMapView extends View{
                 EventView here = new EventView();
                 here.randomEvent(distance);
             } catch (LocationControlExceptions ex) {
-                ErrorView.display(this.getClass().getName(),"Error: Invalid direction.");
-            } catch (IOException ex) {
-                ErrorView.display(this.getClass().getName(),"Error: Invalid distance.");
+                ErrorView.display(this.getClass().getName()," Invalid direction.");
             }
         return false;
     }
