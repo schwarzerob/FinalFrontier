@@ -10,6 +10,7 @@ import finalfrontier.control.CharacterControl;
 import finalfrontier.control.GameControl;
 import finalfrontier.exceptions.GameControlException;
 import finalfrontier.exceptions.MainMenuException;
+import finalfrontier.model.MyCharacter;
 import finalfrontier.model.Player;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
@@ -95,15 +96,16 @@ public class MainMenuView extends View{
 
     private void printReports() 
             throws MainMenuException {
+        MyCharacter charNames[] = MyCharacter.values(); //create Array from MyCharacter enum
         this.console.println("*** printReports function called ***");
         this.console.println("\n\nEnter the file path for the report to be saved.");
-        String filePath = null;
+        String filePath = getInput();
         Object report = null;
         try(FileOutputStream fops = new FileOutputStream(filePath)){
             ObjectOutputStream output = new ObjectOutputStream(fops);
-            output.writeObject(report);
+            output.writeObject(charNames);
         }catch(Exception ex){
-            throw new MainMenuException(ex.getMessage());
+            ErrorView.display("MainMenuView", displayMessage);
         }
         
     }
