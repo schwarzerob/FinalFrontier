@@ -48,22 +48,22 @@ public class LocationMapView extends View{
                 switch (direction){
                     case "N":
                         LocationControl.setRow(row);
-                        Map.setRow(row);
+                        setRow(row);
                         LocationControl.goNorth(distance, row);
                         break;
                     case "S":
                         LocationControl.setRow(row);
-                        Map.setRow(row);
+                        setRow(row);
                         LocationControl.goSouth(distance, row);
                         break;
                     case "E":
                         LocationControl.setCol(col);
-                        Map.setColumn(col);
+                        setCol(col);
                         LocationControl.goEast(distance, col);
                         break;
                     case "W":
                         LocationControl.setCol(col);
-                        Map.setColumn(col);
+                        setCol(col);
                         LocationControl.goWest(distance, col);
                         break;
                     case "Q":
