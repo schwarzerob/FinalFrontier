@@ -38,7 +38,11 @@ public class LocationMapView extends View{
                 value = this.keyboard.readLine();
                 distance = Integer.parseInt(value);
                 if(distance <= 0 || distance >= 6){
-                this.console.println("****You must enter a proper value****");}
+                    this.console.println("****You must enter a proper value****");
+                    
+                }
+                EventView here = new EventView();
+                here.randomEvent(distance);
             } catch (IOException ex) {
             ErrorView.display(this.getClass().getName(),"Error: Invalid distance.");
             }

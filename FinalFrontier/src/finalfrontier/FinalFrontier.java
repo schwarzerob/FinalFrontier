@@ -20,6 +20,8 @@ import java.io.PrintWriter;
  * @author rschw
  */
 public class FinalFrontier {
+
+    public static int row;
     
    public String characterChoice = null;
    private static Game currentGame = null;
