@@ -35,6 +35,7 @@ public class MainMenuView extends View{
                    +"\nL - Load game"
                    +"\nH - Get help on how to play the game"
                    +"\nC - Print character reports"
+                  +"\nIR - Print Item Report"
                    +"\nQ - Quit"
                    +"\n-------------------------------------");
     }
@@ -57,6 +58,9 @@ public class MainMenuView extends View{
                     break;
                 case "C":
                     this.printCharReports();
+                    break;
+                case "IR":
+                    this.itemReport();
                     break;
                 default:
                     this.console.println("\n*** Invalid selection ***"
@@ -101,4 +105,8 @@ public class MainMenuView extends View{
         
     }
     
+    private void itemReport() throws IOException {
+        GameControl gameControl = new GameControl();
+        gameControl.printReports();
+    }
 }
