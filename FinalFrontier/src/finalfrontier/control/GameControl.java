@@ -78,13 +78,14 @@ public class GameControl {
         
         try {
                 outFile = new FileWriter(fileLocation);
-                outFile.write("List of Characters with most of the resources.");
+                outFile.write("List of Characters with most of the resources.\n");
             int maxValue;
             for(MyCharacter theMost: charNames){
                     maxValue=theMost.getOre();
                 if(theMost.getOre()<=maxValue){
                     maxValue=theMost.getOre();
-                    outFile.write("Ore:  "+theMost.name()+" ("+maxValue+")");
+                    outFile.write(theMost.name()+" has "+theMost.getGold()+" gold, "+theMost.getGrain()+" grain, "+theMost.getOre()+" ore, "+
+                                  theMost.getSheep()+" sheep, and "+theMost.getWood()+" wood.\n");
                 }
             }
             
