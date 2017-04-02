@@ -78,7 +78,7 @@ public class GameControl {
         
         try {
                 outFile = new FileWriter(fileLocation);
-                outFile.write("List of Characters with most of the resources.\n");
+                outFile.write("List of Characters with their amount of starting resources.\n");
             int maxValue;
             for(MyCharacter theMost: charNames){
                     maxValue=theMost.getOre();
