@@ -10,9 +10,16 @@ import finalfrontier.exceptions.GameControlException;
 import finalfrontier.model.Game;
 import finalfrontier.model.Player;
 import finalfrontier.view.LocationMapView;
+import finalfrontier.view.MainMenuView;
+import java.io.BufferedReader;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -22,6 +29,7 @@ public class GameControl {
 
     public GameControl() {
     }
+    PrintWriter console = FinalFrontier.getOutFile();
 
         public String createPlayer(String name) throws GameControlException{
             if(name == null){
@@ -50,12 +58,33 @@ public class GameControl {
         //print list of resources with quantity
         
     }
-    public static void resumeGame(String player) {
+    public void resumeGame(String player) {
         System.out.println("*** resumeGame function called ***");
         
     }
     public String savedGames(){
         //print list of resources with quantity
         return null;
+    }
+
+    public void printReports() throws IOException {
+        this.console.println("Enter file location:  ");
+        BufferedReader keyboard = FinalFrontier.getInFile();
+        FileWriter outFile = null;
+            String value = keyboard.readLine();
+            value = value.trim().toUpperCase();
+        String fileLocation = value;
+        
+        try {
+            outFile = new FileWriter(fileLocation);
+            outFile.write("List of Characters with most of the resources.");
+        } catch (IOException ex) {
+            Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+        } finally{
+            if (outFile != null){
+                outFile.close();
+            }
+        }
+        
     }
 }  

@@ -13,6 +13,8 @@ import finalfrontier.exceptions.MainMenuException;
 import finalfrontier.model.MyCharacter;
 import finalfrontier.model.Player;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.Scanner;
 import java.util.logging.Level;
@@ -32,7 +34,7 @@ public class MainMenuView extends View{
                    +"\nS - Save game"
                    +"\nL - Load game"
                    +"\nH - Get help on how to play the game"
-                   +"\nP - Print reports"
+                   +"\nC - Print character reports"
                    +"\nQ - Quit"
                    +"\n-------------------------------------");
     }
@@ -53,17 +55,16 @@ public class MainMenuView extends View{
                 case "H":
                     this.displayHelpMenu();
                     break;
-                case "P":
-                    this.printReports();
+                case "C":
+                    this.printCharReports();
                     break;
                 default:
                     this.console.println("\n*** Invalid selection ***"
                             +"\n    Try again");
                     break;
             }
-            
             return false;
-        } catch (MainMenuException ex) {
+        } catch (IOException ex) {
             Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
         }
         return true;
@@ -94,19 +95,9 @@ public class MainMenuView extends View{
         helpMenuView.display();
     }
 
-    private void printReports() 
-            throws MainMenuException {
-        MyCharacter charNames[] = MyCharacter.values(); //create Array from MyCharacter enum
-        this.console.println("*** printReports function called ***");
-        this.console.println("\n\nEnter the file path for the report to be saved.");
-        String filePath = getInput();
-        Object report = null;
-        try(FileOutputStream fops = new FileOutputStream(filePath)){
-            ObjectOutputStream output = new ObjectOutputStream(fops);
-            output.writeObject(charNames);
-        }catch(Exception ex){
-            ErrorView.display("MainMenuView", displayMessage);
-        }
+    private void printCharReports() throws IOException {
+        GameControl gameControl = new GameControl();
+        gameControl.printReports();
         
     }
     
