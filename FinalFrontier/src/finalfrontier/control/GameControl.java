@@ -8,6 +8,7 @@ package finalfrontier.control;
 import finalfrontier.FinalFrontier;
 import finalfrontier.exceptions.GameControlException;
 import finalfrontier.model.Game;
+import finalfrontier.model.MyCharacter;
 import finalfrontier.model.Player;
 import finalfrontier.view.LocationMapView;
 import finalfrontier.view.MainMenuView;
@@ -68,16 +69,26 @@ public class GameControl {
     }
 
     public void printReports() throws IOException {
+        MyCharacter charNames[] = MyCharacter.values(); //create Array from MyCharacter enum
         this.console.println("Enter file location:  ");
         BufferedReader keyboard = FinalFrontier.getInFile();
         FileWriter outFile = null;
-            String value = keyboard.readLine();
-            value = value.trim().toUpperCase();
-        String fileLocation = value;
+        String value = keyboard.readLine();
+        String fileLocation = value.trim();
         
         try {
-            outFile = new FileWriter(fileLocation);
-            outFile.write("List of Characters with most of the resources.");
+                outFile = new FileWriter(fileLocation);
+                outFile.write("List of Characters with their amount of starting resources.\n");
+            int maxValue;
+            for(MyCharacter theMost: charNames){
+                    maxValue=theMost.getOre();
+                if(theMost.getOre()<=maxValue){
+                    maxValue=theMost.getOre();
+                    outFile.write(theMost.name()+" has "+theMost.getGold()+" gold, "+theMost.getGrain()+" grain, "+theMost.getOre()+" ore, "+
+                                  theMost.getSheep()+" sheep, and "+theMost.getWood()+" wood.\n");
+                }
+            }
+            
         } catch (IOException ex) {
             Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
         } finally{
@@ -85,7 +96,6 @@ public class GameControl {
                 outFile.close();
             }
         }
-        
     }
     public void itemReport() throws IOException {
         this.console.println("Where Do You Want to Save it?");

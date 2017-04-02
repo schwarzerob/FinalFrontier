@@ -1,0 +1,7 @@
+List of Characters with their amount of starting resources.
+LUMBERJACK has 5 gold, 5 grain, 5 ore, 5 sheep, and 10 wood.
+FARMER has 5 gold, 10 grain, 5 ore, 5 sheep, and 5 wood.
+BLACKSMITH has 2 gold, 5 grain, 10 ore, 5 sheep, and 5 wood.
+HUNTER has 5 gold, 5 grain, 5 ore, 10 sheep, and 5 wood.
+SOLDIER has 5 gold, 5 grain, 5 ore, 5 sheep, and 5 wood.
+CACHIER has 10 gold, 5 grain, 5 ore, 5 sheep, and 5 wood.

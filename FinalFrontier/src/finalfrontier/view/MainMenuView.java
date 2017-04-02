@@ -34,6 +34,7 @@ public class MainMenuView extends View{
                    +"\nS - Save game"
                    +"\nL - Load game"
                    +"\nH - Get help on how to play the game"
+                   +"\nI - Print item reports"
                    +"\nC - Print character reports"
                   +"\nIR - Print Item Report"
                    +"\nQ - Quit"
@@ -55,6 +56,9 @@ public class MainMenuView extends View{
                     break;
                 case "H":
                     this.displayHelpMenu();
+                    break;
+                case "I":
+                    this.printItemReports();
                     break;
                 case "C":
                     this.printCharReports();
@@ -102,6 +106,12 @@ public class MainMenuView extends View{
     private void printCharReports() throws IOException {
         GameControl gameControl = new GameControl();
         gameControl.printReports();
+        
+    }
+
+    private void printItemReports() throws IOException {
+        GameControl gameControl = new GameControl();
+        gameControl.itemReport();
         
     }
     
