@@ -14,33 +14,33 @@ import java.util.Random;
  * @author rschw
  */
 public class Location implements Serializable{
-    private int row;
-    private int column;
+    public int row = 0;
+    public int column = 0;
     private char visitedChar = 'X';
+    Map map = new Map();
     
     public Location(){
         }
+    LocationMapView locationMapView = new LocationMapView();
     
-// get and set Row
+// get and set Row and Column
     public int getRow() {
-        return LocationMapView.row;
+        return row;
     }
     public void setRow(int row) {
-        this.row = (char) row;
-    }    
-// get and set Column
+        this.row = row;
+    }  
     public int getColumn() {
-        return LocationMapView.col;
+        return column;
     }
-    public void setColumn(int col) {
-        this.column = (char) column;
+    public void setColumn(int column) {
+        this.column = column;
     }
     
     
     //create random integer to select which event and run to EventView
     Random rand = new Random();
         public int  event;
-    Map map = new Map();
     
     public int getEvent(){
         if(map.getColumn()==4 && map.getRow()==6){
@@ -78,6 +78,15 @@ public class Location implements Serializable{
             return false;
         }
         return true;
+    }
+
+    @Override
+    public int hashCode() {
+        int hash = 7;
+        hash = 73 * hash + this.row;
+        hash = 73 * hash + this.column;
+        hash = 73 * hash + this.visitedChar;
+        return hash;
     }
     
 // toString

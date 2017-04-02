@@ -13,8 +13,8 @@ import java.io.Serializable;
  * @author rschw
  */
 public class Player implements Serializable{
-    public static String name;
-    public static String character;
+    public String name;
+    public String character;
     
 // Constructor
     public Player(String name1, String character1) {
@@ -35,21 +35,17 @@ public class Player implements Serializable{
     
     
     
-// get and set Name    
-// What is this players name?
+// get and set Name and Character
     public String getName() {
         return name;
     }
     public void setName(String name) {
-        Player.name = name;
+        this.name = name;
     }
-    
-// What character is the Player using?
-
     public String getCharacter() {
         return character;
     }
     public void setCharacter(String character) {
-        Player.character = character;
+        this.character = character;
     }
 }

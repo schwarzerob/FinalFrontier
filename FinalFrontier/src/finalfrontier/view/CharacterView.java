@@ -19,13 +19,13 @@ public class CharacterView extends View{
     public static String characterName;
     public CharacterView() {
         super("\n ************************"
-            + "\n * Which character do you want to play?"
-            + "\n *L - Lumberjack begins with more wood than the others."
-            + "\n *F - Farmer leaves with extra grain for the trip."
-            + "\n *B - the Blacksmith has more ore for the crafting."
-            + "\n *H - Hunters already have extra food when he leaves."
-            + "\n *S - a Soldier has more battle equipment to start with."
-            + "\n *C - Cashier from the bank, well of course, he's already got extra cash in his pocket."
+            + "\n  Which character do you want to play?"
+            + "\n L - Lumberjack begins with more wood than the others."
+            + "\n F - Farmer leaves with extra grain for the trip."
+            + "\n B - the Blacksmith has more ore for the crafting."
+            + "\n H - Hunters already have extra food when he leaves."
+            + "\n S - a Soldier has more battle equipment to start with."
+            + "\n C - Cashier from the bank, well of course, he's already got extra cash in his pocket."
             + "\n ************************");
     }
 
