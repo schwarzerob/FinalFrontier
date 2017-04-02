@@ -87,4 +87,24 @@ public class GameControl {
         }
         
     }
+    public void itemReport() throws IOException {
+        this.console.println("Where Do You Want to Save it?");
+        BufferedReader keyboard = FinalFrontier.getInFile();
+        FileWriter outFile = null;
+            String value = keyboard.readLine();
+            value = value.trim().toUpperCase();
+        String fileLocation = value;
+        
+        try {
+            outFile = new FileWriter(fileLocation);
+            outFile.write("This is what you can craft!");
+        } catch (IOException ex) {
+            Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+        } finally{
+            if (outFile != null){
+                outFile.close();
+            }
+        }
+        
+    }
 }  
