@@ -22,7 +22,7 @@ import java.util.Scanner;
  */
 public class CraftingControl implements Serializable {
   
-        public static void craftSword()
+        public void craftSword()
                 throws CraftingControlException {           //throws
             //cost: 3 wood, 15 ore, 5 gold
             
@@ -34,11 +34,9 @@ public class CraftingControl implements Serializable {
             Resources.ore -= ore;
             Resources.gold -= gold;
             Resources.swords += 1;
-            
-            
         }
         
-        public static void craftShield()
+        public void craftShield()
                 throws CraftingControlException {           //throws
             //cost: 10 wood, 5 ore
             int wood = 10, ore = 5;
@@ -49,7 +47,7 @@ public class CraftingControl implements Serializable {
             Resources.ore-=ore;
             Resources.shields+=1;
         }
-        public static void craftBow()
+        public void craftBow()
             throws CraftingControlException {
             //cost: 6 wood, 4 rope
             int wood = 1, rope = 1;
@@ -59,9 +57,9 @@ public class CraftingControl implements Serializable {
             Resources.wood -= wood;
             Resources.rope -= rope;
             Resources.bows += 1;
-            
         }
-        public static void craftRope()
+        
+        public void craftRope()
             throws CraftingControlException{
             //cost: 15 grain
             int grain = 15;
@@ -71,15 +69,12 @@ public class CraftingControl implements Serializable {
             Resources.grain -= grain;
             Resources.rope += 1;
         }
-        public static void craftWagon()
+        
+        public void craftWagon()
             throws CraftingControlException{
             //go to wagon
             WagonView craftWagon = new WagonView();
             craftWagon.display();
-        }
- 
-    public void leastToMost() {
-       
-    }
-    
+                throw new CraftingControlException("You can't afford that!");           //throw new
+            }
 }

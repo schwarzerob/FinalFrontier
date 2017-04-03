@@ -7,11 +7,8 @@ package finalfrontier.view;
 
 import finalfrontier.control.CraftingControl;
 import finalfrontier.exceptions.CraftingControlException;
-import finalfrontier.model.Craft;
 import finalfrontier.model.Craft.CraftingItems;
 import finalfrontier.model.Resources;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -43,14 +40,20 @@ public class CraftingView extends View{
                 case "S":
                     CraftingControl swordCraft = new CraftingControl();
                     swordCraft.craftSword();
+                    this.console.println("You now have "+Resources.swords + " swords");
+                    this.console.println("Left over resources: " +Resources.wood +" wood, " + Resources.ore + " ore, and " + Resources.gold+" gold");
                     break;
                 case "P":
                     CraftingControl shieldCraft = new CraftingControl();
                     shieldCraft.craftShield();
+                    this.console.println("You now have "+Resources.shields + " shields");
+                    this.console.println("Left over resources: " +Resources.wood +" wood, " + Resources.ore + " ore, and " + Resources.gold+" gold");
                     break;
                 case "B":
                     CraftingControl bowCraft = new CraftingControl();
                     bowCraft.craftBow();
+                    this.console.println("You now have "+Resources.bows + " bows");
+                    this.console.println("Left over resources: " +Resources.wood +" wood, " + Resources.ore + " ore, and " + Resources.gold+" gold");
                     break;
                 case "W":
                     CraftingControl wagonCraft = new CraftingControl();
@@ -59,6 +62,8 @@ public class CraftingView extends View{
                 case "C":
                     CraftingControl ropeCraft = new CraftingControl();
                     ropeCraft.craftRope();
+                    this.console.println("You now have "+Resources.rope + " ropes");
+                    this.console.println("Left over resources: " +Resources.wood +" wood, " + Resources.ore + " ore, and " + Resources.gold+" gold");
                     break;
                 case "SH":
                     break;
@@ -66,8 +71,6 @@ public class CraftingView extends View{
                     ErrorView.display(this.getClass().getName(), "That isn't an item to be crafted, try again");
             }
             
-            this.console.println("Left over resources: " +Resources.wood +" wood, " + Resources.ore + " ore, and " + Resources.gold+" gold");
-            this.console.println("You now have "+Resources.swords + " swords");
             return false;
         } catch (CraftingControlException ex) {
             ErrorView.display(this.getClass().getName(), "You can't afford that one!");

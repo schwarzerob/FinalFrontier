@@ -20,11 +20,13 @@ import java.util.logging.Logger;
 public class WagonView extends View{
 
     public WagonView(String message) {
-        super("Your wagon has room for "+Wagon.area+" items. \n"
-                + "So, let's make your wagon bigger!\n"
+        super("Your wagon where you carry all of your items. \n"
+                + "So, should we make your wagon bigger?\n"
+                + "How do we do it?\n"
                 + "T  Taller \n"
                 + "W  Wider \n"
-                + "L  Longer");
+                + "L  Longer\n"
+                + "N  Nevermind");
     }
 
     public WagonView() {
@@ -45,6 +47,9 @@ public class WagonView extends View{
                 case "L":
                     int howLong = this.keyboard.read();
                     wagonControl.taller(howLong);
+                case "N":
+                    CraftingView neverMind = new CraftingView();
+                    neverMind.display();
             }
             return false;
             //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
