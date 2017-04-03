@@ -5,11 +5,7 @@
  */
 package finalfrontier.view;
 
-import finalfrontier.FinalFrontier;
-import finalfrontier.control.GameControl;
-import finalfrontier.exceptions.GameControlException;
 import finalfrontier.model.Map;
-import java.util.Scanner;
 
 /**
  *

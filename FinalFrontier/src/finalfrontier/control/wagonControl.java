@@ -5,10 +5,16 @@
  */
 package finalfrontier.control;
 
+import finalfrontier.FinalFrontier;
 import finalfrontier.exceptions.WagonException;
 import finalfrontier.model.Resources;
 import finalfrontier.model.Wagon;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.io.Serializable;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -18,33 +24,37 @@ public class wagonControl implements Serializable {
 
     public wagonControl() {
     }
+    protected final BufferedReader keyboard = FinalFrontier.getInFile();
+    protected final PrintWriter console = FinalFrontier.getOutFile();
     
-    public static void longer(int howFar) 
+    public void longer(int howFar) 
         throws WagonException{
+        try {
             //cost: 1 wood per increased area
+            howFar = this.keyboard.read();
             Wagon.length+=howFar;
             int increase = Wagon.height*Wagon.width*howFar;
             Wagon.area += increase;
             Resources.wood-=increase;
-        throw new WagonException();
+        } catch (IOException ex) {
+            Logger.getLogger(wagonControl.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
-    public static void wider(int howWide) 
+    public void wider(int howFar) 
         throws WagonException{
             //cost: 1 wood per increased area
-            Wagon.width+=howWide;
-            int increase = Wagon.length*Wagon.height*howWide;
+            Wagon.width+=howFar;
+            int increase = Wagon.length*Wagon.height*howFar;
             Wagon.area += increase;
             Resources.wood-=increase;
-        throw new WagonException();
     }
-    public static void taller(int howTall) 
+    public void taller(int howFar) 
         throws WagonException{
             //cost: 1 wood per increased area
-            Wagon.height+=howTall;
-            int increase = Wagon.length*Wagon.width*howTall;
+            Wagon.height+=howFar;
+            int increase = Wagon.length*Wagon.width*howFar;
             Wagon.area += increase;
             Resources.wood-=increase;
-        throw new WagonException();
     }
 
     //void calcMaxContent(double length, double width, double height) {

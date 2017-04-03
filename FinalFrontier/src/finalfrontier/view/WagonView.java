@@ -19,8 +19,9 @@ import java.util.logging.Logger;
  */
 public class WagonView extends View{
 
-    public WagonView(String message) {
+    public WagonView() {
         super("Your wagon where you carry all of your items. \n"
+                + "So far, it's "
                 + "So, should we make your wagon bigger?\n"
                 + "How do we do it?\n"
                 + "T  Taller \n"
@@ -28,34 +29,33 @@ public class WagonView extends View{
                 + "L  Longer\n"
                 + "N  Nevermind");
     }
-
-    public WagonView() {
-    }
     
 
     @Override
     public boolean doAction(String value) {
         try {
             String side = value.toUpperCase();
+            int howFar=0;
+            wagonControl wagonCont = new wagonControl();
+                //String side = "T";
             switch (side){
-                case "T":
-                    int howFar = this.keyboard.read();
-                    wagonControl.longer(howFar);
-                case "W":
-                    int howWide = this.keyboard.read();
-                    wagonControl.wider(howWide);
                 case "L":
-                    int howLong = this.keyboard.read();
-                    wagonControl.taller(howLong);
+                    this.console.println("How much?");
+                    //howFar = this.keyboard.read();
+                    wagonCont.longer(howFar);
+                case "W":
+                    howFar = this.keyboard.read();
+                    wagonCont.wider(howFar);
+                case "T":
+                    howFar = this.keyboard.read();
+                    wagonCont.taller(howFar);
                 case "N":
                     CraftingView neverMind = new CraftingView();
                     neverMind.display();
             }
-            return false;
+            return true;
             //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        } catch (WagonException ex) {
-            Logger.getLogger(WagonView.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (IOException ex) {
+        } catch (WagonException | IOException ex) {
             Logger.getLogger(WagonView.class.getName()).log(Level.SEVERE, null, ex);
         }
         return false;

@@ -34,7 +34,7 @@ public class WagonViewIT {
     public void testDoAction() {
         System.out.println("doAction");
         String value = "";
-        WagonView instance = "N";
+        WagonView instance = new WagonView();
         boolean expResult = false;
         boolean result = instance.doAction(value);
         assertEquals(expResult, result);
