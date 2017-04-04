@@ -14,8 +14,8 @@ import java.util.Random;
  * @author rschw
  */
 public class Location implements Serializable{
-    public int row = 0;
-    public int column = 0;
+    public static int row = 0;
+    public static int column = 0;
     private char visitedChar = 'X';
     Map map = new Map();
     
@@ -24,17 +24,21 @@ public class Location implements Serializable{
     LocationMapView locationMapView = new LocationMapView();
     
 // get and set Row and Column
-    public int getRow() {
+
+    public static int getRow() {
         return row;
     }
-    public void setRow(int row) {
-        this.row = row;
-    }  
-    public int getColumn() {
+
+    public static void setRow(int row) {
+        Location.row = row;
+    }
+
+    public static int getColumn() {
         return column;
     }
-    public void setColumn(int column) {
-        this.column = column;
+
+    public static void setColumn(int column) {
+        Location.column = column;
     }
     
     

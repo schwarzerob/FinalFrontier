@@ -107,6 +107,35 @@ public class GameControl {
         
         try {
             outFile = new FileWriter(fileLocation);
+            outFile.write("Saved game info.");
+            
+
+            //Content to keep for a saved game
+            outFile.write("Name: ");
+            outFile.write("Character: ");
+            outFile.write("location: ");
+            outFile.write("Utilities: ");
+            outFile.write("Wagon: ");
+            
+        } catch (IOException ex) {
+            Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);
+        } finally{
+            if (outFile != null){
+                outFile.close();
+            }
+        }
+        
+    }
+    public void savedGame() throws IOException {
+        this.console.println("Saved game");
+        BufferedReader keyboard = FinalFrontier.getInFile();
+        FileWriter outFile = null;
+            String value = keyboard.readLine();
+            value = value.trim().toUpperCase();
+        String fileLocation = value;
+        
+        try {
+            outFile = new FileWriter(fileLocation);
             outFile.write("This is what you can craft!");
         } catch (IOException ex) {
             Logger.getLogger(MainMenuView.class.getName()).log(Level.SEVERE, null, ex);

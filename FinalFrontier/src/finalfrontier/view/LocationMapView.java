@@ -23,8 +23,6 @@ public class LocationMapView extends View{
                                 "\n    S "+
                                 "\nQ-Quit moving");
     }
-        public int row=0;
-        public int col=0;
     
     @Override
     public boolean doAction(String value){
@@ -44,7 +42,7 @@ public class LocationMapView extends View{
                 EventView here = new EventView();
                 here.randomEvent(distance);
             } catch (IOException ex) {
-            ErrorView.display(this.getClass().getName(),"Error: Invalid distance.");
+                this.console.print(ex.getMessage());
             }
 
             switch (direction){
@@ -73,21 +71,8 @@ public class LocationMapView extends View{
             EventView here = new EventView();
             here.randomEvent(distance);
         } catch (LocationControlExceptions ex) {
-            ErrorView.display(this.getClass().getName()," Invalid direction.");
+            this.console.println(ex.getMessage());
         }
         return false;
-    }
-
-    public int getRow() {
-        return row;
-    }
-    public void setRow(int row) {
-        this.row = row;
-    }
-    public int getCol() {
-        return col;
-    }
-    public void setCol(int col) {
-        this.col = col;
     }
 }
