@@ -20,7 +20,6 @@ public class Wagon implements Serializable {
     public Wagon(){
     }
     public String toString(String size) {
-        area = length*width*height;
         size =  "Wagon{" + "length: " + length + ", width: " + width + ", height: " + height + '}'+
                 "\nAnd can contain a maximum of "+area+"items.";
         return size;

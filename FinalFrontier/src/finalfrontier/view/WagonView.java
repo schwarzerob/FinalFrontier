@@ -58,7 +58,7 @@ public class WagonView extends View{
         } catch (WagonException | IOException ex) {
             Logger.getLogger(WagonView.class.getName()).log(Level.SEVERE, null, ex);
         }
-        return false;
+        return true;
     }
     
 }

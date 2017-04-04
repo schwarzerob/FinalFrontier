@@ -34,15 +34,14 @@ public class wagonControl implements Serializable {
         try {
             //cost: 1 wood per increased area
             howFar = this.keyboard.read();
-            int length=Wagon.getLength()+howFar;
+            int length=Wagon.getLength();
+            Wagon.setLength(length+howFar);
             int increase = Wagon.getHeight()*Wagon.getWidth()*howFar;
-            int area=length+Wagon.getHeight()*Wagon.getWidth();
-            Wagon.setLength(length);
-            Wagon.setArea(area);
+            Wagon.setArea(Wagon.getWidth()*Wagon.getLength()*Wagon.getHeight());
             Resources.wood-=increase;
-            this.console.println("Increases by: "+increase);
+            this.console.println("Increases by: "+increase+", Cost: "+increase+" wood.");
         } catch (IOException ex) {
-            Logger.getLogger(wagonControl.class.getName()).log(Level.SEVERE, null, ex);
+            throw new WagonException(ex.getMessage());
         }
     }
     public void wider(int howFar) 
