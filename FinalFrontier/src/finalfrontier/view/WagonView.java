@@ -20,8 +20,8 @@ import java.util.logging.Logger;
 public class WagonView extends View{
 
     public WagonView() {
-        super("Your wagon where you carry all of your items. \n"
-                + "So far, it's "
+        super("Your wagon is how you will carry all of your items. \n"
+                + "So far, it's "+Wagon.height+" x "+Wagon.length+" x "+Wagon.width+". \nWhich can hold "+Wagon.area+" items."
                 + "So, should we make your wagon bigger?\n"
                 + "How do we do it?\n"
                 + "T  Taller \n"

@@ -23,7 +23,9 @@ import java.util.logging.Logger;
 public class wagonControl implements Serializable {
 
     public wagonControl() {
+        
     }
+    
     protected final BufferedReader keyboard = FinalFrontier.getInFile();
     protected final PrintWriter console = FinalFrontier.getOutFile();
     
@@ -32,10 +34,13 @@ public class wagonControl implements Serializable {
         try {
             //cost: 1 wood per increased area
             howFar = this.keyboard.read();
-            Wagon.length+=howFar;
-            int increase = Wagon.height*Wagon.width*howFar;
-            Wagon.area += increase;
+            int length=Wagon.getLength()+howFar;
+            int increase = Wagon.getHeight()*Wagon.getWidth()*howFar;
+            int area=length+Wagon.getHeight()*Wagon.getWidth();
+            Wagon.setLength(length);
+            Wagon.setArea(area);
             Resources.wood-=increase;
+            this.console.println("Increases by: "+increase);
         } catch (IOException ex) {
             Logger.getLogger(wagonControl.class.getName()).log(Level.SEVERE, null, ex);
         }
