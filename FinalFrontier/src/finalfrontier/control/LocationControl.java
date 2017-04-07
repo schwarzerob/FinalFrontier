@@ -30,7 +30,6 @@ public class LocationControl implements Serializable {
     public LocationControl() {
     }
         Location location = new Location();
-        Map displayMap = new Map();
             
     public void goNorth(int distance)
         throws LocationControlExceptions{
@@ -38,14 +37,12 @@ public class LocationControl implements Serializable {
         if(row+distance > 6 || row+distance <0){
             throw new LocationControlExceptions("\nToo far!");
         }
-        Location.setRow(distance);
-        //int map = FinalFrontier.
+        Map.setRow(row);
+        Map.setColumn(col);
         row += distance;
-        //location.setRow(row);
-        //location.setColumn(col);
-        displayMap.displayMap();
+        this.console.print(Map.row+": "+Map.column);
+        Map.displayMap();
         System.out.println("North");
-        //System.out.println(row + " : " + col);  //test view
         System.out.println(location.toString());  //test view
         }catch(LocationControlExceptions ex){
             this.console.print(ex.getMessage());}
@@ -61,11 +58,11 @@ public class LocationControl implements Serializable {
         if(row+distance > 6 || row+distance <0){
             throw new LocationControlExceptions("\nToo far!");
         }
-        //location.setRow(row);
-        //location.setColumn(col);
-        displayMap.displayMap();
-        System.out.println("South");
-        //System.out.println(row + " : " + col);  //test view
+        Map.setRow(row);
+        Map.setColumn(col);
+        this.console.print(row+": "+col);
+        Map.displayMap();
+        System.out.println("North");
         System.out.println(location.toString());  //test view
         }catch(LocationControlExceptions ex){
             this.console.print(ex.getMessage());}
@@ -76,12 +73,12 @@ public class LocationControl implements Serializable {
         if(col+distance > 6 || col+distance <0){
             throw new LocationControlExceptions("\nToo far!");
         }
+        Map.setRow(row);
+        Map.setColumn(col);
         col += distance;
-        //location.setRow(row);
-        //location.setColumn(col);
-        displayMap.displayMap();
-        System.out.println("East");
-        //System.out.println(row + " : " + col);  //test view
+        this.console.print(row+": "+col);
+        Map.displayMap();
+        System.out.println("North");
         System.out.println(location.toString());  //test view
         }catch(LocationControlExceptions ex){
             this.console.print(ex.getMessage());}
@@ -92,12 +89,12 @@ public class LocationControl implements Serializable {
         if(col+distance > 6 || col+distance <0){
             throw new LocationControlExceptions("\nToo far!");
         }
+        Map.setRow(row);
+        Map.setColumn(col);
         col -= distance;
-        //location.setRow(row);
-        //location.setColumn(col);
-        displayMap.displayMap();
-        System.out.println("West");
-        //System.out.println(row + " : " + col);  //test view
+        this.console.print(row+": "+col);
+        Map.displayMap();
+        System.out.println("North");
         System.out.println(location.toString());  //test view
         }catch(LocationControlExceptions ex){
             this.console.print(ex.getMessage());}
