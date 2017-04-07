@@ -25,8 +25,8 @@ be changed by the value of either the row, or the column.
 */
 public class LocationControl implements Serializable {
     protected final PrintWriter console = FinalFrontier.getOutFile();
-    public static int row=0;
-    public static int col=0;
+    public static int row;
+    public static int col;
     public LocationControl() {
     }
         Location location = new Location();
@@ -41,8 +41,8 @@ public class LocationControl implements Serializable {
         Location.setRow(distance);
         //int map = FinalFrontier.
         row += distance;
-        location.setRow(row);
-        location.setColumn(col);
+        //location.setRow(row);
+        //location.setColumn(col);
         displayMap.displayMap();
         System.out.println("North");
         //System.out.println(row + " : " + col);  //test view
@@ -61,8 +61,8 @@ public class LocationControl implements Serializable {
         if(row+distance > 6 || row+distance <0){
             throw new LocationControlExceptions("\nToo far!");
         }
-        location.setRow(row);
-        location.setColumn(col);
+        //location.setRow(row);
+        //location.setColumn(col);
         displayMap.displayMap();
         System.out.println("South");
         //System.out.println(row + " : " + col);  //test view
@@ -77,8 +77,8 @@ public class LocationControl implements Serializable {
             throw new LocationControlExceptions("\nToo far!");
         }
         col += distance;
-        location.setRow(row);
-        location.setColumn(col);
+        //location.setRow(row);
+        //location.setColumn(col);
         displayMap.displayMap();
         System.out.println("East");
         //System.out.println(row + " : " + col);  //test view
@@ -93,8 +93,8 @@ public class LocationControl implements Serializable {
             throw new LocationControlExceptions("\nToo far!");
         }
         col -= distance;
-        location.setRow(row);
-        location.setColumn(col);
+        //location.setRow(row);
+        //location.setColumn(col);
         displayMap.displayMap();
         System.out.println("West");
         //System.out.println(row + " : " + col);  //test view
@@ -103,16 +103,16 @@ public class LocationControl implements Serializable {
             this.console.print(ex.getMessage());}
     }
 
-    public int getRow() {
+    public static int getRow() {
         return row;
     }
-    public void setRow(int row) {
-        this.row = row;
+    public static void setRow(int row) {
+        LocationControl.row = row;
     }
-    public int getCol() {
+    public static int getCol() {
         return col;
     }
-    public void setCol(int col) {
-        this.col = col;
-    }
+    public static void setCol(int col) {
+        LocationControl.col = col;
+    }    
 }

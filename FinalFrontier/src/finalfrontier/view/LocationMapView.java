@@ -49,6 +49,7 @@ public class LocationMapView extends View{
                 case "N":
                     //map.setRow(row);
                     locationControl.goNorth(distance);
+                    
                     break;
                 case "S":
                     //map.setRow(row);

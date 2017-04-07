@@ -14,8 +14,8 @@ import java.util.Random;
  * @author rschw
  */
 public class Location implements Serializable{
-    public static int row = 0;
-    public static int column = 0;
+    public static int row;
+    public static int column;
     private char visitedChar = 'X';
     Map map = new Map();
     

@@ -34,39 +34,43 @@ public class Map {
     public Map() {
     }
 
-    public int column=0;
-    public int row=0;
+    public static int column;
+    public static int row;
     
-// get and set Row
-    public int getRow() {
-        return row;
+    public static void whereAt(){
+        column = LocationControl.col;
+        row = LocationControl.row;
     }
-    public void setRow(int row) {
-        this.row = row;
-    }
-    public int getColumn() {
+
+    public static int getColumn() {
         return column;
     }
-    public void setColumn(int column) {
-        this.column = column;
+    public static void setColumn(int column) {
+        Map.column = column;
     }
+    public static int getRow() {
+        return row;
+    }
+    public static void setRow(int row) {
+        Map.row = row;
+    }    
     
 // equals
 
     
 //Display the Map
     public String displayMap(){
-        Location location = new Location();
-        column = location.getColumn();
-        row = location.getRow();
-        EventView hereChar = new EventView();
+        //Location location = new Location();
+        //column = location.getColumn();
+        //row = location.getRow();
+        //EventView hereChar = new EventView();
         
         System.out.println(row + " : " + column);
         //System.out.println(LocationControl.row + " : " + LocationControl.col);
         //System.out.println(LocationMapView.row + " : " + LocationMapView.col);
         
         mapMatrix[6][4] = '§';
-        mapMatrix[row][column] = hereChar.wasHere;
+        mapMatrix[row][column] = EventView.wasHere;
     System.out.println("\n   _ _ _ _ _");
     System.out.println(
             "6 "+"|" + mapMatrix[6][0] + "|" + mapMatrix[6][1] + "|" + mapMatrix[6][2] + "|" + mapMatrix[6][3] + "|" + mapMatrix[6][4] + "|\n" +

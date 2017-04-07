@@ -6,12 +6,9 @@
 package finalfrontier.control;
 
 import finalfrontier.exceptions.CharacterControlException;
-import finalfrontier.model.Craft;
 import finalfrontier.model.MyCharacter;
 import finalfrontier.model.Resources;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  *

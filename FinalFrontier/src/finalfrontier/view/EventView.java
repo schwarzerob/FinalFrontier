@@ -18,7 +18,7 @@ import java.util.Random;
  * @author rschw
  */
 public class EventView extends View{
-        public char wasHere = 'X';
+        public static char wasHere = 'X';
         int event;
 
     public EventView() {
