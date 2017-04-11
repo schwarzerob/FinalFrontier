@@ -10,7 +10,6 @@ import finalfrontier.exceptions.GameControlException;
 import finalfrontier.model.Game;
 import finalfrontier.model.MyCharacter;
 import finalfrontier.model.Player;
-import finalfrontier.view.LocationMapView;
 import finalfrontier.view.MainMenuView;
 import java.io.BufferedReader;
 import java.io.FileOutputStream;
@@ -18,7 +17,6 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.io.PrintWriter;
-import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -69,9 +67,9 @@ public class GameControl {
     }
 
     public void printReports() throws IOException {
-        MyCharacter charNames[] = MyCharacter.values(); //create Array from MyCharacter enum
+        MyCharacter charNames[] = MyCharacter.values();         //create Array from MyCharacter enum
         this.console.println("Enter file location:  ");
-        BufferedReader keyboard = FinalFrontier.getInFile();
+        BufferedReader keyboard = FinalFrontier.getInFile();    
         FileWriter outFile = null;
         String value = keyboard.readLine();
         String fileLocation = value.trim();
